@@ -1,0 +1,38 @@
+﻿1. Rozpoznanie i zbadanie problemu
+2. Ankiety/rozmowy
+3. Wymyślić i wypróbować rozwiązanie
+
+
+* Proste pytania
+   * Co to są licencje
+   * Po co są
+   * Dla kogo są
+   * Komu służą a komu nie
+   * Kiedy są ważne, kiedy nie
+   * Dla kogo są ważne
+   * Co to jest audyt, jak wygląda
+
+
+* Ankiety, rozmowy
+   * dobra ankieta jest trudna do zrobienia
+   * nie narzucać stylu odpowiedzi w ankiecie, chociaż jest wtedy łatwiej ją analizować
+   * rozmowy się robi zwykle kiedy chcemy głębszą analizę
+   * można skonstruować ankietę na podstawie rozmów wstępnych
+   * 8 rozmów to ok. 90% informacji
+   * Metoda 5 razy dlaczego
+   * jeśli chcemy przeprowadzić rozmowę z kimś z firmy, można np. obiecać im wyniki badań czy coś w zamian za poświęcenie czasu na rozmowę
+
+
+* Na jakiej podstawie przeprowadzane są audyty? Czy trzeba koniecznie na nie pozwolić jeśli ktoś przyjdzie do nas go zrobić?
+* Audyt wewnętrzny PŁ -> Centrum Komputerowe
+* Audyt zwykle szuka śladu na dysku po oprogramowaniu, a nie jego bezpośredniej instalacji
+* Na jakim etapie legalność jest ważna? (nie jestem pewien o co im chodziło, etap badania problemu?)
+* Legalność przy instalacji a legalność przy użytku oprogramowania
+
+
+Rady/notatki:
+* Można się podzielić i pracować nad zagadnieniami osobno
+* Trzeba przygotować plan wystąpień, minutki i podsumowania pracy w tygodniu (chyba), i plan wystąpień trzeba wysłać we wtorek
+* Ważne jest zapisywanie i przechowywanie notatek
+* Należy odpowiadać na maile żeby potwierdzić, że się je przeczytało
+* Jeśli wysyłamy maile, to do wszystkich członków razem z instruktorami, żeby nie było że ktoś coś wysłał a reszta nie wiedziała (tego nie mówili akurat tydzień temu ale mi się  przypomniało to dałem)

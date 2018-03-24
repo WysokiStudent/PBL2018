@@ -1,0 +1,36 @@
+﻿* Jeśli mamy jakieś dodatkowe pliki to je wysłać do instruktorów żeby mogli wydrukować i rozdać
+* Preparing a survey is a good idea, i. e. What it is, why it is important to you etc.
+* Wg. Chanieckiego:Problem: nie wiem jakie mam oprogramowanie zainstalowane,
+   * How to make a list of installed software that i’ve previously used?
+   * If you do ‘dir’, it doesn’t really tell you much, there are cryptic names
+   * In order to progress to the more advanced steps, you need to know how to access the list of your programs in an understandable way
+   * After you get a list, you can make a checklist and check what you need to use and what you don’t
+   * After that, you can think whether you need and have a license for the remaining software
+   * Check the items where you know for sure you have a license, etc.
+   * What if you stumble upon an item where you don’t know whether you can legally use it? Maybe check license. Even if the license seems correct, remember to check the usage (for example software might be free but commercial use isn’t allowed)
+   * Another question: where are the remains of the software stored? Maybe it’s uninstalled, but there are still traces of it. Where are they, and how do you access them?
+* We went too far in the analysis, went too high up the ‘abstraction tree’, should just limit the hypothesis to ‘what do i have on my computer?’ then ‘where it is stored?’, even if it is uninstalled etc, what if it is in 50 different places in the register? Then it can be found, so what then?
+* Try a more informatic, programming approach
+* Even if you have the software tool to solve the problem, what do you use it for?
+* The questions we’ve previously answered should be the guidelines which we use to define what purpose we want our ‘tool’ to serve, and to what end.
+* What if you just want to organize your computer, or just get a list of what you have?
+* ‘To whom are licenses the most important’ is the more interesting question in contrast to ‘what are licenses’ etc
+* If people don’t know and care about licenses, maybe a (less programming-like) approach would be an ad to make people more conscious of licenses
+* If people do know but don’t care, why?
+* Ask people, analyze how people perceive licenses, then put forward a few solutions to the problem
+* Prepare surveys, interviews
+   * Survey is fast (especially with ABCD choices)
+   * Interviews are more thorough, you can also follow up their questions with more answers
+   * You have to sum up the result, and define where you want to go next
+* The project is ours, if we disagree with the instructors, we can go with our own way
+* We should always consult with instructors if we have doubts or are not sure about what they mean
+* Engineers and computer scientists have a tendency to have tunnel vision, so we should make effort to perceive the problem more broadly. We seldom think who we are writing our programs for etc.
+* Idea: put our solutions on a survey and then ask which one is the best
+* Make consecutive analyses that narrow the domain and are more thorough each time?
+* Grudzień would prefer a program that would tell him when something is installed that it is not used lawfully, something intuitive and simple, if something is wrong then receive a notification
+* Again, main question, who is the license important to? Analyze this, choose a specific market to make the tool for, the tool has to be well adapted and tailored to a specific group of people.
+* Ask creators if you can use license in specific situation if you’re forced to use it?
+* Have a sensible explanation, why is the license not important to individual people, etc.
+* Talk to people, create solutions, check if people would be interested, then test solution?
+* Definitely talk to people, but make sure to not only talk to students etc. but to different demographics
+* Send minutes/agenda/other files the night before
