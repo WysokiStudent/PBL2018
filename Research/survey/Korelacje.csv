@@ -1,0 +1,1373 @@
+Question Number,Question,,
+1,1. W jaki sposób najczęściej korzystasz z komputera? (proszę zaznacz odpowiedź najbliższą prawdy),,
+2,2. Jakiego systemu operacyjnego używasz?,,
+3,3. Czy instalujesz samodzielnie wszystkie programy na swoim komputerze?,,
+4,4. Czy kiedykolwiek znalazłeś/aś zainstalowany program którego nie rozpoznałeś/aś?,,
+5,5. Jak bardzo legalność oprogramowania na Twoim komputerze ma dla Ciebie znaczenie?,,
+6,6. Jak bardzo licencja oprogramowania ma dla Ciebie znaczenie?,,
+7,7. Jaki problem uważasz za najważniejszy dla Ciebie w kontekście licencji?,,
+8,8. Jak wyszukujesz informacji o licencji oprogramowania zainstalowanego na Twoim komputerze?,,
+9,9. Czy zdarza Ci się mieć problem ze znalezieniem licencji/gwarancji oprogramowania którego używasz?,,
+10,10. Czy w dowolnej chwili jesteś w stanie zestawić terminy ważności licencji na każdy program którego używasz/masz zainstalowany na komputerze?,,
+,,,
+,Answer,,
+,,,
+,Percentage,Answer,Number of Occurrences
+1,Topic,używam przeglądarki internetowej i edytorów tekstu,263
+2,96.1977%,Windows,253
+2,9.88593%,Linux,26
+2,4.18251%,Mac,11
+3,89.3536%,tak,235
+3,3.04183%,"nie, dzielę użytek komputera z inną osobą lub osobami",8
+3,5.32319%,"nie znam się na tym, proszę o pomoc inną osobę",14
+3,1.52091%,"nie, robi to administrator w firmie",4
+4,49.4297%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",130
+4,37.6426%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",99
+4,8.74525%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",23
+4,2.6616%,"tak, musiał to zainstalować ktoś inny, ale nie wiem dlaczego",7
+5,30.7985%,mało ważne,81
+5,38.7833%,całkiem ważne,102
+5,8.74525%,nieważne,23
+5,11.0266%,bardzo ważne,29
+5,10.6464%,nigdy o tym nie myślałem,28
+6,34.2205%,mało ważne,90
+6,15.5894%,nigdy o tym nie myślałem,41
+6,30.038%,całkiem ważne,79
+6,11.0266%,nieważne,29
+6,9.12548%,bardzo ważne,24
+7,47.1483%,brak mi czasu na szczegółowe zapoznanie się z licencją,124
+7,28.1369%,są zbyt długie i trudne do zrozumienia,74
+7,20.9125%,nie mam problemów z licencjami,55
+8,59.3156%,nigdy nie szukam tej informacji,156
+8,11.4068%,przeglądam wpisy w ustawieniach danego programu,30
+8,3.42205%,mam zapisane dane w pliku i je przeszukuję,9
+8,24.3346%,szukam informacji o programie w internecie,64
+9,36.5019%,tak,96
+9,63.4981%,nie,167
+10,22.8137%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",60
+10,54.3726%,nie,143
+10,20.5323%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",54
+10,2.28137%,"tak, mam te dane spisane",6
+,,,
+1,Topic,"tworzę obrazy, muzykę, filmy",23
+2,95.6522%,Windows,22
+2,4.34783%,Mac,1
+2,8.69565%,Linux,2
+3,95.6522%,tak,22
+3,4.34783%,"nie znam się na tym, proszę o pomoc inną osobę",1
+4,34.7826%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",8
+4,8.69565%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",2
+4,52.1739%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",12
+4,4.34783%,"Mam napiracone tyle programów, że aż głupio mi wypełniać tą ankietę pozdrawiam",1
+5,52.1739%,całkiem ważne,12
+5,17.3913%,nieważne,4
+5,4.34783%,bardzo ważne,1
+5,17.3913%,mało ważne,4
+5,8.69565%,nigdy o tym nie myślałem,2
+6,52.1739%,całkiem ważne,12
+6,17.3913%,nieważne,4
+6,13.0435%,bardzo ważne,3
+6,8.69565%,nigdy o tym nie myślałem,2
+6,8.69565%,mało ważne,2
+7,73.913%,brak mi czasu na szczegółowe zapoznanie się z licencją,17
+7,8.69565%,nie mam problemów z licencjami,2
+7,4.34783%,cena,1
+7,13.0435%,są zbyt długie i trudne do zrozumienia,3
+8,8.69565%,pod czas instalacji lub przed nią ogarniam,2
+8,30.4348%,nigdy nie szukam tej informacji,7
+8,26.087%,przeglądam wpisy w ustawieniach danego programu,6
+8,8.69565%,mam zapisane dane w pliku i je przeszukuję,2
+8,17.3913%,szukam informacji o programie w internecie,4
+8,4.34783%,zapoznaję się z licencją podczas instalacji,1
+8,4.34783%,"Pozostawiam tę kwestię osobie, która zajmowała się uruchomieniem komputera - ja tylko.korzystam z trzech programow mi znanych, nie znam sie na reszcie.",1
+9,39.1304%,tak,9
+9,60.8696%,nie,14
+10,34.7826%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",8
+10,43.4783%,nie,10
+10,21.7391%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",5
+,,,
+1,Topic,tworzę lub nadzoruję pracę aplikacji/oprogramowania,64
+2,87.5%,Windows,56
+2,48.4375%,Linux,31
+2,9.375%,Mac,6
+2,1.5625%,Android,1
+2,1.5625%,AdolfOS,1
+3,96.875%,tak,62
+3,1.5625%,repozytoria Wehrmachtu,1
+3,1.5625%,"nie, dzielę użytek komputera z inną osobą lub osobami",1
+4,57.8125%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",37
+4,32.8125%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",21
+4,7.8125%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",5
+4,1.5625%,stalinowskie wirusy,1
+5,6.25%,nieważne,4
+5,25%,bardzo ważne,16
+5,20.3125%,mało ważne,13
+5,42.1875%,całkiem ważne,27
+5,6.25%,nigdy o tym nie myślałem,4
+6,21.875%,mało ważne,14
+6,25%,bardzo ważne,16
+6,10.9375%,nieważne,7
+6,39.0625%,całkiem ważne,25
+6,3.125%,nigdy o tym nie myślałem,2
+7,40.625%,brak mi czasu na szczegółowe zapoznanie się z licencją,26
+7,1.5625%,Niektóre licencje nie udostępniają kodu źródłowego programu ,1
+7,31.25%,nie mam problemów z licencjami,20
+7,23.4375%,są zbyt długie i trudne do zrozumienia,15
+7,1.5625%,nie zawsze są po niemiecku :(,1
+7,1.5625%,Drogie jak na polskie realia zarobkowe,1
+8,45.3125%,nigdy nie szukam tej informacji,29
+8,1.5625%,/usr/share/licenses/common,1
+8,29.6875%,szukam informacji o programie w internecie,19
+8,1.5625%,Sprawdzam rodzaj licencji,1
+8,7.8125%,mam zapisane dane w pliku i je przeszukuję,5
+8,10.9375%,przeglądam wpisy w ustawieniach danego programu,7
+8,1.5625%,"nie mam czasu na takie rzeczy, zlecam to Gestapo",1
+8,1.5625%,cyfrowy podpis + licencja cyfrowa,1
+9,75%,nie,48
+9,25%,tak,16
+10,40.625%,nie,26
+10,39.0625%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",25
+10,17.1875%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",11
+10,3.125%,"tak, mam te dane spisane",2
+,,,
+1,Topic,nie używam komputera,2
+2,50%,Unix,1
+2,50%,nie wiem,1
+3,50%,Proszę o to mamę,1
+3,50%,instaluje mi je mama siostra tata i brat,1
+4,50%,"Tak, mama mi zainstalowała za karę",1
+4,50%,tak albo instaluje je adam,1
+5,50%,bardzo ważne,1
+5,50%,nigdy o tym nie myślałem,1
+6,50%,bardzo ważne,1
+6,50%,nigdy o tym nie myślałem,1
+7,50%,nie mam problemów z licencjami,1
+7,50%,nie umiem czytac,1
+8,50%,nigdy nie szukam tej informacji,1
+8,50%,"nie szukam tych ,,informacji,, ale uzywam slownika",1
+9,100%,nie,2
+10,50%,"tak, mam te dane spisane",1
+10,50%,nie,1
+,,,
+2,Topic,Windows,331
+1,76.435%,używam przeglądarki internetowej i edytorów tekstu,253
+1,6.64653%,"tworzę obrazy, muzykę, filmy",22
+1,16.9184%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,56
+2,16.3142%,Linux,54
+2,1.20846%,Mac,4
+3,90.9366%,tak,301
+3,2.71903%,"nie, dzielę użytek komputera z inną osobą lub osobami",9
+3,4.53172%,"nie znam się na tym, proszę o pomoc inną osobę",15
+3,1.20846%,"nie, robi to administrator w firmie",4
+4,46.2236%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",153
+4,41.3897%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",137
+4,8.76133%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",29
+4,2.1148%,"tak, musiał to zainstalować ktoś inny, ale nie wiem dlaczego",7
+5,28.3988%,mało ważne,94
+5,40.1813%,całkiem ważne,133
+5,9.06344%,nieważne,30
+5,12.6888%,bardzo ważne,42
+5,9.66767%,nigdy o tym nie myślałem,32
+6,31.4199%,mało ważne,104
+6,32.0242%,całkiem ważne,106
+6,13.2931%,nigdy o tym nie myślałem,44
+6,11.1782%,nieważne,37
+6,12.0846%,bardzo ważne,40
+7,48.3384%,brak mi czasu na szczegółowe zapoznanie się z licencją,160
+7,26.5861%,są zbyt długie i trudne do zrozumienia,88
+7,21.4502%,nie mam problemów z licencjami,71
+8,54.0785%,nigdy nie szukam tej informacji,179
+8,12.9909%,przeglądam wpisy w ustawieniach danego programu,43
+8,4.83384%,mam zapisane dane w pliku i je przeszukuję,16
+8,25.0755%,szukam informacji o programie w internecie,83
+9,34.4411%,tak,114
+9,65.5589%,nie,217
+10,23.8671%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",79
+10,49.5468%,nie,164
+10,24.1692%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",80
+10,2.41692%,"tak, mam te dane spisane",8
+,,,
+2,Topic,Linux,59
+1,44.0678%,używam przeglądarki internetowej i edytorów tekstu,26
+1,3.38983%,"tworzę obrazy, muzykę, filmy",2
+1,52.5424%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,31
+2,91.5254%,Windows,54
+2,1.69492%,Mac,1
+2,1.69492%,Android,1
+2,1.69492%,AdolfOS,1
+3,96.6102%,tak,57
+3,1.69492%,repozytoria Wehrmachtu,1
+3,1.69492%,"nie, dzielę użytek komputera z inną osobą lub osobami",1
+4,1.69492%,"tak, kiedyś zainstalowałem i o nim zapomniałem",1
+4,32.2034%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",19
+4,52.5424%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",31
+4,11.8644%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",7
+4,1.69492%,stalinowskie wirusy,1
+5,20.339%,mało ważne,12
+5,54.2373%,całkiem ważne,32
+5,6.77966%,nieważne,4
+5,16.9492%,bardzo ważne,10
+5,1.69492%,nigdy o tym nie myślałem,1
+6,33.8983%,mało ważne,20
+6,11.8644%,nieważne,7
+6,22.0339%,bardzo ważne,13
+6,6.77966%,nigdy o tym nie myślałem,4
+6,25.4237%,całkiem ważne,15
+7,49.1525%,brak mi czasu na szczegółowe zapoznanie się z licencją,29
+7,22.0339%,są zbyt długie i trudne do zrozumienia,13
+7,1.69492%,Niektóre licencje nie udostępniają kodu źródłowego programu ,1
+7,23.7288%,nie mam problemów z licencjami,14
+7,1.69492%,nie zawsze są po niemiecku :(,1
+7,1.69492%,Drogie jak na polskie realia zarobkowe,1
+8,55.9322%,nigdy nie szukam tej informacji,33
+8,1.69492%,/usr/share/licenses/common,1
+8,22.0339%,szukam informacji o programie w internecie,13
+8,6.77966%,mam zapisane dane w pliku i je przeszukuję,4
+8,1.69492%,Sprawdzam rodzaj licencji,1
+8,8.47458%,przeglądam wpisy w ustawieniach danego programu,5
+8,1.69492%,"nie mam czasu na takie rzeczy, zlecam to Gestapo",1
+8,1.69492%,cyfrowy podpis + licencja cyfrowa,1
+9,32.2034%,tak,19
+9,67.7966%,nie,40
+10,20.339%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",12
+10,33.8983%,nie,20
+10,42.3729%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",25
+10,3.38983%,"tak, mam te dane spisane",2
+,,,
+2,Topic,Mac,18
+1,5.55556%,"tworzę obrazy, muzykę, filmy",1
+1,61.1111%,używam przeglądarki internetowej i edytorów tekstu,11
+1,33.3333%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,6
+2,5.55556%,Linux,1
+2,22.2222%,Windows,4
+3,100%,tak,18
+4,44.4444%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",8
+4,44.4444%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",8
+4,11.1111%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",2
+5,5.55556%,nieważne,1
+5,11.1111%,nigdy o tym nie myślałem,2
+5,16.6667%,bardzo ważne,3
+5,33.3333%,całkiem ważne,6
+5,33.3333%,mało ważne,6
+6,11.1111%,nieważne,2
+6,16.6667%,mało ważne,3
+6,11.1111%,bardzo ważne,2
+6,55.5556%,całkiem ważne,10
+6,5.55556%,nigdy o tym nie myślałem,1
+7,44.4444%,brak mi czasu na szczegółowe zapoznanie się z licencją,8
+7,5.55556%,Niektóre licencje nie udostępniają kodu źródłowego programu ,1
+7,27.7778%,są zbyt długie i trudne do zrozumienia,5
+7,22.2222%,nie mam problemów z licencjami,4
+8,77.7778%,nigdy nie szukam tej informacji,14
+8,5.55556%,/usr/share/licenses/common,1
+8,16.6667%,szukam informacji o programie w internecie,3
+9,61.1111%,nie,11
+9,38.8889%,tak,7
+10,77.7778%,nie,14
+10,11.1111%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",2
+10,11.1111%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",2
+,,,
+3,Topic,tak,319
+1,73.6677%,używam przeglądarki internetowej i edytorów tekstu,235
+1,6.89655%,"tworzę obrazy, muzykę, filmy",22
+1,19.4357%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,62
+2,94.3574%,Windows,301
+2,17.8683%,Linux,57
+2,5.64263%,Mac,18
+4,45.768%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",146
+4,43.5737%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",139
+4,8.77743%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",28
+5,29.7806%,mało ważne,95
+5,39.8119%,całkiem ważne,127
+5,9.40439%,nieważne,30
+5,11.9122%,bardzo ważne,38
+5,9.09091%,nigdy o tym nie myślałem,29
+6,31.6614%,mało ważne,101
+6,32.9154%,całkiem ważne,105
+6,11.2853%,nigdy o tym nie myślałem,36
+6,11.9122%,nieważne,38
+6,12.2257%,bardzo ważne,39
+7,47.3354%,brak mi czasu na szczegółowe zapoznanie się z licencją,151
+7,25.7053%,są zbyt długie i trudne do zrozumienia,82
+7,23.511%,nie mam problemów z licencjami,75
+8,54.5455%,nigdy nie szukam tej informacji,174
+8,12.2257%,przeglądam wpisy w ustawieniach danego programu,39
+8,4.70219%,mam zapisane dane w pliku i je przeszukuję,15
+8,26.0188%,szukam informacji o programie w internecie,83
+9,33.2288%,tak,106
+9,66.7712%,nie,213
+10,22.2571%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",71
+10,50.4702%,nie,161
+10,24.7649%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",79
+10,2.50784%,"tak, mam te dane spisane",8
+,,,
+3,Topic,"nie, dzielę użytek komputera z inną osobą lub osobami",9
+1,88.8889%,używam przeglądarki internetowej i edytorów tekstu,8
+1,11.1111%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,1
+2,100%,Windows,9
+2,11.1111%,Linux,1
+4,44.4444%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",4
+4,11.1111%,"tak, musiał to zainstalować ktoś inny, ale nie wiem dlaczego",1
+4,33.3333%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",3
+4,11.1111%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",1
+5,22.2222%,nigdy o tym nie myślałem,2
+5,33.3333%,bardzo ważne,3
+5,44.4444%,całkiem ważne,4
+6,22.2222%,nigdy o tym nie myślałem,2
+6,11.1111%,bardzo ważne,1
+6,44.4444%,całkiem ważne,4
+6,22.2222%,mało ważne,2
+7,22.2222%,są zbyt długie i trudne do zrozumienia,2
+7,11.1111%,nie mam problemów z licencjami,1
+7,66.6667%,brak mi czasu na szczegółowe zapoznanie się z licencją,6
+8,66.6667%,nigdy nie szukam tej informacji,6
+8,11.1111%,szukam informacji o programie w internecie,1
+8,11.1111%,przeglądam wpisy w ustawieniach danego programu,1
+8,11.1111%,mam zapisane dane w pliku i je przeszukuję,1
+9,55.5556%,nie,5
+9,44.4444%,tak,4
+10,55.5556%,nie,5
+10,33.3333%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",3
+10,11.1111%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",1
+,,,
+3,Topic,"nie znam się na tym, proszę o pomoc inną osobę",15
+1,93.3333%,używam przeglądarki internetowej i edytorów tekstu,14
+1,6.66667%,"tworzę obrazy, muzykę, filmy",1
+2,100%,Windows,15
+4,46.6667%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",7
+4,20%,"tak, musiał to zainstalować ktoś inny, ale nie wiem dlaczego",3
+4,26.6667%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",4
+4,6.66667%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",1
+5,13.3333%,mało ważne,2
+5,60%,całkiem ważne,9
+5,20%,nigdy o tym nie myślałem,3
+5,6.66667%,nieważne,1
+6,6.66667%,mało ważne,1
+6,46.6667%,całkiem ważne,7
+6,40%,nigdy o tym nie myślałem,6
+6,6.66667%,nieważne,1
+7,60%,brak mi czasu na szczegółowe zapoznanie się z licencją,9
+7,33.3333%,są zbyt długie i trudne do zrozumienia,5
+7,6.66667%,Czasem licencje są tylko na rok i to jest irytujące ,1
+8,66.6667%,nigdy nie szukam tej informacji,10
+8,6.66667%,przeglądam wpisy w ustawieniach danego programu,1
+8,13.3333%,szukam informacji o programie w internecie,2
+8,6.66667%,"nigdy nie szukam tej informacji, ale gdybym miala to zrobić, szukałabym jej w internecie ",1
+8,6.66667%,"Pozostawiam tę kwestię osobie, która zajmowała się uruchomieniem komputera - ja tylko.korzystam z trzech programow mi znanych, nie znam sie na reszcie.",1
+9,53.3333%,nie,8
+9,46.6667%,tak,7
+10,73.3333%,nie,11
+10,13.3333%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",2
+10,13.3333%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",2
+,,,
+3,Topic,"nie, robi to administrator w firmie",4
+1,100%,używam przeglądarki internetowej i edytorów tekstu,4
+2,100%,Windows,4
+4,50%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",2
+4,25%,"tak, musiał to zainstalować ktoś inny, ale nie wiem dlaczego",1
+4,25%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",1
+5,25%,całkiem ważne,1
+5,75%,bardzo ważne,3
+6,25%,mało ważne,1
+6,25%,nigdy o tym nie myślałem,1
+6,50%,bardzo ważne,2
+7,50%,są zbyt długie i trudne do zrozumienia,2
+7,25%,nie mam problemów z licencjami,1
+7,25%,brak mi czasu na szczegółowe zapoznanie się z licencją,1
+8,50%,nigdy nie szukam tej informacji,2
+8,50%,przeglądam wpisy w ustawieniach danego programu,2
+9,50%,nie,2
+9,50%,tak,2
+10,25%,nie,1
+10,50%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",2
+10,25%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",1
+,,,
+4,Topic,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",159
+1,5.03145%,"tworzę obrazy, muzykę, filmy",8
+1,81.761%,używam przeglądarki internetowej i edytorów tekstu,130
+1,13.2075%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,21
+2,96.2264%,Windows,153
+2,11.9497%,Linux,19
+2,5.03145%,Mac,8
+3,91.8239%,tak,146
+3,4.40252%,"nie znam się na tym, proszę o pomoc inną osobę",7
+3,1.88679%,"nie, dzielę użytek komputera z inną osobą lub osobami",3
+3,1.25786%,"nie, robi to administrator w firmie",2
+5,37.1069%,całkiem ważne,59
+5,37.1069%,mało ważne,59
+5,6.28931%,nieważne,10
+5,8.1761%,bardzo ważne,13
+5,11.3208%,nigdy o tym nie myślałem,18
+6,33.9623%,całkiem ważne,54
+6,15.0943%,nigdy o tym nie myślałem,24
+6,36.478%,mało ważne,58
+6,7.54717%,nieważne,12
+6,6.91824%,bardzo ważne,11
+7,55.3459%,brak mi czasu na szczegółowe zapoznanie się z licencją,88
+7,28.9308%,są zbyt długie i trudne do zrozumienia,46
+7,12.5786%,nie mam problemów z licencjami,20
+8,1.25786%,pod czas instalacji lub przed nią ogarniam,2
+8,57.8616%,nigdy nie szukam tej informacji,92
+8,28.9308%,szukam informacji o programie w internecie,46
+8,1.88679%,mam zapisane dane w pliku i je przeszukuję,3
+8,10.0629%,przeglądam wpisy w ustawieniach danego programu,16
+9,38.9937%,tak,62
+9,61.0063%,nie,97
+10,24.5283%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",39
+10,59.7484%,nie,95
+10,15.7233%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",25
+,,,
+4,Topic,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",148
+1,66.8919%,używam przeglądarki internetowej i edytorów tekstu,99
+1,8.10811%,"tworzę obrazy, muzykę, filmy",12
+1,25%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,37
+2,92.5676%,Windows,137
+2,20.9459%,Linux,31
+2,5.40541%,Mac,8
+3,93.9189%,tak,139
+3,2.7027%,"nie, dzielę użytek komputera z inną osobą lub osobami",4
+3,2.7027%,"nie znam się na tym, proszę o pomoc inną osobę",4
+5,40.5405%,całkiem ważne,60
+5,17.5676%,bardzo ważne,26
+5,8.10811%,nigdy o tym nie myślałem,12
+5,12.8378%,nieważne,19
+5,20.9459%,mało ważne,31
+6,33.7838%,całkiem ważne,50
+6,24.3243%,mało ważne,36
+6,18.2432%,bardzo ważne,27
+6,7.43243%,nigdy o tym nie myślałem,11
+6,16.2162%,nieważne,24
+7,23.6486%,są zbyt długie i trudne do zrozumienia,35
+7,37.8378%,brak mi czasu na szczegółowe zapoznanie się z licencją,56
+7,34.4595%,nie mam problemów z licencjami,51
+8,13.5135%,przeglądam wpisy w ustawieniach danego programu,20
+8,8.10811%,mam zapisane dane w pliku i je przeszukuję,12
+8,49.3243%,nigdy nie szukam tej informacji,73
+8,24.3243%,szukam informacji o programie w internecie,36
+9,23.6486%,tak,35
+9,76.3514%,nie,113
+10,43.2432%,nie,64
+10,17.5676%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",26
+10,35.1351%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",52
+10,4.05405%,"tak, mam te dane spisane",6
+,,,
+4,Topic,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",30
+1,76.6667%,używam przeglądarki internetowej i edytorów tekstu,23
+1,6.66667%,"tworzę obrazy, muzykę, filmy",2
+1,16.6667%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,5
+2,96.6667%,Windows,29
+2,6.66667%,Mac,2
+2,23.3333%,Linux,7
+3,93.3333%,tak,28
+3,3.33333%,"nie, dzielę użytek komputera z inną osobą lub osobami",1
+3,3.33333%,"nie znam się na tym, proszę o pomoc inną osobę",1
+5,53.3333%,całkiem ważne,16
+5,20%,mało ważne,6
+5,10%,bardzo ważne,3
+5,10%,nigdy o tym nie myślałem,3
+5,6.66667%,nieważne,2
+6,20%,nigdy o tym nie myślałem,6
+6,10%,bardzo ważne,3
+6,33.3333%,całkiem ważne,10
+6,26.6667%,mało ważne,8
+6,10%,nieważne,3
+7,53.3333%,brak mi czasu na szczegółowe zapoznanie się z licencją,16
+7,16.6667%,nie mam problemów z licencjami,5
+7,30%,są zbyt długie i trudne do zrozumienia,9
+8,56.6667%,nigdy nie szukam tej informacji,17
+8,20%,przeglądam wpisy w ustawieniach danego programu,6
+8,3.33333%,mam zapisane dane w pliku i je przeszukuję,1
+8,16.6667%,szukam informacji o programie w internecie,5
+8,3.33333%,"Pozostawiam tę kwestię osobie, która zajmowała się uruchomieniem komputera - ja tylko.korzystam z trzech programow mi znanych, nie znam sie na reszcie.",1
+9,46.6667%,nie,14
+9,53.3333%,tak,16
+10,30%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",9
+10,50%,nie,15
+10,13.3333%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",4
+10,6.66667%,"tak, mam te dane spisane",2
+,,,
+4,Topic,"tak, musiał to zainstalować ktoś inny, ale nie wiem dlaczego",7
+1,100%,używam przeglądarki internetowej i edytorów tekstu,7
+2,100%,Windows,7
+3,42.8571%,"nie znam się na tym, proszę o pomoc inną osobę",3
+3,14.2857%,"nie, dzielę użytek komputera z inną osobą lub osobami",1
+3,28.5714%,tak,2
+3,14.2857%,"nie, robi to administrator w firmie",1
+5,71.4286%,całkiem ważne,5
+5,14.2857%,nigdy o tym nie myślałem,1
+5,14.2857%,bardzo ważne,1
+6,28.5714%,całkiem ważne,2
+6,28.5714%,mało ważne,2
+6,42.8571%,nigdy o tym nie myślałem,3
+7,28.5714%,są zbyt długie i trudne do zrozumienia,2
+7,57.1429%,brak mi czasu na szczegółowe zapoznanie się z licencją,4
+7,14.2857%,nie mam problemów z licencjami,1
+8,14.2857%,przeglądam wpisy w ustawieniach danego programu,1
+8,85.7143%,nigdy nie szukam tej informacji,6
+9,71.4286%,tak,5
+9,28.5714%,nie,2
+10,57.1429%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",4
+10,28.5714%,nie,2
+10,14.2857%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",1
+,,,
+5,Topic,mało ważne,98
+1,82.6531%,używam przeglądarki internetowej i edytorów tekstu,81
+1,13.2653%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,13
+1,4.08163%,"tworzę obrazy, muzykę, filmy",4
+2,95.9184%,Windows,94
+2,12.2449%,Linux,12
+2,6.12245%,Mac,6
+3,96.9388%,tak,95
+3,2.04082%,"nie znam się na tym, proszę o pomoc inną osobę",2
+3,1.02041%,"Nie wszystkie, ale większość instaluje sama",1
+4,1.02041%,"tak, kiedyś zainstalowałem i o nim zapomniałem",1
+4,60.2041%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",59
+4,6.12245%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",6
+4,31.6327%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",31
+4,1.02041%,"zainstalowane wraz z systemem operacyjnym, niepotrzebnie",1
+6,69.3878%,mało ważne,68
+6,6.12245%,nigdy o tym nie myślałem,6
+6,9.18367%,nieważne,9
+6,2.04082%,bardzo ważne,2
+6,13.2653%,całkiem ważne,13
+7,55.102%,brak mi czasu na szczegółowe zapoznanie się z licencją,54
+7,1.02041%,Generalnie nie dbam o szczegóły.,1
+7,24.4898%,są zbyt długie i trudne do zrozumienia,24
+7,1.02041%,Cena,1
+7,16.3265%,nie mam problemów z licencjami,16
+7,1.02041%,"Najczęściej licencja jest dla mnie za droga, podejrzewam, że jest to glówny powód piractwa.",1
+7,1.02041%,Drogie jak na polskie realia zarobkowe,1
+8,64.2857%,nigdy nie szukam tej informacji,63
+8,20.4082%,szukam informacji o programie w internecie,20
+8,11.2245%,przeglądam wpisy w ustawieniach danego programu,11
+8,4.08163%,mam zapisane dane w pliku i je przeszukuję,4
+9,30.6122%,tak,30
+9,69.3878%,nie,68
+10,22.449%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",22
+10,64.2857%,nie,63
+10,13.2653%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",13
+,,,
+5,Topic,całkiem ważne,141
+1,8.51064%,"tworzę obrazy, muzykę, filmy",12
+1,72.3404%,używam przeglądarki internetowej i edytorów tekstu,102
+1,19.1489%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,27
+2,94.3262%,Windows,133
+2,22.695%,Linux,32
+2,4.25532%,Mac,6
+3,90.0709%,tak,127
+3,6.38298%,"nie znam się na tym, proszę o pomoc inną osobę",9
+3,2.83688%,"nie, dzielę użytek komputera z inną osobą lub osobami",4
+4,41.844%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",59
+4,42.5532%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",60
+4,11.3475%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",16
+4,3.5461%,"tak, musiał to zainstalować ktoś inny, ale nie wiem dlaczego",5
+6,66.6667%,całkiem ważne,94
+6,6.38298%,nigdy o tym nie myślałem,9
+6,19.8582%,mało ważne,28
+6,5.67376%,bardzo ważne,8
+6,1.41844%,nieważne,2
+7,49.6454%,brak mi czasu na szczegółowe zapoznanie się z licencją,70
+7,26.2411%,są zbyt długie i trudne do zrozumienia,37
+7,20.5674%,nie mam problemów z licencjami,29
+8,1.41844%,pod czas instalacji lub przed nią ogarniam,2
+8,14.1844%,przeglądam wpisy w ustawieniach danego programu,20
+8,48.227%,nigdy nie szukam tej informacji,68
+8,2.12766%,mam zapisane dane w pliku i je przeszukuję,3
+8,31.2057%,szukam informacji o programie w internecie,44
+9,37.5887%,tak,53
+9,62.4113%,nie,88
+10,26.9504%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",38
+10,38.2979%,nie,54
+10,31.9149%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",45
+10,2.83688%,"tak, mam te dane spisane",4
+,,,
+5,Topic,nieważne,31
+1,74.1935%,używam przeglądarki internetowej i edytorów tekstu,23
+1,12.9032%,"tworzę obrazy, muzykę, filmy",4
+1,12.9032%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,4
+2,96.7742%,Windows,30
+2,3.22581%,Mac,1
+2,12.9032%,Linux,4
+3,96.7742%,tak,30
+3,3.22581%,"nie znam się na tym, proszę o pomoc inną osobę",1
+4,32.2581%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",10
+4,61.2903%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",19
+4,6.45161%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",2
+6,87.0968%,nieważne,27
+6,6.45161%,mało ważne,2
+6,6.45161%,nigdy o tym nie myślałem,2
+7,38.7097%,brak mi czasu na szczegółowe zapoznanie się z licencją,12
+7,38.7097%,nie mam problemów z licencjami,12
+7,22.5806%,są zbyt długie i trudne do zrozumienia,7
+8,80.6452%,nigdy nie szukam tej informacji,25
+8,3.22581%,mam zapisane dane w pliku i je przeszukuję,1
+8,3.22581%,zapoznanie przed/ w trakcie instalacji,1
+8,12.9032%,szukam informacji o programie w internecie,4
+9,29.0323%,tak,9
+9,70.9677%,nie,22
+10,77.4194%,nie,24
+10,12.9032%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",4
+10,9.67742%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",3
+,,,
+5,Topic,bardzo ważne,47
+1,61.7021%,używam przeglądarki internetowej i edytorów tekstu,29
+1,34.0426%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,16
+1,2.12766%,nie używam komputera,1
+1,2.12766%,"tworzę obrazy, muzykę, filmy",1
+2,89.3617%,Windows,42
+2,21.2766%,Linux,10
+2,6.38298%,Mac,3
+2,2.12766%,Unix,1
+2,2.12766%,AdolfOS,1
+2,2.12766%,Hi Rez System Beta OB 0000000000001,1
+3,80.8511%,tak,38
+3,2.12766%,Proszę o to mamę,1
+3,6.38298%,"nie, dzielę użytek komputera z inną osobą lub osobami",3
+3,2.12766%,repozytoria Wehrmachtu,1
+3,2.12766%,Hi Chris za mnei instaluje wszystko! Nawet dane z Pentagonu i Teheranu czy Hongkongu,1
+3,6.38298%,"nie, robi to administrator w firmie",3
+4,55.3191%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",26
+4,2.12766%,"Tak, mama mi zainstalowała za karę",1
+4,27.6596%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",13
+4,2.12766%,"Mam napiracone tyle programów, że aż głupio mi wypełniać tą ankietę pozdrawiam",1
+4,6.38298%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",3
+4,2.12766%,stalinowskie wirusy,1
+4,2.12766%,"tak, i to był System operacyjny :v a na powaznie to miałem takie dwie sytuacje, okazało się że były to programy : aimbot i wallhack i do tej pory nwm jak one sie znalazły na moim komputerze :/",1
+4,2.12766%,"tak, musiał to zainstalować ktoś inny, ale nie wiem dlaczego",1
+6,72.3404%,bardzo ważne,34
+6,6.38298%,mało ważne,3
+6,14.8936%,całkiem ważne,7
+6,2.12766%,nieważne,1
+6,4.25532%,nigdy o tym nie myślałem,2
+7,36.1702%,nie mam problemów z licencjami,17
+7,2.12766%,Niektóre licencje nie udostępniają kodu źródłowego programu ,1
+7,31.9149%,brak mi czasu na szczegółowe zapoznanie się z licencją,15
+7,23.4043%,są zbyt długie i trudne do zrozumienia,11
+7,2.12766%,cena,1
+7,2.12766%,nie zawsze są po niemiecku :(,1
+7,2.12766%,"Wspaniłe lektury do poczytunku,t tyko są lekkawo przykrótkie,t akie 600 stron byłoby idealne",1
+8,27.6596%,szukam informacji o programie w internecie,13
+8,2.12766%,/usr/share/licenses/common,1
+8,27.6596%,nigdy nie szukam tej informacji,13
+8,14.8936%,mam zapisane dane w pliku i je przeszukuję,7
+8,23.4043%,przeglądam wpisy w ustawieniach danego programu,11
+8,2.12766%,"nie mam czasu na takie rzeczy, zlecam to Gestapo",1
+8,2.12766%,mam magiczna rozczke z buawowego drewna wyzezbioną przez zacnego Pana AleSieNaJebauem. To ona wskazuje mi droge do licencji!,1
+9,68.0851%,nie,32
+9,31.9149%,tak,15
+10,23.4043%,nie,11
+10,44.6809%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",21
+10,10.6383%,"tak, mam te dane spisane",5
+10,21.2766%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",10
+,,,
+5,Topic,nigdy o tym nie myślałem,35
+1,80%,używam przeglądarki internetowej i edytorów tekstu,28
+1,2.85714%,nie używam komputera,1
+1,5.71429%,"tworzę obrazy, muzykę, filmy",2
+1,11.4286%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,4
+2,91.4286%,Windows,32
+2,5.71429%,Mac,2
+2,2.85714%,nie wiem,1
+2,2.85714%,Linux,1
+3,5.71429%,"nie, dzielę użytek komputera z inną osobą lub osobami",2
+3,82.8571%,tak,29
+3,2.85714%,instaluje mi je mama siostra tata i brat,1
+3,8.57143%,"nie znam się na tym, proszę o pomoc inną osobę",3
+4,34.2857%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",12
+4,51.4286%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",18
+4,8.57143%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",3
+4,2.85714%,tak albo instaluje je adam,1
+4,2.85714%,"tak, musiał to zainstalować ktoś inny, ale nie wiem dlaczego",1
+6,77.1429%,nigdy o tym nie myślałem,27
+6,14.2857%,mało ważne,5
+6,5.71429%,całkiem ważne,2
+6,2.85714%,nieważne,1
+7,37.1429%,są zbyt długie i trudne do zrozumienia,13
+7,45.7143%,brak mi czasu na szczegółowe zapoznanie się z licencją,16
+7,2.85714%,zbyt drogie,1
+7,2.85714%,nie umiem czytac,1
+7,11.4286%,nie mam problemów z licencjami,4
+8,68.5714%,nigdy nie szukam tej informacji,24
+8,17.1429%,szukam informacji o programie w internecie,6
+8,2.85714%,przeglądam wpisy w ustawieniach danego programu,1
+8,2.85714%,"nie szukam tych ,,informacji,, ale uzywam slownika",1
+8,2.85714%,mam zapisane dane w pliku i je przeszukuję,1
+8,2.85714%,"nigdy nie szukam tej informacji, ale gdybym miala to zrobić, szukałabym jej w internecie ",1
+8,2.85714%,"Pozostawiam tę kwestię osobie, która zajmowała się uruchomieniem komputera - ja tylko.korzystam z trzech programow mi znanych, nie znam sie na reszcie.",1
+9,60%,nie,21
+9,40%,tak,14
+10,80%,nie,28
+10,17.1429%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",6
+10,2.85714%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",1
+,,,
+6,Topic,mało ważne,106
+1,84.9057%,używam przeglądarki internetowej i edytorów tekstu,90
+1,13.2075%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,14
+1,1.88679%,"tworzę obrazy, muzykę, filmy",2
+2,98.1132%,Windows,104
+2,18.8679%,Linux,20
+2,2.83019%,Mac,3
+3,95.283%,tak,101
+3,1.88679%,"nie, dzielę użytek komputera z inną osobą lub osobami",2
+4,33.9623%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",36
+4,54.717%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",58
+4,7.54717%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",8
+4,1.88679%,"tak, musiał to zainstalować ktoś inny, ale nie wiem dlaczego",2
+5,64.1509%,mało ważne,68
+5,26.4151%,całkiem ważne,28
+5,4.71698%,nigdy o tym nie myślałem,5
+5,1.88679%,nieważne,2
+5,2.83019%,bardzo ważne,3
+7,55.6604%,brak mi czasu na szczegółowe zapoznanie się z licencją,59
+7,28.3019%,są zbyt długie i trudne do zrozumienia,30
+7,11.3208%,nie mam problemów z licencjami,12
+8,67.9245%,nigdy nie szukam tej informacji,72
+8,3.77358%,mam zapisane dane w pliku i je przeszukuję,4
+8,16.9811%,szukam informacji o programie w internecie,18
+8,11.3208%,przeglądam wpisy w ustawieniach danego programu,12
+9,32.0755%,tak,34
+9,67.9245%,nie,72
+10,27.3585%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",29
+10,56.6038%,nie,60
+10,15.0943%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",16
+,,,
+6,Topic,całkiem ważne,116
+1,10.3448%,"tworzę obrazy, muzykę, filmy",12
+1,68.1034%,używam przeglądarki internetowej i edytorów tekstu,79
+1,21.5517%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,25
+2,91.3793%,Windows,106
+2,8.62069%,Mac,10
+2,12.931%,Linux,15
+3,90.5172%,tak,105
+3,6.03448%,"nie znam się na tym, proszę o pomoc inną osobę",7
+3,3.44828%,"nie, dzielę użytek komputera z inną osobą lub osobami",4
+4,46.5517%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",54
+4,43.1034%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",50
+4,8.62069%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",10
+4,1.72414%,"tak, musiał to zainstalować ktoś inny, ale nie wiem dlaczego",2
+5,81.0345%,całkiem ważne,94
+5,11.2069%,mało ważne,13
+5,6.03448%,bardzo ważne,7
+5,1.72414%,nigdy o tym nie myślałem,2
+7,50%,brak mi czasu na szczegółowe zapoznanie się z licencją,58
+7,25.8621%,są zbyt długie i trudne do zrozumienia,30
+7,22.4138%,nie mam problemów z licencjami,26
+8,1.72414%,pod czas instalacji lub przed nią ogarniam,2
+8,17.2414%,przeglądam wpisy w ustawieniach danego programu,20
+8,5.17241%,mam zapisane dane w pliku i je przeszukuję,6
+8,40.5172%,nigdy nie szukam tej informacji,47
+8,33.6207%,szukam informacji o programie w internecie,39
+9,40.5172%,tak,47
+9,59.4828%,nie,69
+10,24.1379%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",28
+10,42.2414%,nie,49
+10,32.7586%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",38
+,,,
+6,Topic,nigdy o tym nie myślałem,46
+1,89.1304%,używam przeglądarki internetowej i edytorów tekstu,41
+1,2.17391%,nie używam komputera,1
+1,4.34783%,"tworzę obrazy, muzykę, filmy",2
+1,4.34783%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,2
+2,95.6522%,Windows,44
+2,8.69565%,Linux,4
+2,2.17391%,nie wiem,1
+2,2.17391%,Mac,1
+3,78.2609%,tak,36
+3,4.34783%,"nie, dzielę użytek komputera z inną osobą lub osobami",2
+3,13.0435%,"nie znam się na tym, proszę o pomoc inną osobę",6
+3,2.17391%,instaluje mi je mama siostra tata i brat,1
+3,2.17391%,"nie, robi to administrator w firmie",1
+4,52.1739%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",24
+4,13.0435%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",6
+4,23.913%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",11
+4,2.17391%,nie pamiętam takiej sytuacji,1
+4,2.17391%,tak albo instaluje je adam,1
+4,6.52174%,"tak, musiał to zainstalować ktoś inny, ale nie wiem dlaczego",3
+5,13.0435%,mało ważne,6
+5,19.5652%,całkiem ważne,9
+5,58.6957%,nigdy o tym nie myślałem,27
+5,4.34783%,bardzo ważne,2
+5,4.34783%,nieważne,2
+7,2.17391%,Generalnie nie dbam o szczegóły.,1
+7,50%,brak mi czasu na szczegółowe zapoznanie się z licencją,23
+7,34.7826%,są zbyt długie i trudne do zrozumienia,16
+7,2.17391%,zbyt drogie,1
+7,2.17391%,nie umiem czytac,1
+7,8.69565%,nie mam problemów z licencjami,4
+8,71.7391%,nigdy nie szukam tej informacji,33
+8,19.5652%,szukam informacji o programie w internecie,9
+8,2.17391%,"nie szukam tych ,,informacji,, ale uzywam slownika",1
+8,2.17391%,mam zapisane dane w pliku i je przeszukuję,1
+8,2.17391%,"nigdy nie szukam tej informacji, ale gdybym miala to zrobić, szukałabym jej w internecie ",1
+8,2.17391%,"Pozostawiam tę kwestię osobie, która zajmowała się uruchomieniem komputera - ja tylko.korzystam z trzech programow mi znanych, nie znam sie na reszcie.",1
+9,58.6957%,nie,27
+9,41.3043%,tak,19
+10,65.2174%,nie,30
+10,21.7391%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",10
+10,10.8696%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",5
+10,2.17391%,"tak, mam te dane spisane",1
+,,,
+6,Topic,nieważne,40
+1,72.5%,używam przeglądarki internetowej i edytorów tekstu,29
+1,10%,"tworzę obrazy, muzykę, filmy",4
+1,17.5%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,7
+2,92.5%,Windows,37
+2,5%,Mac,2
+2,17.5%,Linux,7
+2,2.5%,Hi Rez System Beta OB 0000000000001,1
+3,95%,tak,38
+3,2.5%,Hi Chris za mnei instaluje wszystko! Nawet dane z Pentagonu i Teheranu czy Hongkongu,1
+3,2.5%,"nie znam się na tym, proszę o pomoc inną osobę",1
+4,30%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",12
+4,60%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",24
+4,2.5%,"tak, i to był System operacyjny :v a na powaznie to miałem takie dwie sytuacje, okazało się że były to programy : aimbot i wallhack i do tej pory nwm jak one sie znalazły na moim komputerze :/",1
+4,7.5%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",3
+5,67.5%,nieważne,27
+5,22.5%,mało ważne,9
+5,2.5%,nigdy o tym nie myślałem,1
+5,5%,całkiem ważne,2
+5,2.5%,bardzo ważne,1
+7,35%,brak mi czasu na szczegółowe zapoznanie się z licencją,14
+7,42.5%,nie mam problemów z licencjami,17
+7,17.5%,są zbyt długie i trudne do zrozumienia,7
+7,2.5%,"Wspaniłe lektury do poczytunku,t tyko są lekkawo przykrótkie,t akie 600 stron byłoby idealne",1
+7,2.5%,Licencje niektóych firm np. Microsoftu są niezgodne z prawem europejskim więc man je kolokwialnie mówiąc gdzieś. Ceny pakietu Office w różnych krajach są różne z czego w Polsce są jedne z najdroższych to też nie niezgodnie z licecją ale legalnie kupuje oprogramowanie microsoftu za granicą i korzystam z niego w Polsce. Nie widze powodu żeby tak biedny kraj jak Polska ( zarabiamy 1/4 tego co niemcy jakakolwiek dyskusja w tej sprawie nie ma sensu wiem o tym aż za dobrze poziom życia w Poslce jest jak na zachodnie normalne standardy tragiczny) ceny offica były wyższe niż w USA.,1
+8,77.5%,nigdy nie szukam tej informacji,31
+8,2.5%,mam zapisane dane w pliku i je przeszukuję,1
+8,2.5%,zapoznanie przed/ w trakcie instalacji,1
+8,12.5%,szukam informacji o programie w internecie,5
+8,2.5%,mam magiczna rozczke z buawowego drewna wyzezbioną przez zacnego Pana AleSieNaJebauem. To ona wskazuje mi droge do licencji!,1
+8,2.5%,Wiem co instaluje,1
+9,22.5%,tak,9
+9,77.5%,nie,31
+10,77.5%,nie,31
+10,12.5%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",5
+10,7.5%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",3
+10,2.5%,"tak, mam te dane spisane",1
+,,,
+6,Topic,bardzo ważne,44
+1,54.5455%,używam przeglądarki internetowej i edytorów tekstu,24
+1,6.81818%,"tworzę obrazy, muzykę, filmy",3
+1,36.3636%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,16
+1,2.27273%,nie używam komputera,1
+2,90.9091%,Windows,40
+2,29.5455%,Linux,13
+2,4.54545%,Mac,2
+2,2.27273%,Unix,1
+2,2.27273%,AdolfOS,1
+3,88.6364%,tak,39
+3,2.27273%,Proszę o to mamę,1
+3,2.27273%,"nie, dzielę użytek komputera z inną osobą lub osobami",1
+3,2.27273%,repozytoria Wehrmachtu,1
+3,4.54545%,"nie, robi to administrator w firmie",2
+4,61.3636%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",27
+4,6.81818%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",3
+4,2.27273%,"Tak, mama mi zainstalowała za karę",1
+4,25%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",11
+4,2.27273%,"Mam napiracone tyle programów, że aż głupio mi wypełniać tą ankietę pozdrawiam",1
+4,2.27273%,stalinowskie wirusy,1
+5,77.2727%,bardzo ważne,34
+5,18.1818%,całkiem ważne,8
+5,4.54545%,mało ważne,2
+7,43.1818%,nie mam problemów z licencjami,19
+7,2.27273%,Niektóre licencje nie udostępniają kodu źródłowego programu ,1
+7,29.5455%,brak mi czasu na szczegółowe zapoznanie się z licencją,13
+7,20.4545%,są zbyt długie i trudne do zrozumienia,9
+7,2.27273%,cena,1
+7,2.27273%,nie zawsze są po niemiecku :(,1
+8,36.3636%,szukam informacji o programie w internecie,16
+8,25%,przeglądam wpisy w ustawieniach danego programu,11
+8,2.27273%,/usr/share/licenses/common,1
+8,22.7273%,nigdy nie szukam tej informacji,10
+8,9.09091%,mam zapisane dane w pliku i je przeszukuję,4
+8,2.27273%,"nie mam czasu na takie rzeczy, zlecam to Gestapo",1
+8,2.27273%,cyfrowy podpis + licencja cyfrowa,1
+9,72.7273%,nie,32
+9,27.2727%,tak,12
+10,22.7273%,nie,10
+10,20.4545%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",9
+10,45.4545%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",20
+10,11.3636%,"tak, mam te dane spisane",5
+,,,
+7,Topic,brak mi czasu na szczegółowe zapoznanie się z licencją,167
+1,74.2515%,używam przeglądarki internetowej i edytorów tekstu,124
+1,10.1796%,"tworzę obrazy, muzykę, filmy",17
+1,15.5689%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,26
+2,95.8084%,Windows,160
+2,17.3653%,Linux,29
+2,4.79042%,Mac,8
+3,90.4192%,tak,151
+3,5.38922%,"nie znam się na tym, proszę o pomoc inną osobę",9
+3,3.59281%,"nie, dzielę użytek komputera z inną osobą lub osobami",6
+4,52.6946%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",88
+4,9.58084%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",16
+4,33.5329%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",56
+4,2.39521%,"tak, musiał to zainstalować ktoś inny, ale nie wiem dlaczego",4
+5,32.3353%,mało ważne,54
+5,41.9162%,całkiem ważne,70
+5,7.18563%,nieważne,12
+5,9.58084%,nigdy o tym nie myślałem,16
+5,8.98204%,bardzo ważne,15
+6,35.3293%,mało ważne,59
+6,34.7305%,całkiem ważne,58
+6,13.7725%,nigdy o tym nie myślałem,23
+6,8.38323%,nieważne,14
+6,7.78443%,bardzo ważne,13
+8,62.2754%,nigdy nie szukam tej informacji,104
+8,1.1976%,pod czas instalacji lub przed nią ogarniam,2
+8,4.19162%,mam zapisane dane w pliku i je przeszukuję,7
+8,17.9641%,szukam informacji o programie w internecie,30
+8,11.976%,przeglądam wpisy w ustawieniach danego programu,20
+9,35.3293%,tak,59
+9,64.6707%,nie,108
+10,25.1497%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",42
+10,55.6886%,nie,93
+10,19.1617%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",32
+,,,
+7,Topic,są zbyt długie i trudne do zrozumienia,92
+1,80.4348%,używam przeglądarki internetowej i edytorów tekstu,74
+1,16.3043%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,15
+1,3.26087%,"tworzę obrazy, muzykę, filmy",3
+2,95.6522%,Windows,88
+2,14.1304%,Linux,13
+2,5.43478%,Mac,5
+3,89.1304%,tak,82
+3,2.17391%,"nie, dzielę użytek komputera z inną osobą lub osobami",2
+3,1.08696%,"Nie wszystkie, ale większość instaluje sama",1
+3,5.43478%,"nie znam się na tym, proszę o pomoc inną osobę",5
+3,2.17391%,"nie, robi to administrator w firmie",2
+4,38.0435%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",35
+4,50%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",46
+4,2.17391%,"tak, musiał to zainstalować ktoś inny, ale nie wiem dlaczego",2
+4,9.78261%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",9
+5,40.2174%,całkiem ważne,37
+5,26.087%,mało ważne,24
+5,14.1304%,nigdy o tym nie myślałem,13
+5,11.9565%,bardzo ważne,11
+5,7.6087%,nieważne,7
+6,32.6087%,całkiem ważne,30
+6,32.6087%,mało ważne,30
+6,17.3913%,nigdy o tym nie myślałem,16
+6,9.78261%,bardzo ważne,9
+6,7.6087%,nieważne,7
+8,10.8696%,przeglądam wpisy w ustawieniach danego programu,10
+8,55.4348%,nigdy nie szukam tej informacji,51
+8,27.1739%,szukam informacji o programie w internecie,25
+8,6.52174%,mam zapisane dane w pliku i je przeszukuję,6
+9,44.5652%,tak,41
+9,55.4348%,nie,51
+10,50%,nie,46
+10,22.8261%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",21
+10,23.913%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",22
+10,3.26087%,"tak, mam te dane spisane",3
+,,,
+7,Topic,nie mam problemów z licencjami,78
+1,70.5128%,używam przeglądarki internetowej i edytorów tekstu,55
+1,2.5641%,"tworzę obrazy, muzykę, filmy",2
+1,1.28205%,nie używam komputera,1
+1,25.641%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,20
+2,91.0256%,Windows,71
+2,1.28205%,Unix,1
+2,17.9487%,Linux,14
+2,5.12821%,Mac,4
+3,96.1538%,tak,75
+3,1.28205%,Proszę o to mamę,1
+3,1.28205%,"nie, dzielę użytek komputera z inną osobą lub osobami",1
+3,1.28205%,"nie, robi to administrator w firmie",1
+4,65.3846%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",51
+4,6.41026%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",5
+4,1.28205%,"Tak, mama mi zainstalowała za karę",1
+4,25.641%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",20
+4,1.28205%,"tak, musiał to zainstalować ktoś inny, ale nie wiem dlaczego",1
+5,21.7949%,bardzo ważne,17
+5,37.1795%,całkiem ważne,29
+5,15.3846%,nieważne,12
+5,20.5128%,mało ważne,16
+5,5.12821%,nigdy o tym nie myślałem,4
+6,24.359%,bardzo ważne,19
+6,33.3333%,całkiem ważne,26
+6,21.7949%,nieważne,17
+6,15.3846%,mało ważne,12
+6,5.12821%,nigdy o tym nie myślałem,4
+8,38.4615%,szukam informacji o programie w internecie,30
+8,14.1026%,przeglądam wpisy w ustawieniach danego programu,11
+8,41.0256%,nigdy nie szukam tej informacji,32
+8,3.84615%,mam zapisane dane w pliku i je przeszukuję,3
+8,1.28205%,zapoznanie przed/ w trakcie instalacji,1
+8,1.28205%,cyfrowy podpis + licencja cyfrowa,1
+9,79.4872%,nie,62
+9,20.5128%,tak,16
+10,41.0256%,nie,32
+10,19.2308%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",15
+10,6.41026%,"tak, mam te dane spisane",5
+10,33.3333%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",26
+,,,
+8,Topic,nigdy nie szukam tej informacji,193
+1,80.829%,używam przeglądarki internetowej i edytorów tekstu,156
+1,3.62694%,"tworzę obrazy, muzykę, filmy",7
+1,15.0259%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,29
+2,92.7461%,Windows,179
+2,17.0984%,Linux,33
+2,7.25389%,Mac,14
+3,90.1554%,tak,174
+3,3.10881%,"nie, dzielę użytek komputera z inną osobą lub osobami",6
+3,5.18135%,"nie znam się na tym, proszę o pomoc inną osobę",10
+3,1.03627%,"nie, robi to administrator w firmie",2
+4,47.6684%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",92
+4,8.80829%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",17
+4,37.8238%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",73
+4,3.10881%,"tak, musiał to zainstalować ktoś inny, ale nie wiem dlaczego",6
+5,32.6425%,mało ważne,63
+5,35.2332%,całkiem ważne,68
+5,12.9534%,nieważne,25
+5,12.4352%,nigdy o tym nie myślałem,24
+5,6.73575%,bardzo ważne,13
+6,37.3057%,mało ważne,72
+6,17.0984%,nigdy o tym nie myślałem,33
+6,16.0622%,nieważne,31
+6,24.3523%,całkiem ważne,47
+6,5.18135%,bardzo ważne,10
+7,53.886%,brak mi czasu na szczegółowe zapoznanie się z licencją,104
+7,26.4249%,są zbyt długie i trudne do zrozumienia,51
+7,16.5803%,nie mam problemów z licencjami,32
+9,28.4974%,tak,55
+9,71.5026%,nie,138
+10,16.0622%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",31
+10,66.8394%,nie,129
+10,16.0622%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",31
+10,1.03627%,"tak, mam te dane spisane",2
+,,,
+8,Topic,pod czas instalacji lub przed nią ogarniam,2
+1,100%,"tworzę obrazy, muzykę, filmy",2
+2,100%,Windows,2
+3,100%,tak,2
+4,100%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",2
+5,100%,całkiem ważne,2
+6,100%,całkiem ważne,2
+7,100%,brak mi czasu na szczegółowe zapoznanie się z licencją,2
+9,100%,tak,2
+10,100%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",2
+,,,
+8,Topic,przeglądam wpisy w ustawieniach danego programu,43
+1,69.7674%,używam przeglądarki internetowej i edytorów tekstu,30
+1,13.9535%,"tworzę obrazy, muzykę, filmy",6
+1,16.2791%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,7
+2,100%,Windows,43
+2,11.6279%,Linux,5
+3,90.6977%,tak,39
+3,2.32558%,"nie znam się na tym, proszę o pomoc inną osobę",1
+3,2.32558%,"nie, dzielę użytek komputera z inną osobą lub osobami",1
+3,4.65116%,"nie, robi to administrator w firmie",2
+4,46.5116%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",20
+4,13.9535%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",6
+4,2.32558%,"tak, musiał to zainstalować ktoś inny, ale nie wiem dlaczego",1
+4,37.2093%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",16
+5,46.5116%,całkiem ważne,20
+5,25.5814%,mało ważne,11
+5,25.5814%,bardzo ważne,11
+5,2.32558%,nigdy o tym nie myślałem,1
+6,46.5116%,całkiem ważne,20
+6,25.5814%,bardzo ważne,11
+6,27.907%,mało ważne,12
+7,23.2558%,są zbyt długie i trudne do zrozumienia,10
+7,25.5814%,nie mam problemów z licencjami,11
+7,46.5116%,brak mi czasu na szczegółowe zapoznanie się z licencją,20
+7,2.32558%,Cena,1
+7,2.32558%,Koszt licencji,1
+9,48.8372%,tak,21
+9,51.1628%,nie,22
+10,20.9302%,nie,9
+10,48.8372%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",21
+10,30.2326%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",13
+,,,
+8,Topic,mam zapisane dane w pliku i je przeszukuję,16
+1,56.25%,używam przeglądarki internetowej i edytorów tekstu,9
+1,12.5%,"tworzę obrazy, muzykę, filmy",2
+1,31.25%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,5
+2,100%,Windows,16
+2,25%,Linux,4
+3,93.75%,tak,15
+3,6.25%,"nie, dzielę użytek komputera z inną osobą lub osobami",1
+4,75%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",12
+4,18.75%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",3
+4,6.25%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",1
+5,18.75%,całkiem ważne,3
+5,43.75%,bardzo ważne,7
+5,25%,mało ważne,4
+5,6.25%,nieważne,1
+5,6.25%,nigdy o tym nie myślałem,1
+6,25%,mało ważne,4
+6,37.5%,całkiem ważne,6
+6,25%,bardzo ważne,4
+6,6.25%,nieważne,1
+6,6.25%,nigdy o tym nie myślałem,1
+7,43.75%,brak mi czasu na szczegółowe zapoznanie się z licencją,7
+7,18.75%,nie mam problemów z licencjami,3
+7,37.5%,są zbyt długie i trudne do zrozumienia,6
+9,68.75%,nie,11
+9,31.25%,tak,5
+10,37.5%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",6
+10,25%,nie,4
+10,12.5%,"tak, mam te dane spisane",2
+10,25%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",4
+,,,
+8,Topic,szukam informacji o programie w internecie,87
+1,73.5632%,używam przeglądarki internetowej i edytorów tekstu,64
+1,21.8391%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,19
+1,4.5977%,"tworzę obrazy, muzykę, filmy",4
+2,95.4023%,Windows,83
+2,14.9425%,Linux,13
+2,3.44828%,Mac,3
+3,95.4023%,tak,83
+3,1.14943%,"Nie wszystkie, ale większość instaluje sama",1
+3,1.14943%,"nie, dzielę użytek komputera z inną osobą lub osobami",1
+3,2.29885%,"nie znam się na tym, proszę o pomoc inną osobę",2
+4,41.3793%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",36
+4,52.8736%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",46
+4,5.74713%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",5
+5,14.9425%,bardzo ważne,13
+5,22.9885%,mało ważne,20
+5,50.5747%,całkiem ważne,44
+5,6.89655%,nigdy o tym nie myślałem,6
+5,4.5977%,nieważne,4
+6,18.3908%,bardzo ważne,16
+6,20.6897%,mało ważne,18
+6,44.8276%,całkiem ważne,39
+6,10.3448%,nigdy o tym nie myślałem,9
+6,5.74713%,nieważne,5
+7,34.4828%,nie mam problemów z licencjami,30
+7,34.4828%,brak mi czasu na szczegółowe zapoznanie się z licencją,30
+7,28.7356%,są zbyt długie i trudne do zrozumienia,25
+7,1.14943%,zbyt drogie,1
+7,1.14943%,Czasem licencje są tylko na rok i to jest irytujące ,1
+9,58.6207%,nie,51
+9,41.3793%,tak,36
+10,39.0805%,nie,34
+10,20.6897%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",18
+10,35.6322%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",31
+10,4.5977%,"tak, mam te dane spisane",4
+,,,
+9,Topic,tak,121
+1,79.3388%,używam przeglądarki internetowej i edytorów tekstu,96
+1,7.43802%,"tworzę obrazy, muzykę, filmy",9
+1,13.2231%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,16
+2,94.2149%,Windows,114
+2,15.7025%,Linux,19
+2,5.78512%,Mac,7
+3,87.6033%,tak,106
+3,5.78512%,"nie znam się na tym, proszę o pomoc inną osobę",7
+3,3.30579%,"nie, dzielę użytek komputera z inną osobą lub osobami",4
+3,1.65289%,"nie, robi to administrator w firmie",2
+4,51.2397%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",62
+4,28.9256%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",35
+4,13.2231%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",16
+4,4.13223%,"tak, musiał to zainstalować ktoś inny, ale nie wiem dlaczego",5
+5,24.7934%,mało ważne,30
+5,43.8017%,całkiem ważne,53
+5,7.43802%,nieważne,9
+5,11.5702%,nigdy o tym nie myślałem,14
+5,12.3967%,bardzo ważne,15
+6,28.0992%,mało ważne,34
+6,38.843%,całkiem ważne,47
+6,7.43802%,nieważne,9
+6,9.91736%,bardzo ważne,12
+6,15.7025%,nigdy o tym nie myślałem,19
+7,48.7603%,brak mi czasu na szczegółowe zapoznanie się z licencją,59
+7,33.8843%,są zbyt długie i trudne do zrozumienia,41
+7,13.2231%,nie mam problemów z licencjami,16
+8,45.4545%,nigdy nie szukam tej informacji,55
+8,1.65289%,pod czas instalacji lub przed nią ogarniam,2
+8,17.3554%,przeglądam wpisy w ustawieniach danego programu,21
+8,29.7521%,szukam informacji o programie w internecie,36
+8,4.13223%,mam zapisane dane w pliku i je przeszukuję,5
+10,30.5785%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",37
+10,55.3719%,nie,67
+10,12.3967%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",15
+10,1.65289%,"tak, mam te dane spisane",2
+,,,
+9,Topic,nie,231
+1,72.2944%,używam przeglądarki internetowej i edytorów tekstu,167
+1,6.06061%,"tworzę obrazy, muzykę, filmy",14
+1,20.7792%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,48
+2,93.9394%,Windows,217
+2,17.316%,Linux,40
+2,4.7619%,Mac,11
+3,92.2078%,tak,213
+3,2.1645%,"nie, dzielę użytek komputera z inną osobą lub osobami",5
+3,3.4632%,"nie znam się na tym, proszę o pomoc inną osobę",8
+4,41.9913%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",97
+4,6.06061%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",14
+4,48.9177%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",113
+5,29.4372%,mało ważne,68
+5,38.0952%,całkiem ważne,88
+5,9.52381%,nieważne,22
+5,13.8528%,bardzo ważne,32
+5,9.09091%,nigdy o tym nie myślałem,21
+6,11.6883%,nigdy o tym nie myślałem,27
+6,31.1688%,mało ważne,72
+6,13.4199%,nieważne,31
+6,13.8528%,bardzo ważne,32
+6,29.8701%,całkiem ważne,69
+7,46.7532%,brak mi czasu na szczegółowe zapoznanie się z licencją,108
+7,22.0779%,są zbyt długie i trudne do zrozumienia,51
+7,26.8398%,nie mam problemów z licencjami,62
+8,59.7403%,nigdy nie szukam tej informacji,138
+8,4.7619%,mam zapisane dane w pliku i je przeszukuję,11
+8,22.0779%,szukam informacji o programie w internecie,51
+8,9.52381%,przeglądam wpisy w ustawieniach danego programu,22
+10,48.9177%,nie,113
+10,18.1818%,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",42
+10,29.8701%,"tak, bardzo szybko, wiem gdzie szukać tych informacji",69
+10,3.0303%,"tak, mam te dane spisane",7
+,,,
+10,Topic,"tak, ale może mi to zająć mnóstwo czasu i nie wiem jaki będzie efekt",79
+1,75.9494%,używam przeglądarki internetowej i edytorów tekstu,60
+1,10.1266%,"tworzę obrazy, muzykę, filmy",8
+1,13.9241%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,11
+2,100%,Windows,79
+2,15.1899%,Linux,12
+2,1.26582%,Android,1
+2,2.53165%,Mac,2
+3,89.8734%,tak,71
+3,1.26582%,"Nie wszystkie, ale większość instaluje sama",1
+3,3.79747%,"nie, dzielę użytek komputera z inną osobą lub osobami",3
+3,2.53165%,"nie znam się na tym, proszę o pomoc inną osobę",2
+3,2.53165%,"nie, robi to administrator w firmie",2
+4,1.26582%,"tak, kiedyś zainstalowałem i o nim zapomniałem",1
+4,49.3671%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",39
+4,11.3924%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",9
+4,32.9114%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",26
+4,5.06329%,"tak, musiał to zainstalować ktoś inny, ale nie wiem dlaczego",4
+5,27.8481%,mało ważne,22
+5,48.1013%,całkiem ważne,38
+5,12.6582%,bardzo ważne,10
+5,7.59494%,nigdy o tym nie myślałem,6
+5,3.79747%,nieważne,3
+6,36.7089%,mało ważne,29
+6,35.443%,całkiem ważne,28
+6,12.6582%,nigdy o tym nie myślałem,10
+6,11.3924%,bardzo ważne,9
+6,3.79747%,nieważne,3
+7,53.1646%,brak mi czasu na szczegółowe zapoznanie się z licencją,42
+7,26.5823%,są zbyt długie i trudne do zrozumienia,21
+7,18.9873%,nie mam problemów z licencjami,15
+7,1.26582%,"Najczęściej licencja jest dla mnie za droga, podejrzewam, że jest to glówny powód piractwa.",1
+8,39.2405%,nigdy nie szukam tej informacji,31
+8,2.53165%,pod czas instalacji lub przed nią ogarniam,2
+8,7.59494%,mam zapisane dane w pliku i je przeszukuję,6
+8,26.5823%,przeglądam wpisy w ustawieniach danego programu,21
+8,22.7848%,szukam informacji o programie w internecie,18
+8,1.26582%,Sprawdzam rodzaj licencji,1
+9,46.8354%,tak,37
+9,53.1646%,nie,42
+,,,
+10,Topic,nie,180
+1,79.4444%,używam przeglądarki internetowej i edytorów tekstu,143
+1,5.55556%,"tworzę obrazy, muzykę, filmy",10
+1,14.4444%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,26
+2,91.1111%,Windows,164
+2,7.77778%,Mac,14
+2,11.1111%,Linux,20
+3,89.4444%,tak,161
+3,2.77778%,"nie, dzielę użytek komputera z inną osobą lub osobami",5
+3,6.11111%,"nie znam się na tym, proszę o pomoc inną osobę",11
+4,52.7778%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",95
+4,35.5556%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",64
+4,8.33333%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",15
+4,1.11111%,"tak, musiał to zainstalować ktoś inny, ale nie wiem dlaczego",2
+5,35%,mało ważne,63
+5,30%,całkiem ważne,54
+5,13.3333%,nieważne,24
+5,6.11111%,bardzo ważne,11
+5,15.5556%,nigdy o tym nie myślałem,28
+6,16.6667%,nigdy o tym nie myślałem,30
+6,27.2222%,całkiem ważne,49
+6,17.2222%,nieważne,31
+6,5.55556%,bardzo ważne,10
+6,33.3333%,mało ważne,60
+7,25.5556%,są zbyt długie i trudne do zrozumienia,46
+7,51.6667%,brak mi czasu na szczegółowe zapoznanie się z licencją,93
+7,17.7778%,nie mam problemów z licencjami,32
+8,71.6667%,nigdy nie szukam tej informacji,129
+8,5%,przeglądam wpisy w ustawieniach danego programu,9
+8,18.8889%,szukam informacji o programie w internecie,34
+8,2.22222%,mam zapisane dane w pliku i je przeszukuję,4
+9,62.7778%,nie,113
+9,37.2222%,tak,67
+,,,
+10,Topic,"tak, bardzo szybko, wiem gdzie szukać tych informacji",84
+1,64.2857%,używam przeglądarki internetowej i edytorów tekstu,54
+1,29.7619%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,25
+1,5.95238%,"tworzę obrazy, muzykę, filmy",5
+2,95.2381%,Windows,80
+2,29.7619%,Linux,25
+2,2.38095%,Mac,2
+2,1.19048%,Hi Rez System Beta OB 0000000000001,1
+3,94.0476%,tak,79
+3,1.19048%,"nie, dzielę użytek komputera z inną osobą lub osobami",1
+3,1.19048%,Hi Chris za mnei instaluje wszystko! Nawet dane z Pentagonu i Teheranu czy Hongkongu,1
+3,2.38095%,"nie znam się na tym, proszę o pomoc inną osobę",2
+3,1.19048%,"nie, robi to administrator w firmie",1
+4,61.9048%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",52
+4,29.7619%,"tak, musiało to być oprogramowanie dodawane na dokładkę przez inny instalator",25
+4,1.19048%,"zainstalowane wraz z systemem operacyjnym, niepotrzebnie",1
+4,4.7619%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",4
+4,1.19048%,"tak, i to był System operacyjny :v a na powaznie to miałem takie dwie sytuacje, okazało się że były to programy : aimbot i wallhack i do tej pory nwm jak one sie znalazły na moim komputerze :/",1
+4,1.19048%,"tak, musiał to zainstalować ktoś inny, ale nie wiem dlaczego",1
+5,53.5714%,całkiem ważne,45
+5,25%,bardzo ważne,21
+5,15.4762%,mało ważne,13
+5,4.7619%,nieważne,4
+5,1.19048%,nigdy o tym nie myślałem,1
+6,45.2381%,całkiem ważne,38
+6,19.0476%,mało ważne,16
+6,23.8095%,bardzo ważne,20
+6,5.95238%,nieważne,5
+6,5.95238%,nigdy o tym nie myślałem,5
+7,38.0952%,brak mi czasu na szczegółowe zapoznanie się z licencją,32
+7,1.19048%,Za dużo kosztują,1
+7,1.19048%,Niektóre licencje nie udostępniają kodu źródłowego programu ,1
+7,1.19048%,Cena,1
+7,26.1905%,są zbyt długie i trudne do zrozumienia,22
+7,30.9524%,nie mam problemów z licencjami,26
+7,1.19048%,"Wspaniłe lektury do poczytunku,t tyko są lekkawo przykrótkie,t akie 600 stron byłoby idealne",1
+8,15.4762%,przeglądam wpisy w ustawieniach danego programu,13
+8,36.9048%,nigdy nie szukam tej informacji,31
+8,1.19048%,/usr/share/licenses/common,1
+8,36.9048%,szukam informacji o programie w internecie,31
+8,4.7619%,mam zapisane dane w pliku i je przeszukuję,4
+8,1.19048%,zapoznanie przed/ w trakcie instalacji,1
+8,1.19048%,cyfrowy podpis + licencja cyfrowa,1
+8,1.19048%,mam magiczna rozczke z buawowego drewna wyzezbioną przez zacnego Pana AleSieNaJebauem. To ona wskazuje mi droge do licencji!,1
+8,1.19048%,zapoznaję się z licencją podczas instalacji,1
+9,82.1429%,nie,69
+9,17.8571%,tak,15
+,,,
+10,Topic,"tak, mam te dane spisane",9
+1,11.1111%,nie używam komputera,1
+1,66.6667%,używam przeglądarki internetowej i edytorów tekstu,6
+1,22.2222%,tworzę lub nadzoruję pracę aplikacji/oprogramowania,2
+2,11.1111%,Unix,1
+2,88.8889%,Windows,8
+2,22.2222%,Linux,2
+3,11.1111%,Proszę o to mamę,1
+3,88.8889%,tak,8
+4,11.1111%,"Tak, mama mi zainstalowała za karę",1
+4,66.6667%,"nie, w pełni panuję nad tym co mam zainstalowane/wiem, co instalują inne osoby",6
+4,22.2222%,"tak, kiedyś zainstalowałem na próbę i o nim zapomniałem",2
+5,55.5556%,bardzo ważne,5
+5,44.4444%,całkiem ważne,4
+6,55.5556%,bardzo ważne,5
+6,11.1111%,całkiem ważne,1
+6,11.1111%,mało ważne,1
+6,11.1111%,nigdy o tym nie myślałem,1
+6,11.1111%,nieważne,1
+7,55.5556%,nie mam problemów z licencjami,5
+7,33.3333%,są zbyt długie i trudne do zrozumienia,3
+7,11.1111%,Licencje niektóych firm np. Microsoftu są niezgodne z prawem europejskim więc man je kolokwialnie mówiąc gdzieś. Ceny pakietu Office w różnych krajach są różne z czego w Polsce są jedne z najdroższych to też nie niezgodnie z licecją ale legalnie kupuje oprogramowanie microsoftu za granicą i korzystam z niego w Polsce. Nie widze powodu żeby tak biedny kraj jak Polska ( zarabiamy 1/4 tego co niemcy jakakolwiek dyskusja w tej sprawie nie ma sensu wiem o tym aż za dobrze poziom życia w Poslce jest jak na zachodnie normalne standardy tragiczny) ceny offica były wyższe niż w USA.,1
+8,22.2222%,nigdy nie szukam tej informacji,2
+8,22.2222%,mam zapisane dane w pliku i je przeszukuję,2
+8,44.4444%,szukam informacji o programie w internecie,4
+8,11.1111%,Wiem co instaluje,1
+9,77.7778%,nie,7
+9,22.2222%,tak,2
