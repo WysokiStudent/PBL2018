@@ -4,7 +4,6 @@
 Provindexes a structure to store information about software and it's license.
 """
 
-
 class SoftwareProgram:
     """
     Structure to store information about software and it's license.
@@ -18,7 +17,6 @@ class SoftwareProgram:
         self.index = None
         self.name = name
         self.program_location = program_location
-        self.license_location = license_location
         self.license_location = license_location
         self.note = note
 

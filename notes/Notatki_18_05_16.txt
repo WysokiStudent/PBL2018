@@ -1,0 +1,24 @@
+Dokumentacja w jezyku ang:
+Wszelkie rzeczy proste nale¿y dokumentowaæ dopóki s¹ one proste. Dokumentacja ma zawieraæ relacje, co odwo³uje siê do czego.
+Diagramy relacyjne. Pseudo zdania, nawet je¿eli to be³kot mo¿e siê to edytowaæ. 
+Przyjmijmy rzeczy, ¿e szukamy rzeczy które gwarantuj¹ sukces. Kiedy szukamy programów skupmy siê na tych które s¹ najwa¿niejsze, najbardziej polularne.
+Edytowanie powino mieæ miejsce na bie¿¹co. Wa¿ne jest to, jak siê organizujemy, jakie konwencje wybieramy. (Np to, ¿e u¿ywamy pyylint, ¿eby mieæ jednakow¹ konwencjê)
+Dlaczego takie a nie inne rozwi¹zanie/narzêdzie.
+
+Funkcja wyszukiwania w GUI.
+
+Zalety oprogramowania:
+£atwe dodawanie, kreatory, samouczki, podpowiedzi wszêdzie. U¿ytkownik jest leniwy nale¿y mu pomóc u¿ywaæ programu.
+
+Deadline:
+Scrypt do przeszukiwania: pi¹tek 18-05-18 MG
+	jak nie bêdzie dzia³aæ to spotkanie w poniedzia³ek 21 o godzinie 14:15
+	jeœli tak to super, spotkanie w œrodê
+
+GUI: poniedzia³ek 21-05-18 AB
+	jeœli nie to œroda
+
+Parser: poniedzia³ek 21-05-2018 MF
+
+dokumentacja + plan artyku³u: wtorek 22-05-2018
+
