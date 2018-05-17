@@ -4,6 +4,7 @@
 Provindexes a structure to store information about software and it's license.
 """
 
+
 class SoftwareProgram:
     """
     Structure to store information about software and it's license.
