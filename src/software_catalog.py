@@ -15,9 +15,11 @@ class SoftwareCatalog:
     def __init__(self, catalog_name):
         self.catalog_path = Path(catalog_name)
         if not self.catalog_path.is_file():
-            print("The software catalog does not exist. Creatring...")
+            print("The software catalog does not exist. Creating...")
             catalog = open(self.catalog_path, "wb")
-            pickle.dump([], catalog)
+            tutorial = [SoftwareProgram("Click me", "", "./Tutorial.txt", "")]
+            tutorial[0].index = 0
+            pickle.dump(tutorial, catalog)
             print(str(self.catalog_path) + " created.")
             catalog.close()
 
@@ -42,6 +44,21 @@ class SoftwareCatalog:
         catalog.close()
         return result
 
+    def update_program(self, program_to_update: SoftwareProgram):
+        """
+        Override entry in the program catalog
+        """
+        catalog = open(self.catalog_path, "r+b")
+        program_list = pickle.load(catalog)
+
+        for program in program_list:
+            if program.index == program_to_update.index:
+                program_list[program.index] = program_to_update
+        catalog.seek(0)
+        catalog.truncate()
+        pickle.dump(program_list, catalog)
+        catalog.close()
+
     def add_program(self, program: SoftwareProgram):
         """
         Append to the list of software programs
@@ -61,4 +78,5 @@ class SoftwareCatalog:
         catalog = open(self.catalog_path, "rb")
         result = pickle.load(catalog)
         catalog.close()
+
         return result

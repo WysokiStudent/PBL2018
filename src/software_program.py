@@ -22,7 +22,8 @@ class SoftwareProgram:
         self.note = note
 
     def __str__(self):
-        return str(self.name) + " " +\
+        return str(self.index) + " " +\
+            str(self.name) + " " +\
             str(self.program_location) + " " +\
             str(self.license_location) + " " +\
             str(self.note)

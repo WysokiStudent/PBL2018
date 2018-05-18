@@ -24,6 +24,19 @@ class SoftwareLicenseOrganiser:
         """
         print("Currently unavailable")
 
+    def get_software(self, index: int) -> SoftwareProgram:
+        """
+        Returns the SoftwareProgram with the index given as the parameter.
+        """
+        return self.catalog.get_program(index)
+
+    def update_software(self, program: SoftwareProgram):
+        """
+        Overrites a single entry inside the catalog.
+        """
+        self.catalog.update_program(program)
+
+
     def add_software(self, program: SoftwareProgram):
         """
         Adds program to repository
