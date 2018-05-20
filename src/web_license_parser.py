@@ -1,9 +1,10 @@
 # lib for using http methods and interacting with sites
 import requests
-# lib for parsing html
-from bs4 import BeautifulSoup
 # lib just to open the html file in a browser
 import webbrowser
+# lib for parsing html
+# from bs4 import BeautifulSoup
+
 
 # session object used for http methods
 session = requests.Session()
