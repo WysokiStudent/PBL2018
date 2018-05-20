@@ -78,7 +78,6 @@ def add_list_entry():
 def parse_license():
     print("Currently unavaiable")
 
-
 def scan_for_software():
     CATALOG.update_software_catalog()
     APP.updateListBox("Software List", CATALOG.list_installed_software())
