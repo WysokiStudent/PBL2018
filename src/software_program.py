@@ -4,6 +4,8 @@
 Provindexes a structure to store information about software and it's license.
 """
 
+import os.path
+
 
 class SoftwareProgram:
     """
@@ -24,6 +26,6 @@ class SoftwareProgram:
     def __str__(self):
         return str(self.index) + " " +\
             str(self.name) + " " +\
-            str(self.program_location) + " " +\
-            str(self.license_location) + " " +\
+            str(os.path.split(self.program_location)[1]) + " " +\
+            str(os.path.split(self.license_location)[1]) + " " +\
             str(self.note)
