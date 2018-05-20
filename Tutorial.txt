@@ -1,0 +1,6 @@
+To select a program click on one of the entries from the list on the left.
+To edit the entry double click on it.
+To add a new entry click the "Add Software"
+To parse a license (make it easier to understand) select a program (The license text will change to reflect that programs license) and click the "Parse License" button.
+
+You can also make an automatic search for programs using the Menu located in the topleft corner.
