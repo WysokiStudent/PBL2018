@@ -22,7 +22,8 @@ def create_license_box(row: int, column: int):
     APP.stopLabelFrame()
 
 def create_edit_window():
-    APP.startSubWindow("Edit List Entry", "Edit")
+    APP.startSubWindow("Edit List Entry", "Edit", True)
+    APP.setStretch("column")
     APP.setSticky("nsew")
     APP.addLabel("Program Index Label", "Index")
     APP.addLabelEntry("Name Entry")
@@ -33,7 +34,10 @@ def create_edit_window():
     APP.stopSubWindow()
 
 def change_license_text(list_changed_event):
-    software = APP.getListBox("Software List")[0]
+    try:
+        software = APP.getListBox("Software List")[0]
+    except:
+        return
     APP.clearTextArea("License Text")
     license_location = CATALOG.get_software(int(software.split()[0])).license_location
     try:
@@ -54,6 +58,7 @@ def submit_list_entry_change(event):
 
     CATALOG.update_software(software)
     APP.updateListBox("Software List", CATALOG.list_installed_software(), callFunction=False)
+    APP.hideSubWindow("Edit List Entry")
 
 def edit_list_entry(event):
     index = APP.getListBox("Software List")[0].split()[0]
@@ -65,11 +70,27 @@ def edit_list_entry(event):
     APP.setEntry("Notes Entry", software.note)
     APP.showSubWindow("Edit List Entry")
 
+def add_list_entry():
+    CATALOG.add_software(SoftwareProgram("New Entry", "", "", ""))
+    APP.updateListBox("Software List", CATALOG.list_installed_software(), select=True, callFunction=True)
+    edit_list_entry(None)
+
+def parse_license():
+    print("Currently unavaiable")
+
+
+def scan_for_software():
+    CATALOG.update_software_catalog()
+    APP.updateListBox("Software List", CATALOG.list_installed_software())
+
 def main():
     create_software_list(CATALOG.list_installed_software(), 0, 0)
     create_license_box(0, 1)
     create_edit_window()
-    APP.addMenu("menu", None)
+    APP.setStretch("column")
+    APP.addButton("Add Software", add_list_entry, 1, 0)
+    APP.addButton("Parse License", parse_license, 1, 1)
+    APP.addMenuList("Menu", ["Scan for Software"], [scan_for_software])
     APP.go()
 
 if __name__ == "__main__":
