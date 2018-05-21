@@ -1,4 +1,0 @@
-You will need:
-'requests' for using http methods and interacting with websites
-'webbrowser' for opening a html file in a new browser window or tab
-'beautifulsoup4' for parsing html files (currently commented out)
