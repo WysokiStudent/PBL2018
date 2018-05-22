@@ -50,7 +50,9 @@ def create_edit_window():
     APP.addLabelEntry("Name Entry")
     APP.addLabelFileEntry("Program Location Entry")
     APP.addLabelFileEntry("License Location Entry")
+    APP.setStretch("both")
     APP.addLabelEntry("Notes Entry")
+    APP.setStretch("column")
     APP.addButton("Submit changes", submit_list_entry_change)
     APP.stopSubWindow()
 
