@@ -1,4 +1,7 @@
-You will need:
+For the analyzer you will need:
 'requests' for using http methods and interacting with websites (pip install requests)
 'webbrowser' for opening a html file in a new browser window or tab (might actually be default)
 'beautifulsoup4' for parsing html files (currently commented out) (pip install beautifulsoup4)
+
+For the GUI:
+'appJar' a wrapper for tkinter that allows to create simple UIs (pip install appJar)

@@ -1,0 +1,46 @@
+W artykule zawrzeæ próbn¹ wersjê programu
+29 czerwca ostateczna prezentacja
+Artyku³ tydzieñ wczeœniej (20 czerwca - sprwadziæ)
+18-22 czerwca badania rynku
+Produkt mo¿na przedstawiæ na seminarium. Na tym przedstawieniu nale¿y mieæ ju¿ wstêpne wyniki.
+
+Lister:
+Mo¿na pod³¹czyæ z plikiem jako proxy
+
+
+GUI:
+W przypadku nie wybrania licencji powinna siê pojawiæ informacja o tym fakcie.
+Rozwijanie szczegó³ów
+Link do strony z informacjami na temat programu.
+
+Licencje:
+Zapisywaæ na koomputerze czy otwieraæ?
+Jak strona z której pobieramy dane na temat licencji kategoryzuje zawarte tam informacje?
+Jak wybierane s¹ "najwa¿niejsze" fragmenty licencji?
+
+Artyku³:
+Jak zmierzyæ wartoœæ naukow¹?
+Uderzyæ do ró¿nych grup, typowego u¿ytkownika, informatyków.
+"Jak d³ugo musia³eœ czekaæ na wyniki?" "Czy to za d³ugo?" "Czy oprogramowanie by³o intuicyjne?"
+Conc: "Nasze rozwi¹zanie z braku czasu jest... Dodalibyœmy... gdybyœmy mieli wiêcej czasu... brakuje mu"
+Brak informacji na temat zespo³u. Problem -> Analiza -> rozwi¹zanie (opis dzia³ania, kluczowe framentu kodu ale bez przesady)
+Sposób interakcji u¿ytkownia z programem, modu³y u¿yte do stworzenia programu
+Algorytmy wykorzystane w budowaniu rozwi¹zania. Obrazki to najlepszy sposób.
+
+
+Na koniec pytania(nale¿y do nich wróciæ po oddaniu artyku³u):
+Cel projektu to rozwin¹æ kompetencje:
+Zdolnoœci analityczne (proces dojœcia do problemu i rozwi¹zania)
+Pytania merytoryczne s¹ doœæ wa¿ne. Padaj¹ pytania czysto informatyczne, pytania bêd¹ do prezentacji. W prezentacji mo¿na u¿ywaæ ogólników ¿eby prowokowaæ pytania.
+Mówienie o szczegó³ach -> wiêkszy splendor
+Losujemy pytania (z 10) które dostarczaj¹ opiekunowie, ka¿dy z nas losuje 2 pytania. Pytania powinny byæ œciœle zwi¹zane z technologiami wykorzystanymi w projekcie.
+Sposób przygotowania to wypisanie obszarów w których 
+
+Portfolio zespo³u osobno.
+
+Uwaga edycyjna do grafu z pomys³ami:
+Zmieniæ osie tak aby nie sugerowa³y istnienia wartoœci ujemnych.
+
+Cel: obrona idea
+Prezentacja 12 minut. Sztywno trzymaæ siê czasu
+Format: dowolny
