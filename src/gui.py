@@ -13,6 +13,7 @@ APP = appJar.gui("Software Organiser", useTtk=True)
 CATALOG = SoftwareLicenseOrganiser("softwares.pi")
 ANALIZER = LicenseWebAnalyzer()
 
+
 def create_software_list(software_list, row: int, column: int):
     """
     Creates a Frame with a ListBox in wich the list of softwares is shown.
@@ -25,11 +26,13 @@ def create_software_list(software_list, row: int, column: int):
     APP.setListBoxChangeFunction("Software List", change_license_text)
     APP.stopFrame()
 
+
 def create_license_box(row: int, column: int):
     """
-    Creates a Frame in which an editable text box is placed, inside the textbox
-    the license text is placed. Changing the text in the box will not change the contents
-    of the file with the license. It will however change the text that will be sent to
+    Creates a Frame in which an editable text box is placed.
+    Inside the textbox the license text is placed.
+    Changing the text in the box will not change the contents of the file
+    with the license. It will however change the text that will be sent to
     the license parser.
     """
     APP.startLabelFrame("License", row, column)
@@ -37,12 +40,15 @@ def create_license_box(row: int, column: int):
     APP.addTextArea("License Text", row + 1, column)
     APP.setTextArea(
         "License Text",
-        """To view the license of a software click on the software list entry on the left.""")
+        "To view the licese of a software click on the software entry" +
+        " on the left.")
     APP.stopLabelFrame()
+
 
 def create_edit_window():
     """
-    Creates a window inside which the user can edit the contents of a selected list entry.
+    Creates a window inside which the user can edit
+    the contents of a selected list entry.
     The window is hidden by default.
     """
     APP.startSubWindow("Edit List Entry", "Edit", True)
@@ -58,17 +64,47 @@ def create_edit_window():
     APP.addButton("Submit changes", submit_list_entry_change)
     APP.stopSubWindow()
 
+
+def create_warning_window():
+    """
+    Creates a window which can be used to display warnings and
+    ask for confirmation.
+    """
+    APP.startSubWindow("Warning Window", "Warning", modal=True)
+    APP.setSticky("nsew")
+    APP.addLabel("Warning Message")
+    APP.setStretch("column")
+    APP.addButton("Confirm", warning_confirmed)
+    APP.stopSubWindow()
+
+
+def display_warning_message(warning: str):
+    """
+    Display the prepared "Warning Window" with a specified message
+    """
+    APP.setLabel("Warning Message", warning)
+    APP.showSubWindow("Warning Window")
+
+
+def warning_confirmed():
+    """
+    Hides the warning window.
+    """
+    APP.hideSubWindow("Warning Window")
+
+
 def change_license_text(list_changed_event):
     """
-    Updates the textBox that stores the license to show the license of the currently selected
-    list entry.
+    Updates the textBox that stores the license to show
+    the license of the currently selected list entry.
     """
     try:
         software = APP.getListBox("Software List")[0]
     except IndexError:
         return
     APP.clearTextArea("License Text")
-    license_location = CATALOG.get_software(int(software.split()[0])).license_location
+    license_location = CATALOG.get_software(
+        int(software.split()[0])).license_location
     try:
         with open(license_location, "r") as file:
             text = file.read().replace("\n", "")
@@ -77,10 +113,12 @@ def change_license_text(list_changed_event):
         print("Could not open " + license_location)
         APP.setTextArea("License Text", "Failed to open file.")
 
+
 def submit_list_entry_change(event):
     """
-    Accept changes to the list entry made by the user. The changes to be made are taken from
-    the subwindow in which the user can make changes.
+    Accept changes to the list entry made by the user.
+    The changes to be made are taken from the subwindow
+    in which the user can make changes.
     """
     software_index = int(APP.getLabel("Program Index Label").split()[-1])
     software = CATALOG.get_software(software_index)
@@ -89,14 +127,23 @@ def submit_list_entry_change(event):
     software.license_location = APP.getEntry("License Location Entry")
     software.note = APP.getEntry("Notes Entry")
 
+    if(software.license_location == "" or software.license_location is None):
+        display_warning_message(
+            "The license location is empty, " +
+            "you will not be able to view or parse the license")
+
     CATALOG.update_software(software)
-    APP.updateListBox("Software List", CATALOG.list_installed_software(), callFunction=False)
+    APP.updateListBox(
+        "Software List",
+        CATALOG.list_installed_software(),
+        callFunction=False)
     APP.hideSubWindow("Edit List Entry")
+
 
 def edit_list_entry(event):
     """
-    Change the subwindow in whch the user can edit list entries to reflect the current contetns
-    of the list entry that is selected.
+    Change the subwindow in whch the user can edit list entries
+    to reflect the current contetns of the list entry that is selected.
     """
     index = APP.getListBox("Software List")[0].split()[0]
     software = CATALOG.get_software(int(index))
@@ -107,9 +154,11 @@ def edit_list_entry(event):
     APP.setEntry("Notes Entry", software.note)
     APP.showSubWindow("Edit List Entry")
 
+
 def add_list_entry():
     """
-    Adds an empty Program to the software catalog and then updates the list to reflect the change
+    Adds an empty Program to the software catalog and then updates
+    the list to reflect the change
     """
     CATALOG.add_software(SoftwareProgram("New Entry", "", "", ""))
     APP.updateListBox(
@@ -119,14 +168,16 @@ def add_list_entry():
         callFunction=True)
     edit_list_entry(None)
 
+
 def parse_license():
     """
-    Parse the text of the license that is currently stored inside the TextBox that displayes the
-    license.
+    Parse the text of the license that is currently stored
+    inside the TextBox that displayes the license.
     """
-    license_text = APP.getTextArea("License Text") 
+    license_text = APP.getTextArea("License Text")
     ANALIZER.analyze_license_string(license_text)
     ANALIZER.open_analysis_in_browser()
+
 
 def scan_for_software():
     """
@@ -135,6 +186,7 @@ def scan_for_software():
     CATALOG.update_software_catalog()
     APP.updateListBox("Software List", CATALOG.list_installed_software())
 
+
 def main():
     """
     Run the GUI for the software organiser
@@ -142,6 +194,7 @@ def main():
     create_software_list(CATALOG.list_installed_software(), 0, 0)
     create_license_box(0, 1)
     create_edit_window()
+    create_warning_window()
     APP.setStretch("column")
     APP.setSticky("ew")
     APP.addButton("Add Software", add_list_entry, 1, 0)

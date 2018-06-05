@@ -36,7 +36,6 @@ class SoftwareLicenseOrganiser:
         """
         self.catalog.update_program(program)
 
-
     def add_software(self, program: SoftwareProgram):
         """
         Adds program to repository
