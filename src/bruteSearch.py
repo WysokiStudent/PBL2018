@@ -11,6 +11,7 @@ else:
 
 stack = []  # initialisation of list which will store results
 start = time.time()
+stack_with_paths = []
 
 
 def detect_irrelevant_result(program_name):
@@ -92,12 +93,11 @@ def cut_the_string(path):
 
 
 def append_with_path(key, value_name):
-    global stack
+    global stack_with_paths, stack
     if value_name == 'DisplayIcon':
-        stack[-1] = stack[-1] + '  ' + cut_the_string((_winreg.QueryValueEx(key, value_name))[0])
+        stack_with_paths[-1] = stack[-1] + '  ' + cut_the_string((_winreg.QueryValueEx(key, value_name))[0])
     else:
-        stack[-1] = stack[-1] + '  ' + _winreg.QueryValueEx(key, value_name)[0]
-
+        stack_with_paths[-1] = stack[-1] + '  ' + _winreg.QueryValueEx(key, value_name)[0]
 
 
 def check_for_path(key):
