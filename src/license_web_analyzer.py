@@ -23,8 +23,8 @@ class LicenseWebAnalyzer:
 
 
     def analyze_license_string(self, license_text: str):
-        response = self.request_license_analysis(license_text)
-        self.write_response(response);
+        response_text = self.request_license_analysis(license_text).text
+        self.write_response(response_text)
 
         '''
         # removing the html tags
@@ -38,14 +38,14 @@ class LicenseWebAnalyzer:
     def request_license_analysis(self, license_text: str):
         # configuring http headers and FormData (seems like header can be empty)
         request_headers = {}
-        request_data = dict(title='none', url='none', license=license_text, anmode=2, comment='none', submit='Start Analyzer')
+        request_data = dict(title='none', url='none', license=license_text, anmode=0, comment='none', submit='Start Analyzer')
         # calling the http 'post' method with the prepared headers & data and save the http response as a variable
         post_response = self.session.post(self.analyzer_url, data=request_data, headers=request_headers)
         return post_response
 
-    def write_response(self, post_response: str):
+    def write_response(self, response_text: str):
         with open("response.html", "w") as response_file:  # writing the resulting response to an html file
-            print(post_response.text, file=response_file)
+            print(response_text, file=response_file)
 
 
     def open_analysis_in_browser(self):
@@ -53,4 +53,6 @@ class LicenseWebAnalyzer:
 
 
 # to test:
-# LicenseWebAnalyzer.analyze('license.txt')
+# lic = LicenseWebAnalyzer()
+# lic.analyze_license_file('license.txt')
+# lic.open_analysis_in_browser()
