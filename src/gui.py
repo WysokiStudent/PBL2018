@@ -7,9 +7,11 @@ The GUI for the software organiser.
 import appJar
 from software_program import SoftwareProgram
 from software_license_organiser import SoftwareLicenseOrganiser
+from license_web_analyzer import LicenseWebAnalyzer
 
 APP = appJar.gui("Software Organiser", useTtk=True)
 CATALOG = SoftwareLicenseOrganiser("softwares.pi")
+ANALIZER = LicenseWebAnalyzer()
 
 
 def create_software_list(software_list, row: int, column: int):
@@ -127,8 +129,8 @@ def submit_list_entry_change(event):
 
     if(software.license_location == "" or software.license_location is None):
         display_warning_message(
-            "The license location is empty, \
-            you will not be able to view or parse the license")
+            "The license location is empty, " +
+            "you will not be able to view or parse the license")
 
     CATALOG.update_software(software)
     APP.updateListBox(
@@ -172,7 +174,9 @@ def parse_license():
     Parse the text of the license that is currently stored
     inside the TextBox that displayes the license.
     """
-    print("Currently unavaiable")
+    license_text = APP.getTextArea("License Text")
+    ANALIZER.analyze_license_string(license_text)
+    ANALIZER.open_analysis_in_browser()
 
 
 def scan_for_software():
@@ -192,6 +196,7 @@ def main():
     create_edit_window()
     create_warning_window()
     APP.setStretch("column")
+    APP.setSticky("ew")
     APP.addButton("Add Software", add_list_entry, 1, 0)
     APP.addButton("Parse License", parse_license, 1, 1)
     APP.addMenuList("Menu", ["Scan for Software"], [scan_for_software])
