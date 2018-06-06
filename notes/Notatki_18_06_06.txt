@@ -1,0 +1,84 @@
+Została zaproponowana/ zbudowania wykresu w postaci chmury funkcjonalności (innowacja/trudność) w celu określenia położenia realizowanego projektu w przestrzeni użytkowej. Następnie przystąpiono do relizacji...
+
+Tutaj uproszczony schemat realizacji
+Obszar informacyjny, bazy danych licencji, komunikacji z zewnętrznym , feedback (pętla zprzężenia zwrotnego), obszar edycji właściwości 
+Dowód na to, że pierwszy szkic projektu został wykonany.
+
+Na każdym z etapów rozwoju programu należy skonfrontować rozwiązanie z użytkownikami.
+Liczba tych użytkowników powinna być minimalna tak, żeby nie przygnieść się pracą.
+To co prezentowane jest użytkownikom nie musi być w pełni funkcjonalne, liczy się opinia użytkownika. Można zdobyć cenne materiały.
+
+Artykuł ok. 4 strony ale to raczej zgadywanie. Można podmieniać tekst grafikami ale owe grafiki nie powinny stanowić większości artykułu.
+1/3 do 40% powierzchni to mogą być rysunki.
+
+Do każdego rysunku trzeba się odnieść, nie może się pojawić wykres, figura, zacytowany artykuł bez odniesienia.
+Czy cele które zostały przedstawione w streszczniu zostały opisane w dalszej części artyku.
+Text 12, czcionka na rysuknach 9-8. (Luźna czcionka do poprawek to Courier new) Przedewszystkim ważna jest czytelność. Istnieją wykresy które
+nie nadają się do publikowania ponieważ czcionka na nich jest zbyt mała. Wtedy należy dodać legende.
+
+Jesteśmy oceniani za zangażowanie, pomysłowość, aktywne podejście do zagadnienia. Sam program jest "proof of concept"
+Ważniejsze jest podeści "koncepcyjne" a nie ostateczny produkt. 
+Ankiety nie dały nam ostatecznego rozwiązania dlatego w ramach projektu powinien się pojawić user expirience.
+
+Można wziąć wersje programu przedstawić ją użytkownikowi, spytać o jego opinie. W ten sposób można utworzyć 2 kolejne wersje programu.
+Feedbackloop.
+
+GUI->Kolorowe, atrakcyjne narzędzie, gładkie krawędzie itd.
+Cel: Narzędzie do zwiększenia świadomośći użytkownika o swoim systemie, nie do rozwiązania problemu.
+Jeżeli nie uda nam się znaleść licencji to trudno, użytkownik ma się dowiedzieć o tym, że coś u niego jest ale nie wiadomo co.
+Zwrócić uwagę na inwentaryzacje. Żeby można było się obronić: "Zainstalowałem trail, ale mam po nim ślady"
+Podać użytkownikowi ślady:
+Jaki wpis w rejestrze
+Ile wystąpień (trzeba zaznaczyć, że takie ślady mogą występować 4 krotnie ze względu na to, że Windows obsługuje jednocześnie x86 i x86_64)
+ścieżka do tych śladów
+
+Naciąganie faktów to standard w przemyśle. Trzeba sprzedać produkt nie zależnie od jego wartości.
+
+!Cel: Narzędzie do zwiększenia świadomośći użytkownika o swoim systemie, nie do rozwiązania problemu.
+Porgram nawet nie powinien edytować rejestów ani plików, może to wywołać dyskomfort u osób które lubią wiedzieć co dzieje się na ich komputerach.
+
+
+Uporządkowanie dokumentów:
+Minutki, artukuł, dokumentacja, agendy.
+
+Schemat funkcjonalny: poziom szczegółów nie musi być duży. Po prostu bloczki.
+Dane powinny być dobrze gromadzone/organizowane.
+
+Poziały znalezionych aplikacji:
+Zainstalowa
+Odinstalowana
+
+
+Dokumentacja musi być ujednolinocna jakościowo i ilościowo.
+Jakie są zmienne publiczne, prywatne.
+
+
+Organizacja danych:
+1.Inwetaryzacja tego co jest i tego co działa
+
+
+eg: Patryk dane
+O: porównania wersji
+Wszyscy porządkujemy
+
+
+Należy dążyć do perfekcji (albo chodziaż żeby wyglądało idalnie), oceny z TB wbrew pozorom będą bardzo zróżnicowane.
+Im lepiej wyglądamy tym lepsze mamy szanse.
+
+Na tą chwilę priorytetm jest artykuł. Na za tydzień draft. 
+Na tą chwilę może być 80% rysunków i nagłówków. Zastanowić się nad modyfikacją rysunków.
+Jak tylko powstanie 
+
+Artykuł,
+Bierząca praca nad interfacem,
+Inwentaryzacja, porządkowanie materiałów.
+
+
+Może w przypadku błędów ze strony serwera, należy albo się nimi nie przejmować albo powiedzieć użytkownikowi, że to wina serwera.
+Waże jest po prostu to, żeby zauważyć takie wyjątkowe sytuacje zauważyć, że to nie nasza wina a wina aplikacji z której korzysta parser.
+Można napisać/powiedzieć, że w przyszłości możemy zwiększyć dokładność kontroli tych błędów, albo samodzielnie napisać taki program.
+Raczej nie obwiniać się za błędy innych.
+
+Ważna powaga podejścia (konsultacje).
+
+Wszystkie punkty z pierwszej prezentacji powinno zostać zawarte w końcowej ale lekko skrócone.
