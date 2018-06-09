@@ -2,7 +2,7 @@ import errno, os, re, time
 import winreg as _winreg
 
 proc_arch = os.environ['PROCESSOR_ARCHITECTURE'].lower()  # checking if the arch is 64x
-proc_arch64 = os.environ['PROCESSOR_ARCHITEW6432'].lower()  # checking if arch is 86x
+# proc_arch64 = os.environ['PROCESSOR_ARCHITEW6432'].lower()  # checking if arch is 86x
 
 if proc_arch == 'x86' or proc_arch == 'amd64':
     arch_keys = {_winreg.KEY_WOW64_32KEY, _winreg.KEY_WOW64_64KEY}
@@ -10,7 +10,6 @@ else:
     raise Exception("Unhandled arch: %s" % proc_arch)
 
 stack = []  # initialisation of list which will store results
-start = time.time()
 stack_with_paths = []
 
 
@@ -39,11 +38,9 @@ def detect_irrelevant_result(program_name):
 
 
 def pull_stack():
-    global stack, start
+    global stack
     for x in range(len(stack) - 1):
         print(x, stack[x])  # printin results
-    end = time.time()
-    print('program work time:', end - start)  # printing time
 
 
 def push_stack(program_name):
@@ -95,9 +92,9 @@ def cut_the_string(path):
 def append_with_path(key, value_name):
     global stack_with_paths, stack
     if value_name == 'DisplayIcon':
-        stack_with_paths[-1] = stack[-1] + '  ' + cut_the_string((_winreg.QueryValueEx(key, value_name))[0])
+        stack_with_paths.append(stack[-1] + '  ' + cut_the_string((_winreg.QueryValueEx(key, value_name))[0]))
     else:
-        stack_with_paths[-1] = stack[-1] + '  ' + _winreg.QueryValueEx(key, value_name)[0]
+        stack_with_paths.append(stack[-1] + '  ' + _winreg.QueryValueEx(key, value_name)[0])
 
 
 def check_for_path(key):
@@ -134,9 +131,43 @@ def go_deeper(key):
                 pass
 
 
-for arch_key in arch_keys:
-    key = _winreg.OpenKey(_winreg.HKEY_LOCAL_MACHINE, r"SOFTWARE", 0, _winreg.KEY_READ | arch_key)
-    for i in range(0, _winreg.QueryInfoKey(key)[0]):
-        go_deeper(key)
+def scan_registry():
+    global arch_keys
+    for arch_key in arch_keys:
+        key = _winreg.OpenKey(_winreg.HKEY_LOCAL_MACHINE, r"SOFTWARE", 0, _winreg.KEY_READ | arch_key)
+        for i in range(0, _winreg.QueryInfoKey(key)[0]):
+            go_deeper(key)
 
-pull_stack()
+
+def save_scan_result(filename: str):
+    global stack
+    save_result(stack, filename)
+
+
+def save_good_entries(filename: str):
+    global stack_with_paths
+    save_result(stack_with_paths, filename)
+
+
+def save_result(stack: list, filename: str):
+    with open(filename, mode='w') as result:
+        for x in range(len(stack) - 1):
+            print(stack[x].encode('latin-1', 'replace'), file=result)
+
+
+def scan_registry_and_save_results(
+        all_results_filename: str,
+        good_results_filename: str):
+    scan_registry()
+    save_scan_result(all_results_filename)
+    save_good_entries(good_results_filename)
+
+def main():
+    start = time.time()
+    scan_registry()
+    pull_stack()
+    end = time.time()
+    print('program work time:', end - start)  # printing time
+
+if __name__ == "__main__":
+    main()
