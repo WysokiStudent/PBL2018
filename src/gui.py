@@ -4,6 +4,7 @@
 The GUI for the software organiser.
 """
 
+import _thread
 import appJar
 from software_program import SoftwareProgram
 from software_license_organiser import SoftwareLicenseOrganiser
@@ -12,6 +13,7 @@ from license_web_analyzer import LicenseWebAnalyzer
 APP = appJar.gui("Software Organiser", useTtk=True)
 CATALOG = SoftwareLicenseOrganiser("softwares.pi")
 ANALIZER = LicenseWebAnalyzer()
+scanning_in_progress = False
 
 
 def create_software_list(software_list, row: int, column: int):
@@ -183,8 +185,21 @@ def scan_for_software():
     """
     Use an tool that scans the computer in search for installed software.
     """
+    global scanning_in_progress
+    display_warning_message("Scanning started. This might last several minutes")
     CATALOG.update_software_catalog()
     APP.updateListBox("Software List", CATALOG.list_installed_software())
+    scanning_in_progress = False
+    display_warning_message("Scanning Complete.")
+
+
+def scan_in_spearate_thread():
+    global scanning_in_progress
+    if(scanning_in_progress):
+        display_warning_message("Scanning in progress...")
+    else:
+        scanning_in_progress = True
+        _thread.start_new_thread(scan_for_software, ())
 
 
 def main():
@@ -199,7 +214,7 @@ def main():
     APP.setSticky("ew")
     APP.addButton("Add Software", add_list_entry, 1, 0)
     APP.addButton("Parse License", parse_license, 1, 1)
-    APP.addMenuList("Menu", ["Scan for Software"], [scan_for_software])
+    APP.addMenuList("Menu", ["Scan for Software"], [scan_in_spearate_thread])
     APP.go()
 
 if __name__ == "__main__":
