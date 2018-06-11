@@ -42,7 +42,7 @@ def create_license_box(row: int, column: int):
     APP.addTextArea("License Text", row + 1, column)
     APP.setTextArea(
         "License Text",
-        "To view the licese of a software click on the software entry" +
+        "To view the license of a software click on the software entry" +
         " on the left.")
     APP.stopLabelFrame()
 

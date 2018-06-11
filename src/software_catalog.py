@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Provindexes a software catalog to store data about software.
+Provides a software catalog to store data about software.
 """
 
 from pathlib import Path
