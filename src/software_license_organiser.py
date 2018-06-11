@@ -29,7 +29,7 @@ class SoftwareLicenseOrganiser:
             all_results_filename,
             good_results_filename)
 
-        with open(all_results_filename, encoding='latin-1', mode='r') as results:
+        with open(all_results_filename, mode='r') as results:
             for line in results:
                 self.add_software(SoftwareProgram(line, "", "", ""))
 

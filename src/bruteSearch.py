@@ -152,7 +152,10 @@ def save_good_entries(filename: str):
 def save_result(stack: list, filename: str):
     with open(filename, mode='w') as result:
         for x in range(len(stack) - 1):
-            print(stack[x].encode('latin-1', 'replace'), file=result)
+            try:
+                print(stack[x], file=result)
+            except:
+                print(stack[x].encode('cp1252', 'replace'), file=result)
 
 
 def scan_registry_and_save_results(
