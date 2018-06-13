@@ -24,8 +24,10 @@ class LicenseWebAnalyzer:
 
     def analyze_license_string(self, license_text: str):
         response_text = self.request_license_analysis(license_text).text
-        self.write_response(response_text)
-
+        with open('response.html', 'w') as newfile:
+            for line in response_text.splitlines():
+                if 'Notice: Undefined' not in line:
+                    print(line, file=newfile)
         '''
         # removing the html tags
         post_response_without_tags = BeautifulSoup(post_response.text, 'html.parser')
