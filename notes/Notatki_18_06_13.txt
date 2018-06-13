@@ -1,0 +1,68 @@
+5-8 osób testy, koniecznie zawrzeæ w artykule. Do pi¹tku, powinny powstaæ ankiety a aplikacja powinna zostaæ rozes³ana.
+Ankiete przes³a³ Dr. Grudzieñ. Nasza nie musi byæ dedykowana dla naszego oprogramowania. U¿ytkownicy maj¹ zaznaczaæpunkty na skali, normalizacja danych nie jest konieczna.
+Wyniki do wtorku rano, ¿eby jeszcze da³o siê coœ z nimi zrobiæ.
+
+Przede wszystkim interesuje nas to jak u¿ytkownik ocenia aplikacje, je¿eli powie, ¿e GUI jest do kitu to nale¿y to uwzglêdniæ ale to nie jest kluczowy punkt w ankiecie. Skala 1-10
+
+Ankieta to wynik badania.
+Artyuku³ ma mieæ tytu³.
+
+Przeprowadziliœmy badania -> problem -> rozwi¹zanie -> badania dotycz¹ce skuteznoœci
+
+wmic SOFTWAREELEMENT SOFTWAREFUTURE
+Nale¿y siê przygotowaæ z tego, udowodniæ 
+
+NUMEROWAÆ STRONY
+Abstrakt:
+Zosta³y przeprowadzone badania, stoworzona aplikacja, jakie wyniki osi¹gneliœmy, jakie narzêdzia zosta³y u¿yte(akurat to jednym zdaniem)
+Artyku³ bezosobowo, w 3 osobie. To co jest w abstrakcie jest najwa¿niejsze. Abstrakt raczej nale¿y napisaæ na koñcu.
+CEL, Co siê uda³o zrobiæ (apka), badania u¿ytkowników
+
+Intro:
+Przekonaæ czytelnika, ¿e problem jest wa¿ny. Tutaj mo¿e siê znajdowaæ jêzyk nie-techniczny taki który trafia do cz³owieka.
+Background info:
+Opis wstêpny zaproponowany przez koordynatorów nie jest konieczny. Copy - paste nie zadzia³a ale ogólne mo¿na wyci¹gn¹æ z coœ wyci¹gn¹æ
+Problem jest wa¿ny
+
+Probelm finding:
+Tutaj raczej nie powinno byæ technicznego opisu dojœcia do problemu bo to wstêp do tematu.
+Ankiety w formie graficznej, raczej zcalone 10 ró¿nych wyników pytañ. Dobrze bêdzie wrzuciæ tutaj ze 2 konkretne wykresy wyników ale tylko te najciekawsze
+
+
+Idea finding:
+
+Innovative ideas:
+Tutaj lista pomys³ów/wykres z wyborem
+Wy³uskaægrupy osób do których trafiamy i pokazaæ rozwi¹zanai który byœmy im zaporoponowali.
+Zaczaæ z wysokiego poziomy abstrakcji: pokazaæ grupy (osoby które lubi¹ siê bawiæ przez zabawê, osoby które...)
+póŸniej pokazaæ grupê i rozwi¹zanie
+
+Main idea justification:
+Tuaj wykres z tym jak doszliœmy do naszego rozwi¹zania
+
+Solution:
+Details of solution:
+Najpierw wykres jak u¿ytkownik korzysta z programu,
+póŸniej jak wygl¹da implementacja programu
+
+Ways of verification:
+1. Testy oprogramowania (dzia³a na kilku kompach, szukanie trwa tyle i tyle, manualne dodawanie)
+2. Testy z u¿tykownikiem (NASA-TLX)
+
+Conculusions:
+"Z badañ z u¿ytkownikiem wynika³o, ¿e nale¿y poprawiæ...", ogólny zarys bez szczegó³ów (trochê powtórzenie abstraktu)
+S³abe strony które widzimy, s³abe strony pokazane przez u¿ytkowników
+
+References:
+Info i licencjach
+systemie operacyjnym
+python
+Nasa-tlx
+Minimum 10 pozycji, raczej artyku³y i ksi¹¿ki, ¿eby to wszsystko nie by³o stronami internetowymi
+Szczególnie kiedy badamy u¿ytkownika.
+
+Final notes after some time at IIS:
+Mario -> artykul
+Maciek -> ankieta na podstawie NASA-TLX
+Patryk -> poprawienie funkcjonalnosci GUI
+Aleksander -> portfolio druzyny
