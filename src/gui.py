@@ -53,6 +53,7 @@ def create_edit_window():
     the contents of a selected list entry.
     The window is hidden by default.
     """
+    APP.icon = "favicon.ico"
     APP.startSubWindow("Edit List Entry", "Edit", True)
     APP.setStretch("column")
     APP.setSticky("nsew")
