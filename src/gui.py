@@ -202,19 +202,25 @@ def scan_in_spearate_thread():
         scanning_in_progress = True
         _thread.start_new_thread(scan_for_software, ())
 
+def add_default_button(title, func, row=None, column=0, colspan=0, rowspan=0):
+    APP.setSticky("ew")
+    APP.setStretch("column")
+    return APP.addButton(title, func, row=None, column=0, colspan=0, rowspan=0)
 
 def main():
     """
     Run the GUI for the software organiser
     """
+    APP.startPanedFrame("p1", 0, 0, 2)
     create_software_list(CATALOG.list_installed_software(), 0, 0)
-    create_license_box(0, 1)
+    add_default_button("Add Software", add_list_entry, 1, 0)
+    APP.startPanedFrame("p2", 0, 1)
+    create_license_box(0, 0)
+    add_default_button("Parse License", parse_license, 1, 0)
+    APP.stopAllPanedFrames()
+
     create_edit_window()
     create_warning_window()
-    APP.setStretch("column")
-    APP.setSticky("ew")
-    APP.addButton("Add Software", add_list_entry, 1, 0)
-    APP.addButton("Parse License", parse_license, 1, 1)
     APP.addMenuList("Menu", ["Scan for Software"], [scan_in_spearate_thread])
     APP.go()
 
