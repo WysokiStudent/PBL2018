@@ -14,13 +14,14 @@ APP = appJar.gui("Software Organiser", useTtk=True)
 CATALOG = SoftwareLicenseOrganiser("softwares.pi")
 ANALIZER = LicenseWebAnalyzer()
 scanning_in_progress = False
+view_software_without_paths = True
 
 
-def create_software_list(software_list, row: int, column: int):
+def create_software_list(software_list, row: int, column: int, colspan=0, rowspan=0):
     """
-    Creates a Frame with a ListBox in wich the list of softwares is shown.
+    Creates a Frame with a ListBox in which the list of softwares is shown.
     """
-    APP.startFrame("Software List Frame", row, column)
+    APP.startFrame("Software List Frame", row, column, colspan, rowspan)
     APP.setSticky("nsew")
     APP.addListBox("Software List", software_list).bind(
         "<Double-Button-1>",
@@ -29,7 +30,7 @@ def create_software_list(software_list, row: int, column: int):
     APP.stopFrame()
 
 
-def create_license_box(row: int, column: int):
+def create_license_box(row: int, column: int, colspan=0, rowspan=0):
     """
     Creates a Frame in which an editable text box is placed.
     Inside the textbox the license text is placed.
@@ -37,7 +38,7 @@ def create_license_box(row: int, column: int):
     with the license. It will however change the text that will be sent to
     the license parser.
     """
-    APP.startLabelFrame("License", row, column)
+    APP.startLabelFrame("License", row, column, colspan, rowspan)
     APP.setSticky("nsew")
     APP.addTextArea("License Text", row + 1, column)
     APP.setTextArea(
@@ -171,6 +172,8 @@ def add_list_entry():
         callFunction=True)
     edit_list_entry(None)
 
+def delete_list_entry():
+    pass
 
 def parse_license():
     """
@@ -203,17 +206,27 @@ def scan_in_spearate_thread():
         _thread.start_new_thread(scan_for_software, ())
 
 def add_default_button(title, func, row=None, column=0, colspan=0, rowspan=0):
+    """
+    Add a button with sticky set to "ew" and stretch set to "column"
+    """
     APP.setSticky("ew")
     APP.setStretch("column")
-    return APP.addButton(title, func, row=None, column=0, colspan=0, rowspan=0)
+    return APP.addButton(title, func, row, column, colspan, rowspan)
+
+def show_software_without_paths():
+    view_software_without_paths = True
+
+def hide_software_without_paths():
+    view_software_without_paths = False
 
 def main():
     """
     Run the GUI for the software organiser
     """
     APP.startPanedFrame("p1", 0, 0, 2)
-    create_software_list(CATALOG.list_installed_software(), 0, 0)
+    create_software_list(CATALOG.list_installed_software(), 0, 0, 2)
     add_default_button("Add Software", add_list_entry, 1, 0)
+    add_default_button("Delete Software", delete_list_entry, 1, 1)
     APP.startPanedFrame("p2", 0, 1)
     create_license_box(0, 0)
     add_default_button("Parse License", parse_license, 1, 0)
@@ -222,6 +235,8 @@ def main():
     create_edit_window()
     create_warning_window()
     APP.addMenuList("Menu", ["Scan for Software"], [scan_in_spearate_thread])
+    APP.addMenuList("View", ["Show all software", "Show software with paths"],
+                            [show_software_without_paths, hide_software_without_paths])
     APP.go()
 
 if __name__ == "__main__":
