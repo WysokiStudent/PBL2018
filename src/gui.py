@@ -126,7 +126,8 @@ def update_license_list():
     """
     Updates the ListBox that stores the license files
     """
-    APP.updateListBox("License List", get_license_file_list())
+    if APP.getListBox("Software List"):
+        APP.updateListBox("License List", get_license_file_list())
 
 def change_license_text(list_changed_event):
     """
