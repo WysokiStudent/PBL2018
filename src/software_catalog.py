@@ -71,6 +71,20 @@ class SoftwareCatalog:
         pickle.dump(program_list, catalog)
         catalog.close()
 
+    def delete_program(self, program_index: int):
+        """
+        Delete from the list of software programs
+        """
+        catalog = open(self.catalog_path, "rb")
+        program_list = pickle.load(catalog)
+        catalog.close()
+        for program in program_list:
+            if program.index == program_index:
+                program_list.remove(program)
+        catalog = open(self.catalog_path, "wb")
+        pickle.dump(program_list, catalog)
+        catalog.close()
+
     def list_software(self) -> list:
         """
         Return list of programs stored inside catalog

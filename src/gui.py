@@ -10,12 +10,11 @@ from software_program import SoftwareProgram
 from software_license_organiser import SoftwareLicenseOrganiser
 from license_web_analyzer import LicenseWebAnalyzer
 
-APP = appJar.gui("Software Organiser", useTtk=True)
+APP = appJar.gui("Software Organiser", "800x500", useTtk=True)
 CATALOG = SoftwareLicenseOrganiser("softwares.pi")
 ANALIZER = LicenseWebAnalyzer()
 scanning_in_progress = False
 view_software_without_paths = True
-
 
 def create_software_list(software_list, row: int, column: int, colspan=0, rowspan=0):
     """
@@ -29,6 +28,15 @@ def create_software_list(software_list, row: int, column: int, colspan=0, rowspa
     APP.setListBoxChangeFunction("Software List", change_license_text)
     APP.stopFrame()
 
+def create_license_list(license_list, row: int, column: int, colspan=0, rowspan=0):
+    """
+    Creates a Frame with a ListBox in which the list of licenses is shown.
+    """
+    APP.startFrame("License List Frame", row, column, colspan, rowspan)
+    APP.setSticky("nsew")
+    APP.addListBox("License List", license_list)
+    APP.setListBoxChangeFunction("License List", change_license_text)
+    APP.stopFrame()
 
 def create_license_box(row: int, column: int, colspan=0, rowspan=0):
     """
@@ -139,7 +147,7 @@ def submit_list_entry_change(event):
     CATALOG.update_software(software)
     APP.updateListBox(
         "Software List",
-        CATALOG.list_installed_software(),
+        get_filtered_list(),
         callFunction=False)
     APP.hideSubWindow("Edit List Entry")
 
@@ -167,13 +175,18 @@ def add_list_entry():
     CATALOG.add_software(SoftwareProgram("New Entry", "", "", ""))
     APP.updateListBox(
         "Software List",
-        CATALOG.list_installed_software(),
+        get_filtered_list(),
         select=True,
         callFunction=True)
     edit_list_entry(None)
 
 def delete_list_entry():
-    pass
+    """
+    Removes program from the software catalog and updates the list
+    to reflect the change
+    """
+    CATALOG.delete_software(APP.getListBoxPos("Software List")[0])
+    APP.updateListBox("Software List", get_filtered_list())
 
 def parse_license():
     """
@@ -184,6 +197,18 @@ def parse_license():
     ANALIZER.analyze_license_string(license_text)
     ANALIZER.open_analysis_in_browser()
 
+def get_filtered_list():
+    software_list = CATALOG.list_installed_software()
+
+    print(view_software_without_paths)
+    if view_software_without_paths:
+        return software_list
+    
+    filtered_list = []
+    for software in software_list:
+        if software.program_location != "":
+            filtered_list.append(software)
+    return filtered_list
 
 def scan_for_software():
     """
@@ -192,7 +217,7 @@ def scan_for_software():
     global scanning_in_progress
     display_warning_message("Scanning started. This might last several minutes")
     CATALOG.update_software_catalog()
-    APP.updateListBox("Software List", CATALOG.list_installed_software())
+    APP.updateListBox("Software List", get_filtered_list())
     scanning_in_progress = False
     display_warning_message("Scanning Complete.")
 
@@ -214,28 +239,39 @@ def add_default_button(title, func, row=None, column=0, colspan=0, rowspan=0):
     return APP.addButton(title, func, row, column, colspan, rowspan)
 
 def show_software_without_paths():
+    """
+    Show all software available
+    """
+    global view_software_without_paths
     view_software_without_paths = True
+    APP.updateListBox("Software List", get_filtered_list())
 
 def hide_software_without_paths():
+    """
+    Show only software with paths
+    """
+    global view_software_without_paths
     view_software_without_paths = False
+    APP.updateListBox("Software List", get_filtered_list())
 
 def main():
     """
     Run the GUI for the software organiser
     """
     APP.startPanedFrame("p1", 0, 0, 2)
-    create_software_list(CATALOG.list_installed_software(), 0, 0, 2)
-    add_default_button("Add Software", add_list_entry, 1, 0)
-    add_default_button("Delete Software", delete_list_entry, 1, 1)
+    create_software_list(get_filtered_list(), 0, 0, 3)
+    create_license_list(CATALOG.list_installed_software(), 1, 0, 3)
+    add_default_button("Add Software", add_list_entry, 2, 0)
+    add_default_button("Delete Software", delete_list_entry, 2, 1)
     APP.startPanedFrame("p2", 0, 1)
-    create_license_box(0, 0)
+    create_license_box(0, 0, 2, 2)
     add_default_button("Parse License", parse_license, 1, 0)
     APP.stopAllPanedFrames()
 
     create_edit_window()
     create_warning_window()
     APP.addMenuList("Menu", ["Scan for Software"], [scan_in_spearate_thread])
-    APP.addMenuList("View", ["Show all software", "Show software with paths"],
+    APP.addMenuList("View", ["Show all software", "Show only software with paths"],
                             [show_software_without_paths, hide_software_without_paths])
     APP.go()
 

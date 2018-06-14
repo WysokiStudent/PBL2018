@@ -9,7 +9,6 @@ from software_program import SoftwareProgram
 from software_catalog import SoftwareCatalog
 import bruteSearch
 
-
 class SoftwareLicenseOrganiser:
     """
     SoftwareLicenseOrganiser is used to simplyfy communication inside
@@ -53,6 +52,9 @@ class SoftwareLicenseOrganiser:
         index = len(self.catalog)
         program.index = index
         self.catalog.add_program(program)
+
+    def delete_software(self, program_index: int):
+        self.catalog.delete_program(program_index)
 
     def list_installed_software(self) -> list:
         """
