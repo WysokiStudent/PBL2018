@@ -14,7 +14,7 @@ APP = appJar.gui("Software Organiser", "800x500", useTtk=True)
 CATALOG = SoftwareLicenseOrganiser("softwares.pi")
 ANALIZER = LicenseWebAnalyzer()
 scanning_in_progress = False
-view_software_without_paths = True
+display_files_not_containing_paths = True
 
 def create_software_list(software_list, row: int, column: int, colspan=0, rowspan=0):
     """
@@ -25,18 +25,36 @@ def create_software_list(software_list, row: int, column: int, colspan=0, rowspa
     APP.addListBox("Software List", software_list).bind(
         "<Double-Button-1>",
         edit_list_entry, add="+")
-    APP.setListBoxChangeFunction("Software List", change_license_text)
+    APP.setListBoxChangeFunction("Software List", update_license_list)
     APP.stopFrame()
 
-def create_license_list(license_list, row: int, column: int, colspan=0, rowspan=0):
+def create_license_list(row: int, column: int, colspan=0, rowspan=0):
     """
     Creates a Frame with a ListBox in which the list of licenses is shown.
     """
     APP.startFrame("License List Frame", row, column, colspan, rowspan)
     APP.setSticky("nsew")
-    APP.addListBox("License List", license_list)
+    APP.addListBox("License List", get_license_file_list())
     APP.setListBoxChangeFunction("License List", change_license_text)
     APP.stopFrame()
+
+def get_license_file_list():
+    """
+    Gets a list of files from path "license_location"
+    """
+    files = []
+    try:
+        index = APP.getListBoxPos("Software List")[0]
+    except IndexError:
+        return files
+    software = CATALOG.get_software(index)
+    if software.license_location != "":
+        from os import walk
+        for (directory, _, filenames) in walk(software.license_location):
+            print(directory, filenames)
+            files.extend(directory + file for file in filenames)
+            break
+    return files
 
 def create_license_box(row: int, column: int, colspan=0, rowspan=0):
     """
@@ -104,6 +122,11 @@ def warning_confirmed():
     """
     APP.hideSubWindow("Warning Window")
 
+def update_license_list():
+    """
+    Updates the ListBox that stores the license files
+    """
+    APP.updateListBox("License List", get_license_file_list())
 
 def change_license_text(list_changed_event):
     """
@@ -111,12 +134,14 @@ def change_license_text(list_changed_event):
     the license of the currently selected list entry.
     """
     try:
-        software = APP.getListBox("Software List")[0]
+    #     software = APP.getListBox("Software List")[0]
+        license_location = APP.getListBox("License List")[0]
     except IndexError:
         return
+    print(license_location)
     APP.clearTextArea("License Text")
-    license_location = CATALOG.get_software(
-        int(software.split()[0])).license_location
+    # license_location = CATALOG.get_software(
+    #     int(software.split()[0])).license_location
     try:
         with open(license_location, "r") as file:
             text = file.read().replace("\n", "")
@@ -200,8 +225,7 @@ def parse_license():
 def get_filtered_list():
     software_list = CATALOG.list_installed_software()
 
-    print(view_software_without_paths)
-    if view_software_without_paths:
+    if display_files_not_containing_paths:
         return software_list
     
     filtered_list = []
@@ -242,16 +266,16 @@ def show_software_without_paths():
     """
     Show all software available
     """
-    global view_software_without_paths
-    view_software_without_paths = True
+    global display_files_not_containing_paths
+    display_files_not_containing_paths = True
     APP.updateListBox("Software List", get_filtered_list())
 
 def hide_software_without_paths():
     """
     Show only software with paths
     """
-    global view_software_without_paths
-    view_software_without_paths = False
+    global display_files_not_containing_paths
+    display_files_not_containing_paths = False
     APP.updateListBox("Software List", get_filtered_list())
 
 def main():
@@ -260,7 +284,7 @@ def main():
     """
     APP.startPanedFrame("p1", 0, 0, 2)
     create_software_list(get_filtered_list(), 0, 0, 3)
-    create_license_list(CATALOG.list_installed_software(), 1, 0, 3)
+    create_license_list(1, 0, 3)
     add_default_button("Add Software", add_list_entry, 2, 0)
     add_default_button("Delete Software", delete_list_entry, 2, 1)
     APP.startPanedFrame("p2", 0, 1)
