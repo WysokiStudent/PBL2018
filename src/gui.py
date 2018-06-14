@@ -44,14 +44,13 @@ def get_license_file_list():
     """
     files = []
     try:
-        index = APP.getListBoxPos("Software List")[0]
+        index = get_software_index()
     except IndexError:
         return files
     software = CATALOG.get_software(index)
     if software.license_location != "":
         from os import walk
         for (directory, _, filenames) in walk(software.license_location):
-            print(directory, filenames)
             files.extend(directory + file for file in filenames)
             break
     return files
@@ -135,14 +134,11 @@ def change_license_text(list_changed_event):
     the license of the currently selected list entry.
     """
     try:
-    #     software = APP.getListBox("Software List")[0]
         license_location = APP.getListBox("License List")[0]
     except IndexError:
         return
-    print(license_location)
+
     APP.clearTextArea("License Text")
-    # license_location = CATALOG.get_software(
-    #     int(software.split()[0])).license_location
     try:
         with open(license_location, "r") as file:
             text = file.read().replace("\n", "")
@@ -177,13 +173,15 @@ def submit_list_entry_change(event):
         callFunction=False)
     APP.hideSubWindow("Edit List Entry")
 
+def get_software_index() -> int:
+    return int(APP.getListBox("Software List")[0].split()[0])
 
 def edit_list_entry(event):
     """
     Change the subwindow in whch the user can edit list entries
     to reflect the current contetns of the list entry that is selected.
     """
-    index = APP.getListBox("Software List")[0].split()[0]
+    index = get_software_index()
     software = CATALOG.get_software(int(index))
     APP.setLabel("Program Index Label", "Program Index: " + index)
     APP.setEntry("Name Entry", software.name)
