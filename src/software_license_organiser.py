@@ -24,9 +24,9 @@ class SoftwareLicenseOrganiser:
         """
         all_results_filename = "ScanResult.txt"
         good_results_filename = "GoodScanResults.txt"
-        # bruteSearch.scan_registry_and_save_results(
-        #     all_results_filename,
-        #     good_results_filename)
+        bruteSearch.scan_registry_and_save_results(
+            all_results_filename,
+            good_results_filename)
 
         with open(all_results_filename, mode='r') as results:
             import ast

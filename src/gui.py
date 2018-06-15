@@ -91,7 +91,7 @@ def create_edit_window():
     APP.setSticky("nsew")
     APP.addLabel("Program Index Label", "Index")
     APP.addLabelEntry("Name Entry")
-    APP.addLabelFileEntry("Program Location Entry")
+    APP.addLabelDirectoryEntry("Program Location Entry")
     APP.addLabelDirectoryEntry("License Location Entry")
     APP.setStretch("both")
     APP.addLabelEntry("Notes Entry")
