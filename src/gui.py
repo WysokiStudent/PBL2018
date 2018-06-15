@@ -14,7 +14,8 @@ APP = appJar.gui("Software Organiser", "800x500", useTtk=True)
 CATALOG = SoftwareLicenseOrganiser("softwares.pi")
 ANALIZER = LicenseWebAnalyzer()
 scanning_in_progress = False
-display_files_not_containing_paths = True
+hide_files_not_containing_paths = False
+hide_files_not_containing_licenses = False
 license_directory = ""
 
 def create_software_list(software_list, row: int, column: int, colspan=0, rowspan=0):
@@ -227,15 +228,26 @@ def parse_license():
     ANALIZER.open_analysis_in_browser()
 
 def get_filtered_list():
-    software_list = CATALOG.list_installed_software()
+    """
+    Filters out software depending on booleans:
+    hide_files_not_containing_paths and
+    hide_files_not_containing_licenses
 
-    if display_files_not_containing_paths:
-        return software_list
+    Returns the list with filtered results 
+    """
+    software_list = CATALOG.list_installed_software()
     
     filtered_list = []
     for software in software_list:
-        if software.program_location != "":
-            filtered_list.append(software)
+        if hide_files_not_containing_paths:
+            if software.program_location == "":
+                continue
+        if hide_files_not_containing_licenses:
+            if software.license_location == "":
+                continue
+            print(software.license_location)
+        filtered_list.append(software)
+
     return filtered_list
 
 def scan_for_software():
@@ -269,22 +281,6 @@ def add_default_button(title, func, row=None, column=0, colspan=0, rowspan=0):
     APP.setStretch("column")
     return APP.addButton(title, func, row, column, colspan, rowspan)
 
-def show_software_without_paths():
-    """
-    Show all software available
-    """
-    global display_files_not_containing_paths
-    display_files_not_containing_paths = True
-    APP.updateListBox("Software List", get_filtered_list())
-
-def hide_software_without_paths():
-    """
-    Show only software with paths
-    """
-    global display_files_not_containing_paths
-    display_files_not_containing_paths = False
-    APP.updateListBox("Software List", get_filtered_list())
-
 def set_icon():
     """
     Sets icon to favicon.ico. If icon is not found sets it to None.
@@ -305,6 +301,48 @@ def find_in_software_list(text: str):
             software_list.append(software)
     APP.updateListBox("Software List", software_list)
 
+def show_all_software():
+    """
+    Shows all software available
+    """
+    global hide_files_not_containing_paths
+    global hide_files_not_containing_licenses
+    hide_files_not_containing_paths = False
+    hide_files_not_containing_licenses = False
+    APP.updateListBox("Software List", get_filtered_list())
+
+def show_software_without_paths():
+    """
+    Shows software with empty software_location
+    """
+    global hide_files_not_containing_paths
+    hide_files_not_containing_paths = False
+    APP.updateListBox("Software List", get_filtered_list())
+
+def hide_software_without_paths():
+    """
+    Hides software with empty software_location
+    """
+    global hide_files_not_containing_paths
+    hide_files_not_containing_paths = True
+    APP.updateListBox("Software List", get_filtered_list())
+
+def show_software_without_licenses():
+    """
+    Shows software with empty license_location
+    """
+    global hide_files_not_containing_licenses
+    hide_files_not_containing_licenses = False
+    APP.updateListBox("Software List", get_filtered_list())
+
+def hide_software_without_licenses():
+    """
+    Hide software with empty license_location
+    """
+    global hide_files_not_containing_licenses
+    hide_files_not_containing_licenses = True
+    APP.updateListBox("Software List", get_filtered_list())
+
 def main():
     """
     Run the GUI for the software organiser
@@ -323,8 +361,20 @@ def main():
     create_edit_window()
     create_warning_window()
     APP.addMenuList("Menu", ["Scan for Software"], [scan_in_spearate_thread])
-    APP.addMenuList("View", ["Show only software with paths", "Show all software"],
-                            [hide_software_without_paths, show_software_without_paths])
+    APP.addMenuList("View", ["Show all software",
+                            None,
+                            "Show software without software paths",
+                            "Hide software without software paths",
+                            None,
+                            "Show software without license paths",
+                            "Hide software without license paths"],
+                            [show_all_software,
+                            None,
+                            show_software_without_paths,
+                            hide_software_without_paths,
+                            None,
+                            show_software_without_licenses,
+                            hide_software_without_licenses])
     APP.go()
 
 if __name__ == "__main__":

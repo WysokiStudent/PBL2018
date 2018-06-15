@@ -52,7 +52,7 @@ def push_stack(program_name):
     if not detect_irrelevant_result(program_name):  # calling functions which check if name is pottentialy correct
         return False
     if len(stack) < 1:  # if stack is empty the new variable can just be added without additional checking
-        stack.append(str(program_name))
+        stack.append(program_name)
         return True
     x = len(stack) - 1
     while x != 0:  # checking stack from top, because identical results are in most cases near to each other
@@ -61,7 +61,7 @@ def push_stack(program_name):
         else:
             x -= 1
 
-    stack.append(str(program_name))  # if the function didn
+    stack.append(program_name)  # if the function didn
     return True
     # now = time.time()
     # print stack_iterator, stack[len(stack) - 1], now - start
@@ -92,9 +92,14 @@ def cut_the_string(path):
 def append_with_path(key, value_name):
     global stack_with_paths, stack
     if value_name == 'DisplayIcon':
-        stack_with_paths.append(stack[-1] + '  ' + cut_the_string((_winreg.QueryValueEx(key, value_name))[0]))
+        directory = cut_the_string((_winreg.QueryValueEx(key, value_name))[0])
     else:
-        stack_with_paths.append(stack[-1] + '  ' + _winreg.QueryValueEx(key, value_name)[0])
+        directory = _winreg.QueryValueEx(key, value_name)[0]
+
+    import os
+    if os.path.isdir(directory):
+        stack_with_paths.append([str(stack[-1]), str(directory)])
+        stack[-1] = stack_with_paths[-1]
 
 
 def check_for_path(key):
@@ -141,6 +146,7 @@ def scan_registry():
 
 def save_scan_result(filename: str):
     global stack
+
     save_result(stack, filename)
 
 
@@ -153,9 +159,9 @@ def save_result(stack: list, filename: str):
     with open(filename, mode='w') as result:
         for x in range(len(stack) - 1):
             try:
-                print(stack[x], file=result)
+                result.write('%s\n' % stack[x])
             except:
-                print(stack[x].encode('cp1252', 'replace'), file=result)
+                result.write('%s\n' % stack[x].encode('cp1252', 'replace'))
 
 
 def scan_registry_and_save_results(
@@ -173,4 +179,8 @@ def main():
     print('program work time:', end - start)  # printing time
 
 if __name__ == "__main__":
-    main()
+    all_results_filename = "ScanResult.txt"
+    good_results_filename = "GoodScanResults.txt"
+    scan_registry_and_save_results(
+            all_results_filename,
+            good_results_filename)
