@@ -15,6 +15,7 @@ CATALOG = SoftwareLicenseOrganiser("softwares.pi")
 ANALIZER = LicenseWebAnalyzer()
 scanning_in_progress = False
 display_files_not_containing_paths = True
+license_directory = ""
 
 def create_software_list(software_list, row: int, column: int, colspan=0, rowspan=0):
     """
@@ -42,17 +43,23 @@ def get_license_file_list():
     """
     Gets a list of files from path "license_location"
     """
+    global license_directory
     files = []
     try:
         index = get_software_index()
     except IndexError:
         return files
     software = CATALOG.get_software(index)
+    
     if software.license_location != "":
-        from os import walk
-        for (directory, _, filenames) in walk(software.license_location):
-            files.extend(directory + file for file in filenames)
-            break
+        import os
+        if os.path.isdir(software.license_location):
+            for (license_directory, _, filenames) in os.walk(software.license_location):
+                files.extend(filenames)
+                break
+        elif os.path.isfile(software.license_location):
+            license_directory, file = os.path.split(software.license_location)
+            files.append(file)
     return files
 
 def create_license_box(row: int, column: int, colspan=0, rowspan=0):
@@ -134,14 +141,14 @@ def change_license_text(list_changed_event):
     the license of the currently selected list entry.
     """
     try:
-        license_location = APP.getListBox("License List")[0]
+        license_location = license_directory + "/" + APP.getListBox("License List")[0]
     except IndexError:
         return
 
     APP.clearTextArea("License Text")
     try:
         with open(license_location, "r") as file:
-            text = file.read().replace("\n", "")
+            text = file.read()
         APP.setTextArea("License Text", text)
     except FileNotFoundError:
         print("Could not open " + license_location)
@@ -209,7 +216,7 @@ def delete_list_entry():
     Removes program from the software catalog and updates the list
     to reflect the change
     """
-    CATALOG.delete_software(APP.getListBoxPos("Software List")[0])
+    CATALOG.delete_software(get_software_index())
     APP.updateListBox("Software List", get_filtered_list())
 
 def parse_license():
