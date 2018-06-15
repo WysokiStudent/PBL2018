@@ -287,12 +287,23 @@ def hide_software_without_paths():
 
 def set_icon():
     """
-    Sets icon for the application
+    Sets icon to favicon.ico. If icon is not found sets it to None.
     """
     try:
         APP.icon = "favicon.ico"
     except Exception:
         APP.winIcon = None
+
+def find_in_software_list(text: str):
+    """
+    Finds software containing string "text" and updates "Software List"
+    ListBox with them.
+    """
+    software_list = []
+    for software in CATALOG.list_installed_software():
+        if text in software.__str__():
+            software_list.append(software)
+    APP.updateListBox("Software List", software_list)
 
 def main():
     """
@@ -312,8 +323,8 @@ def main():
     create_edit_window()
     create_warning_window()
     APP.addMenuList("Menu", ["Scan for Software"], [scan_in_spearate_thread])
-    APP.addMenuList("View", ["Show all software", "Show only software with paths"],
-                            [show_software_without_paths, hide_software_without_paths])
+    APP.addMenuList("View", ["Show only software with paths", "Show all software"],
+                            [hide_software_without_paths, show_software_without_paths])
     APP.go()
 
 if __name__ == "__main__":
