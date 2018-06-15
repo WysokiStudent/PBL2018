@@ -85,7 +85,6 @@ def create_edit_window():
     the contents of a selected list entry.
     The window is hidden by default.
     """
-    APP.icon = "favicon.ico"
     APP.startSubWindow("Edit List Entry", "Edit", True)
     APP.setStretch("column")
     APP.setSticky("nsew")
@@ -286,10 +285,20 @@ def hide_software_without_paths():
     display_files_not_containing_paths = False
     APP.updateListBox("Software List", get_filtered_list())
 
+def set_icon():
+    """
+    Sets icon for the application
+    """
+    try:
+        APP.icon = "favicon.ico"
+    except Exception:
+        APP.winIcon = None
+
 def main():
     """
     Run the GUI for the software organiser
     """
+    set_icon()
     APP.startPanedFrame("p1", 0, 0, 2)
     create_software_list(get_filtered_list(), 0, 0, 3)
     create_license_list(1, 0, 3)
