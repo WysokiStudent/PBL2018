@@ -189,8 +189,8 @@ def edit_list_entry(event):
     to reflect the current contetns of the list entry that is selected.
     """
     index = get_software_index()
-    software = CATALOG.get_software(int(index))
-    APP.setLabel("Program Index Label", "Program Index: " + index)
+    software = CATALOG.get_software(index)
+    APP.setLabel("Program Index Label", "Program Index: " + str(index))
     APP.setEntry("Name Entry", software.name)
     APP.setEntry("Program Location Entry", software.program_location)
     APP.setEntry("License Location Entry", software.license_location)
