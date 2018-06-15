@@ -79,7 +79,6 @@ def create_license_box(row: int, column: int, colspan=0, rowspan=0):
         " on the left.")
     APP.stopLabelFrame()
 
-
 def create_edit_window():
     """
     Creates a window inside which the user can edit
@@ -93,7 +92,7 @@ def create_edit_window():
     APP.addLabel("Program Index Label", "Index")
     APP.addLabelEntry("Name Entry")
     APP.addLabelFileEntry("Program Location Entry")
-    APP.addLabelFileEntry("License Location Entry")
+    APP.addLabelDirectoryEntry("License Location Entry")
     APP.setStretch("both")
     APP.addLabelEntry("Notes Entry")
     APP.setStretch("column")
@@ -185,7 +184,7 @@ def get_software_index() -> int:
 
 def edit_list_entry(event):
     """
-    Change the subwindow in whch the user can edit list entries
+    Change the subwindow in which the user can edit list entries
     to reflect the current contetns of the list entry that is selected.
     """
     index = get_software_index()
