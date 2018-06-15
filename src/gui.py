@@ -245,10 +245,13 @@ def scan_for_software():
     """
     global scanning_in_progress
     display_warning_message("Scanning started. This might last several minutes")
+    import time
+    execution_time = time.process_time()
     CATALOG.update_software_catalog()
+    execution_time = time.process_time() - execution_time
     APP.updateListBox("Software List", get_filtered_list())
     scanning_in_progress = False
-    display_warning_message("Scanning Complete.")
+    display_warning_message("Scanning Complete.\n\nExecution Time = " + str(execution_time))
 
 
 def scan_in_spearate_thread():
