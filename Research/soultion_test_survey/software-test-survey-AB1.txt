@@ -1,0 +1,18 @@
+Proces skanowania ma byæ widoczny.
+Okienko od wyników/edytowania mog³oby pokazywaæ siê wy¿ej.
+
+1.1 3
+1.2 7
+1.3 1
+2.1 (Wiêksza czcionka by³aby fajna) 3
+2.2 4
+2.3 6
+3.1 5 (Duplikacja plików - bug)
+3.2 (Nie da siê przeci¹gaæ okienka w dó³, fajnie, ¿e da siê w bok) 7
+3.3 (Duplikacja kluczy) 4
+3.4 4
+4.1 2 (bo trzeba czekaæ)
+4.2 2
+4.3 2
+4.4 2
+4.5 2
