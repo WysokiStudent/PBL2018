@@ -7,7 +7,6 @@ and the software finder
 
 from software_program import SoftwareProgram
 from software_catalog import SoftwareCatalog
-import bruteSearch
 
 class SoftwareLicenseOrganiser:
     """

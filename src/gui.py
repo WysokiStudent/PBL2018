@@ -17,6 +17,8 @@ scanning_in_progress = False
 hide_files_not_containing_paths = False
 hide_files_not_containing_licenses = False
 license_directory = ""
+software_search_value = ""
+license_search_value = ""
 
 def create_software_list(software_list, row: int, column: int, colspan=0, rowspan=0):
     """
@@ -36,11 +38,11 @@ def create_license_list(row: int, column: int, colspan=0, rowspan=0):
     """
     APP.startFrame("License List Frame", row, column, colspan, rowspan)
     APP.setSticky("nsew")
-    APP.addListBox("License List", get_license_file_list())
+    APP.addListBox("License List", get_license_list())
     APP.setListBoxChangeFunction("License List", change_license_text)
     APP.stopFrame()
 
-def get_license_file_list():
+def get_license_list():
     """
     Gets a list of files from path "license_location"
     """
@@ -53,14 +55,16 @@ def get_license_file_list():
     software = CATALOG.get_software(index)
     
     if software.license_location != "":
-        import os
+        import os, glob
         if os.path.isdir(software.license_location):
-            for (license_directory, _, filenames) in os.walk(software.license_location):
-                files.extend(filenames)
-                break
+            license_directory = software.license_location
+            files.extend(glob.iglob(software.license_location))
         elif os.path.isfile(software.license_location):
             license_directory, file = os.path.split(software.license_location)
             files.append(file)
+        for index, file in enumerate(files.copy()):
+            if license_search_value.casefold() not in file.casefold():
+                del files[index]
     return files
 
 def create_license_box(row: int, column: int, colspan=0, rowspan=0):
@@ -132,7 +136,7 @@ def update_license_list():
     Updates the ListBox that stores the license files
     """
     if APP.getListBox("Software List"):
-        APP.updateListBox("License List", get_license_file_list())
+        APP.updateListBox("License List", get_license_list())
 
 def change_license_text(list_changed_event):
     """
@@ -175,7 +179,7 @@ def submit_list_entry_change(event):
     CATALOG.update_software(software)
     APP.updateListBox(
         "Software List",
-        get_filtered_list(),
+        get_software_list(),
         callFunction=False)
     APP.hideSubWindow("Edit List Entry")
 
@@ -205,7 +209,7 @@ def add_list_entry():
     CATALOG.add_software(SoftwareProgram("New Entry", "", "", ""))
     APP.updateListBox(
         "Software List",
-        get_filtered_list(),
+        get_software_list(),
         select=True,
         callFunction=True)
     edit_list_entry(None)
@@ -216,7 +220,7 @@ def delete_list_entry():
     to reflect the change
     """
     CATALOG.delete_software(get_software_index())
-    APP.updateListBox("Software List", get_filtered_list())
+    APP.updateListBox("Software List", get_software_list())
 
 def parse_license():
     """
@@ -227,7 +231,7 @@ def parse_license():
     ANALIZER.analyze_license_string(license_text)
     ANALIZER.open_analysis_in_browser()
 
-def get_filtered_list():
+def get_software_list():
     """
     Filters out software depending on booleans:
     hide_files_not_containing_paths and
@@ -245,7 +249,8 @@ def get_filtered_list():
         if hide_files_not_containing_licenses:
             if software.license_location == "":
                 continue
-            print(software.license_location)
+        if software_search_value.casefold() not in software.__str__().casefold():
+            continue
         filtered_list.append(software)
 
     return filtered_list
@@ -260,7 +265,7 @@ def scan_for_software():
     execution_time = time.process_time()
     CATALOG.update_software_catalog()
     execution_time = time.process_time() - execution_time
-    APP.updateListBox("Software List", get_filtered_list())
+    APP.updateListBox("Software List", get_software_list())
     scanning_in_progress = False
     display_warning_message("Scanning Complete.\n\nExecution Time = " + str(execution_time))
 
@@ -290,17 +295,6 @@ def set_icon():
     except Exception:
         APP.winIcon = None
 
-def find_in_software_list(text: str):
-    """
-    Finds software containing string "text" and updates "Software List"
-    ListBox with them.
-    """
-    software_list = []
-    for software in CATALOG.list_installed_software():
-        if text in software.__str__():
-            software_list.append(software)
-    APP.updateListBox("Software List", software_list)
-
 def show_all_software():
     """
     Shows all software available
@@ -309,7 +303,7 @@ def show_all_software():
     global hide_files_not_containing_licenses
     hide_files_not_containing_paths = False
     hide_files_not_containing_licenses = False
-    APP.updateListBox("Software List", get_filtered_list())
+    APP.updateListBox("Software List", get_software_list())
 
 def show_software_without_paths():
     """
@@ -317,7 +311,7 @@ def show_software_without_paths():
     """
     global hide_files_not_containing_paths
     hide_files_not_containing_paths = False
-    APP.updateListBox("Software List", get_filtered_list())
+    APP.updateListBox("Software List", get_software_list())
 
 def hide_software_without_paths():
     """
@@ -325,7 +319,7 @@ def hide_software_without_paths():
     """
     global hide_files_not_containing_paths
     hide_files_not_containing_paths = True
-    APP.updateListBox("Software List", get_filtered_list())
+    APP.updateListBox("Software List", get_software_list())
 
 def show_software_without_licenses():
     """
@@ -333,7 +327,7 @@ def show_software_without_licenses():
     """
     global hide_files_not_containing_licenses
     hide_files_not_containing_licenses = False
-    APP.updateListBox("Software List", get_filtered_list())
+    APP.updateListBox("Software List", get_software_list())
 
 def hide_software_without_licenses():
     """
@@ -341,7 +335,25 @@ def hide_software_without_licenses():
     """
     global hide_files_not_containing_licenses
     hide_files_not_containing_licenses = True
-    APP.updateListBox("Software List", get_filtered_list())
+    APP.updateListBox("Software List", get_software_list())
+
+def add_search_entry(title, func, row=None, column=0, colspan=0, rowspan=0, secret=False):
+    APP.setSticky("ew")
+    APP.setStretch("column")
+    APP.addEntry(title, row, column, colspan, rowspan, secret)
+    APP.setEntryChangeFunction(title, func)
+
+def update_software_search_value():
+    global software_search_value
+    software_search_value = APP.getEntry("Software Search Entry")
+    APP.updateListBox("Software List", get_software_list())
+
+def update_license_search_value():
+    global license_search_value
+    license_search_value = APP.getEntry("License Search Entry")
+    print(license_search_value)
+    APP.updateListBox("License List", get_license_list())
+
 
 def main():
     """
@@ -349,10 +361,16 @@ def main():
     """
     set_icon()
     APP.startPanedFrame("p1", 0, 0, 2)
-    create_software_list(get_filtered_list(), 0, 0, 3)
-    create_license_list(1, 0, 3)
-    add_default_button("Add Software", add_list_entry, 2, 0)
-    add_default_button("Delete Software", delete_list_entry, 2, 1)
+    APP.startPanedFrameVertical("pv1", 0, 0, 2)
+    add_search_entry("Software Search Entry", update_software_search_value, 0, 0, 2)
+    create_software_list(get_software_list(), 1, 0, 2)
+    APP.startPanedFrame("pv2", 2, 0, 2)
+    add_search_entry("License Search Entry", update_license_search_value, 2, 0, 2)
+    create_license_list(3, 0, 2)
+    add_default_button("Add Software", add_list_entry, 5, 0)
+    add_default_button("Delete Software", delete_list_entry, 5, 1)
+    APP.stopPanedFrame()
+    APP.stopPanedFrame()
     APP.startPanedFrame("p2", 0, 1)
     create_license_box(0, 0, 2, 2)
     add_default_button("Parse License", parse_license, 1, 0)

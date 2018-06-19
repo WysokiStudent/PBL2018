@@ -17,8 +17,7 @@ class SoftwareCatalog:
         if not self.catalog_path.is_file():
             print("The software catalog does not exist. Creating...")
             catalog = open(self.catalog_path, "wb")
-            tutorial = [SoftwareProgram("Click me", "", "./Tutorial.txt", "")]
-            tutorial[0].index = 0
+            tutorial = [SoftwareProgram(0, "Click me", "./", "./Tutorial.txt", "")]
             pickle.dump(tutorial, catalog)
             print(str(self.catalog_path) + " created.")
             catalog.close()
