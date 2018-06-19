@@ -13,19 +13,20 @@ class SoftwareProgram:
     """
     def __init__(
             self,
+            index,
             name=None,
             program_location=None,
             license_location=None,
             note=None):
-        self.index = None
+        self.index = index
         self.name = name
         self.program_location = program_location
         self.license_location = license_location
         self.note = note
 
     def __str__(self):
-        return str(self.index) + " " +\
-            str(self.name) + " " +\
-            str(os.path.split(self.program_location)[1]) + " " +\
-            str(os.path.split(self.license_location)[1]) + " " +\
-            str(self.note)
+        return ''.join([
+            str(self.index), ' ', str(self.name), ' ',
+            str(self.program_location), ' ',
+            str(self.license_location), ' ',
+            str(self.note)])
