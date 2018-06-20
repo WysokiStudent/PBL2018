@@ -26,7 +26,7 @@ class SoftwareProgram:
 
     def __str__(self):
         return "".join([
-            str(self.index), " ", str(self.name), " ",
+            str(self.index), " ", str(self.name).replace('.exe', ''), " ",
             str(self.program_location), " ",
             str(self.license_location), " ",
             str(self.note)])
