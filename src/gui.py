@@ -58,7 +58,7 @@ def get_license_list():
         import os, glob
         if os.path.isdir(software.license_location):
             license_directory = software.license_location
-            files.extend(glob.iglob(software.license_location))
+            files.extend(os.path.basename(file) for file in glob.iglob("".join([software.license_location, "/*"])))
         elif os.path.isfile(software.license_location):
             license_directory, file = os.path.split(software.license_location)
             files.append(file)
@@ -351,7 +351,6 @@ def update_software_search_value():
 def update_license_search_value():
     global license_search_value
     license_search_value = APP.getEntry("License Search Entry")
-    print(license_search_value)
     APP.updateListBox("License List", get_license_list())
 
 
