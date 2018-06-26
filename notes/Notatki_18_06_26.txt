@@ -1,0 +1,41 @@
+Figury powinny mieć podpisy ale podpisy ograniczają się do nazwania figury. Nie opisują tego jak uzyskało się dane.
+
+Ograniczyć zapychacze w figurach. Jeżeli coś się powtarza to należy ograniczyć.
+Podpisane osie, wartości jako oś Y.
+
+Streszczenie popzedniego odcinka (mid-termu) max 3,5 minuty. 2 slajdy wracające do mid-termu. Praca to wciąż organizacja, jakich narzędzi użyliśmy? (Ogólnie nie tylko do organizacji, np.: Używaliśmy pythona, dicord, fb, github).
+
+Odwołanie do definicji problemu, można wrócić do wyników ankiety. To wszystko może być to może być ok 1/3 prezentacji.
+Pozostałe 2/3 czasu (8 minut) poświęcamy na zupełnie nowe zagadnienia.
+
+Trzeba wspomnieć, że wyszukiwanie plików .exe nie pokazuje śladów po zainstalowanych wcześniej aplikacji. Jest to wada w porównaniu do poprzedniej wersji ale jej usprawiedliwieniem jest szybkość przeszukiwania.
+Trzeba się zastanowić nad celem projektu. Czy celem jest znalezienie zainstalowanego oprogramowania i śladów owego oprogramowania czy odnalezienie licencji.
+
+W prezentacji testowane:
+WMI
+rejestr
+program Patryka
+Jak sprawdzone, wady i zalety każdego z rozwiązań.
+
+W prezentacji pokazać jakie dalsze kroki chcielibyśmy podjąć, żeby ulepszyć rozwiązanie.
+(Pomysł Maćka: porównywanie wyników z rejestru z quick scanem)
+Inne GUI (Qt i jego licencje)
+Uwaga na pytanie o to czy nasza apka jest legalna.
+Dodatkowe funkcjonalności, tutaj należy uwzględnić opinie użytkowników.
+
+Można przygotować slajd z komentarzami użytkowników i uwzględnić to co zrobiliśmy w kierunku polepszenia apki (m.in to co zrobił Patryk).
+
+Użyte narzędzia raczej na jednym slajdzie.
+
+Filmik 10-15s z przyspieszonym czasem na którym pokażemy jak działa apka.
+
+Naszym "Geniuszem" nie jest apka ale pomysł na apke.
+Można zaprezentować algorytm użytkowania dla użytkownia.
+
+Pewność siebie
+
+Środa prezentacja z białym tłem. Czwartek konkret 11-12
+
+Licencje, programowanie skryptowe, rejest, windows, user expirience test (ankiety, rozmowy).
+Płynnie wypowiadać się na ytanie zawierające dane zagadnienie:
+Co to jest, co czego służy... Najważniejsza jest płynność wypowiedzi.
