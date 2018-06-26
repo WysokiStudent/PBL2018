@@ -267,7 +267,7 @@ def scan_for_software():
     execution_time = time.process_time() - execution_time
     APP.updateListBox("Software List", get_software_list())
     scanning_in_progress = False
-    display_warning_message("Scanning Complete.\n\nExecution Time = " + str(execution_time))
+    display_warning_message("".join(["Scanning Complete.\n\nExecution Time = ", str(execution_time), "s"]))
 
 
 def scan_in_spearate_thread():
