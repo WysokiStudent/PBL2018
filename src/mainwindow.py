@@ -4,27 +4,31 @@ import _thread
 
 from PySide2.QtUiTools import QUiLoader
 from PySide2.QtWidgets import QMainWindow, QTreeWidgetItem, QMessageBox
-from PySide2.QtCore import QFile
+from PySide2.QtCore import QObject, QFile, Signal, Slot
 
 from software_program import SoftwareProgram
 from software_license_organiser import SoftwareLicenseOrganiser
 from license_web_analyzer import LicenseWebAnalyzer
 
-class MainWindow:
+class MainWindow(QObject):
+	message_signal = Signal(str)
 	def __init__(self):
-		self.setup_ui()
-		self.setup_signals()
+		super().__init__()
+		self.ui = self.setup_ui("mainwindow.ui")
+		self.edit_window = self.setup_ui("editwindow.ui")
 		self.setup_class_variables()
+		self.setup_signals()
 		self.update_software_tree()
 
-	def setup_ui(self):
+	def setup_ui(self, uiFileName, parent = None):
 		import os
 		directory = os.path.dirname(os.path.realpath(__file__))
 		uiLoader = QUiLoader()
-		uiFile = QFile(directory + "\\mainwindow.ui")
+		uiFile = QFile("".join([directory, "\\", uiFileName]))
 		uiFile.open(QFile.ReadOnly)
-		self.ui = uiLoader.load(uiFile)
+		ui = uiLoader.load(uiFile, parent = parent)
 		uiFile.close()
+		return ui
 
 	def setup_signals(self):
 		self.ui.actionScan_for_software.triggered.connect(self.on_actionScan_for_software_triggered)
@@ -32,12 +36,15 @@ class MainWindow:
 		self.ui.actionHide_software_without_path.toggled.connect(self.on_actionHide_software_without_path_toggled)
 		self.ui.actionHide_software_without_license.toggled.connect(self.on_actionHide_software_without_license_toggled)
 		self.ui.softwareTreeWidget.itemSelectionChanged.connect(self.on_softwareTreeWidget_itemSelectionChanged)
+		self.ui.softwareTreeWidget.itemDoubleClicked.connect(self.on_softwareTreeWidget_itemDoubleClicked)
 		self.ui.licenseListWidget.itemSelectionChanged.connect(self.on_licenseListWidget_itemSelectionChanged)
 		self.ui.addSoftwareButton.clicked.connect(self.on_addSoftwareButton_clicked)
 		self.ui.removeSoftwareButton.clicked.connect(self.on_removeSoftwareButton_clicked)
 		self.ui.parseLicenseButton.clicked.connect(self.on_parseLicenseButton_clicked)
 		self.ui.softwareSearchLineEdit.textChanged.connect(self.on_softwareSearchLineEdit_textChanged)
 		self.ui.licenseSearchLineEdit.textChanged.connect(self.on_licenseSearchLineEdit_textChanged)
+		self.edit_window.submitButton.clicked.connect(self.on_edit_window_submitButton_clicked)
+		self.message_signal.connect(self.display_message)
 
 	def setup_class_variables(self):
 		self.CATALOG = SoftwareLicenseOrganiser("softwares.pi")
@@ -48,6 +55,23 @@ class MainWindow:
 		self.software_search_text = ""
 		self.license_search_text = ""
 		self.software_list = self.CATALOG.list_installed_software()
+		self.msg_box = QMessageBox(self.ui)
+
+	def open_edit_window(self, item):
+		self.edited_item = item
+		index = self.get_software_index(item)
+		software = self.software_list[index]
+		self.edit_window.indexValueLabel.setText(str(index))
+		self.edit_window.nameEdit.setText(software.name)
+		self.edit_window.programLocationEdit.setText(software.program_location)
+		self.edit_window.licenseLocationEdit.setText(software.license_location)
+		self.edit_window.noteEdit.setText(software.note)
+		self.edit_window.open()
+
+	@Slot(str)
+	def display_message(self, message):
+		self.msg_box.setText(message)
+		self.msg_box.open()
 
 	def update_software_tree(self):
 		self.ui.softwareTreeWidget.clear()
@@ -160,10 +184,11 @@ class MainWindow:
 		if item:
 			while item.parent():
 				item = item.parent()
-			item = item.child(0)
-			return int(item.text(1))
-		else:
-			return -1
+
+			for index in range(item.childCount()):
+				if item.child(index).text(0).casefold() == "index":
+					return int(item.child(index).text(1))
+		return -1
 
 	def on_actionShow_all_software_triggered(self):
 		self.ui.actionHide_software_without_license.setChecked(False)
@@ -180,14 +205,32 @@ class MainWindow:
 	def on_softwareTreeWidget_itemSelectionChanged(self):
 		self.update_license_list()
 
+	def on_softwareTreeWidget_itemDoubleClicked(self, item):
+		self.open_edit_window(item)
+
 	def on_licenseListWidget_itemSelectionChanged(self):
 		self.update_license_plain_text_edit()
 
 	def on_addSoftwareButton_clicked(self):
-		pass
+		index = len(self.software_list)
+		software = SoftwareProgram(index)
+		self.software_list.append(software)
+		self.CATALOG.add_software(software)
+		item = QTreeWidgetItem()
+		item.setText(0, "New Software")
+		self.insertChildren(item, software)
+		self.ui.softwareTreeWidget.addTopLevelItem(item)
+		self.open_edit_window(item)
 
 	def on_removeSoftwareButton_clicked(self):
-		pass
+		item = self.ui.softwareTreeWidget.currentItem()
+		if not item:
+			return
+		index = self.get_software_index(item)
+		self.CATALOG.delete_software(index)
+		self.software_list = self.CATALOG.list_installed_software()
+		self.ui.softwareTreeWidget.setCurrentItem(None)
+		self.update_software_tree()
 
 	def on_parseLicenseButton_clicked(self):
 		license_text = self.ui.licensePlainTextEdit.toPlainText()
@@ -197,6 +240,29 @@ class MainWindow:
 	def on_actionScan_for_software_triggered(self):
 		self.scan_in_spearate_thread()
 
+	def on_edit_window_submitButton_clicked(self):
+		item = self.edited_item
+		while item.parent():
+			item = item.parent()
+
+		index = self.get_software_index(item)
+		software = self.software_list[index]
+		software.name = self.edit_window.nameEdit.text()
+		software.program_location = self.edit_window.programLocationEdit.text()
+		software.license_location = self.edit_window.licenseLocationEdit.text()
+		software.note = self.edit_window.noteEdit.text()
+		self.software_list[index] = software
+		self.CATALOG.update_software(software)
+
+		item.setText(0, software.name)
+		item.child(0).setText(1, str(software.index))
+		item.child(1).setText(1, software.name)
+		item.child(2).setText(1, software.program_location)
+		item.child(3).setText(1, software.license_location)
+		item.child(4).setText(1, software.note)
+
+		self.edit_window.close()
+
 	def scan_in_spearate_thread(self):
 		if(self.scanning_in_progress):
 			self.display_warning_message("Scanning in progress...")
@@ -205,8 +271,8 @@ class MainWindow:
 			_thread.start_new_thread(self.scan_for_software, ())
 
 	def scan_for_software(self):
-		self.display_warning_message("Scanning started. This might last several minutes")
 		import time
+		self.display_warning_message("Scanning started. This might last several minutes")
 		execution_time = time.process_time()
 		self.CATALOG.update_software_catalog()
 		execution_time = time.process_time() - execution_time
@@ -215,12 +281,8 @@ class MainWindow:
 		self.scanning_in_progress = False
 		self.display_warning_message("".join(["Scanning Complete.\n\nExecution Time = ", str(execution_time), "s"]))
 
-	def display_warning_message(self, msg):
-		return
-		msg_box = QMessageBox(self.ui)
-		msg_box.setWindowTitle("Warning")
-		msg_box.setText("This is a message")
-		msg_box.exec_()
+	def display_warning_message(self, message):
+		self.message_signal.emit(message)
 
 	def on_softwareSearchLineEdit_textChanged(self, text):
 		self.software_search_text = text

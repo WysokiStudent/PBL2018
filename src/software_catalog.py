@@ -77,9 +77,12 @@ class SoftwareCatalog:
         catalog = open(self.catalog_path, "rb")
         program_list = pickle.load(catalog)
         catalog.close()
-        for program in program_list:
-            if program.index == program_index:
-                program_list.remove(program)
+        for index, program in reversed(list(enumerate(program_list.copy()))):
+            if program.index > program_index:
+                program_list[index].index -= 1
+            else:
+                if program.index == program_index:
+                    del program_list[index]
         catalog = open(self.catalog_path, "wb")
         pickle.dump(program_list, catalog)
         catalog.close()
