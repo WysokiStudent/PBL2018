@@ -10,7 +10,6 @@ from software_program import SoftwareProgram
 from software_license_organiser import SoftwareLicenseOrganiser
 from license_web_analyzer import LicenseWebAnalyzer
 
-
 class MainWindow:
 	def __init__(self):
 		self.setup_ui()
@@ -106,16 +105,12 @@ class MainWindow:
 
 	def update_license_list(self):
 		item = self.ui.softwareTreeWidget.currentItem()
-		if not item:
+		index = self.get_software_index(item)
+		if index == -1:
 			self.ui.licenseListWidget.clear()
 			return
-
-		while item.parent():
-			item = item.parent()
-
-		index = self.ui.softwareTreeWidget.indexOfTopLevelItem(item)
-		software = self.CATALOG.get_software(index)
 		
+		software = self.software_list[index]
 		license_files = []
 		if software:
 			if software.license_location != "":
@@ -125,24 +120,20 @@ class MainWindow:
 				elif os.path.isfile(software.license_location):
 					license_files.append(os.path.basename(software.license_location))
 
-				for index, license_file in enumerate(license_files.copy()):
-					if self.license_search_text.casefold() not in license_file.casefold():
-						del license_files[index]
+				license_files = [license_file for license_file in license_files if self.license_search_text.casefold() in license_file.casefold()]
 
 		self.ui.licenseListWidget.clear()
 		self.ui.licenseListWidget.addItems(license_files)
 
 	def update_license_plain_text_edit(self):
 		item = self.ui.softwareTreeWidget.currentItem()
-		if not item:
+		
+		index = self.get_software_index(item)
+		if index == -1:
 			self.ui.licensePlainTextEdit.setPlainText("")
+			return
 		
-		while item.parent():
-			item = item.parent()
-
-		index = self.ui.softwareTreeWidget.indexOfTopLevelItem(item)
-		software = self.CATALOG.get_software(index)
-		
+		software = self.software_list[index]
 		license_name = self.ui.licenseListWidget.currentItem().text()
 		if license_name == "":
 			self.ui.licensePlainTextEdit.setPlainText("")
@@ -164,6 +155,15 @@ class MainWindow:
 		except FileNotFoundError:
 			print("Could not open " + license_path)
 			self.ui.licensePlainTextEdit.setPlainText("Failed to open file")
+
+	def get_software_index(self, item):
+		if item:
+			while item.parent():
+				item = item.parent()
+			item = item.child(0)
+			return int(item.text(1))
+		else:
+			return -1
 
 	def on_actionShow_all_software_triggered(self):
 		self.ui.actionHide_software_without_license.setChecked(False)
@@ -210,6 +210,7 @@ class MainWindow:
 		execution_time = time.process_time()
 		self.CATALOG.update_software_catalog()
 		execution_time = time.process_time() - execution_time
+		self.software_list = self.CATALOG.list_installed_software()
 		self.update_software_tree()
 		self.scanning_in_progress = False
 		self.display_warning_message("".join(["Scanning Complete.\n\nExecution Time = ", str(execution_time), "s"]))
