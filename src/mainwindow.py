@@ -5,6 +5,7 @@ import _thread
 from PySide2.QtUiTools import QUiLoader
 from PySide2.QtWidgets import QMainWindow, QTreeWidgetItem, QMessageBox
 from PySide2.QtCore import QObject, QFile, Signal, Slot
+from PySide2.QtXml import QDomNode
 
 from software_program import SoftwareProgram
 from software_license_organiser import SoftwareLicenseOrganiser
@@ -88,16 +89,15 @@ class MainWindow(QObject):
 				continue
 			
 			item = QTreeWidgetItem()
-			item.setText(0, software.name)
+			item.setText(0, "".join([str(software.index), ". ", software.name]))
 			self.insertChildren(item, software)
 			self.ui.softwareTreeWidget.addTopLevelItem(item)
 
 	def insertChildren(self, item, software):
-		item.insertChild(0, self.getIndexItem(software))
-		item.insertChild(1, self.getNameItem(software))
-		item.insertChild(2, self.getDirectoryItem(software))
-		item.insertChild(3, self.getLicenseDirItem(software))
-		item.insertChild(4, self.getNoteItem(software))
+		item.insertChild(0, self.getNameItem(software))
+		item.insertChild(1, self.getDirectoryItem(software))
+		item.insertChild(2, self.getLicenseDirItem(software))
+		item.insertChild(3, self.getNoteItem(software))
 
 	def getIndexItem(self, software):
 		return self.getSubItem("Index", str(software.index))
@@ -184,10 +184,9 @@ class MainWindow(QObject):
 		if item:
 			while item.parent():
 				item = item.parent()
-
-			for index in range(item.childCount()):
-				if item.child(index).text(0).casefold() == "index":
-					return int(item.child(index).text(1))
+				
+			lastDigitIndex = item.text(0).find(".")
+			return int(item.text(0)[:lastDigitIndex])
 		return -1
 
 	def on_actionShow_all_software_triggered(self):
@@ -217,7 +216,7 @@ class MainWindow(QObject):
 		self.software_list.append(software)
 		self.CATALOG.add_software(software)
 		item = QTreeWidgetItem()
-		item.setText(0, "New Software")
+		item.setText(0, "".join([str(software.index), ". New Software"]))
 		self.insertChildren(item, software)
 		self.ui.softwareTreeWidget.addTopLevelItem(item)
 		self.open_edit_window(item)
@@ -254,12 +253,11 @@ class MainWindow(QObject):
 		self.software_list[index] = software
 		self.CATALOG.update_software(software)
 
-		item.setText(0, software.name)
-		item.child(0).setText(1, str(software.index))
-		item.child(1).setText(1, software.name)
-		item.child(2).setText(1, software.program_location)
-		item.child(3).setText(1, software.license_location)
-		item.child(4).setText(1, software.note)
+		item.setText(0, "".join([str(software.index), ". ", software.name]))
+		item.child(0).setText(1, software.name)
+		item.child(1).setText(1, software.program_location)
+		item.child(2).setText(1, software.license_location)
+		item.child(3).setText(1, software.note)
 
 		self.edit_window.close()
 
