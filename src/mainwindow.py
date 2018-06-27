@@ -16,7 +16,7 @@ class MainWindow(QObject):
 	def __init__(self):
 		super().__init__()
 		self.ui = self.setup_ui("mainwindow.ui")
-		self.edit_window = self.setup_ui("editwindow.ui")
+		self.edit_window = self.setup_ui("editwindow.ui", self.ui)
 		self.setup_class_variables()
 		self.setup_signals()
 		self.update_software_tree()
@@ -67,12 +67,12 @@ class MainWindow(QObject):
 		self.edit_window.programLocationEdit.setText(software.program_location)
 		self.edit_window.licenseLocationEdit.setText(software.license_location)
 		self.edit_window.noteEdit.setText(software.note)
-		self.edit_window.open()
+		self.edit_window.show()
 
 	@Slot(str)
 	def display_message(self, message):
 		self.msg_box.setText(message)
-		self.msg_box.open()
+		self.msg_box.show()
 
 	def update_software_tree(self):
 		self.ui.softwareTreeWidget.clear()
