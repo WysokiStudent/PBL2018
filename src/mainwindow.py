@@ -3,7 +3,7 @@ import sys
 import _thread
 
 from PySide2.QtUiTools import QUiLoader
-from PySide2.QtWidgets import QMainWindow, QTreeWidgetItem, QMessageBox
+from PySide2.QtWidgets import QMainWindow, QTreeWidgetItem, QMessageBox, QFileDialog
 from PySide2.QtCore import QObject, QFile, Signal, Slot
 from PySide2.QtXml import QDomNode
 
@@ -44,6 +44,8 @@ class MainWindow(QObject):
 		self.ui.parseLicenseButton.clicked.connect(self.on_parseLicenseButton_clicked)
 		self.ui.softwareSearchLineEdit.textChanged.connect(self.on_softwareSearchLineEdit_textChanged)
 		self.ui.licenseSearchLineEdit.textChanged.connect(self.on_licenseSearchLineEdit_textChanged)
+		self.edit_window.programLocationButton.clicked.connect(self.on_edit_window_programLocationButton_clicked)
+		self.edit_window.licenseLocationButton.clicked.connect(self.on_edit_window_licenseLocationButton_clicked)
 		self.edit_window.submitButton.clicked.connect(self.on_edit_window_submitButton_clicked)
 		self.message_signal.connect(self.display_message)
 
@@ -238,6 +240,28 @@ class MainWindow(QObject):
 
 	def on_actionScan_for_software_triggered(self):
 		self.scan_in_spearate_thread()
+
+	def on_edit_window_programLocationButton_clicked(self):
+		directory = self.edit_window.programLocationEdit.text()
+		if directory == "":
+			directory = "/home"
+		
+		directory = QFileDialog.getExistingDirectory(self.edit_window, "Select Directory",
+                                       directory,
+                                       QFileDialog.DontResolveSymlinks)
+		if directory != "":
+			self.edit_window.programLocationEdit.setText(directory)
+
+	def on_edit_window_licenseLocationButton_clicked(self):
+		directory = self.edit_window.programLocationEdit.text()
+		if directory == "":
+			directory = "/home"
+
+		directory = QFileDialog.getExistingDirectory(self.edit_window, "Select Directory",
+                                       directory,
+									   QFileDialog.DontResolveSymlinks)
+		if directory != "":
+			self.edit_window.licenseLocationEdit.setText(directory)
 
 	def on_edit_window_submitButton_clicked(self):
 		item = self.edited_item

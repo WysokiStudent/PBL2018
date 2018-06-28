@@ -115,57 +115,6 @@
              <string>Item</string>
             </property>
            </column>
-           <item>
-            <property name="text">
-             <string>Click Me</string>
-            </property>
-            <property name="textAlignment">
-             <set>AlignLeading|AlignVCenter</set>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <item>
-             <property name="text">
-              <string>Index</string>
-             </property>
-             <property name="text">
-              <string>0</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Name</string>
-             </property>
-             <property name="text">
-              <string>Click Me</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Directory</string>
-             </property>
-             <property name="text">
-              <string>.</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>License Dir</string>
-             </property>
-             <property name="text">
-              <string>.</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Notes</string>
-             </property>
-             <property name="text">
-              <string>It is a tutorial</string>
-             </property>
-            </item>
-           </item>
           </widget>
          </item>
         </layout>
@@ -270,7 +219,7 @@
         <item>
          <widget class="QPushButton" name="parseLicenseButton">
           <property name="text">
-           <string>Parse License</string>
+           <string>Analize License</string>
           </property>
          </widget>
         </item>

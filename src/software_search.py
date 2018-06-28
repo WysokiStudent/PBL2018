@@ -11,8 +11,6 @@ def get_software_list():
         software_paths.extend(os.path.dirname(path) for path in glob.iglob("".join([drive[:2], '/**/*.exe']), recursive=True)
                                 if all(word not in path.casefold() for word in prohibited_words))
 
-    print(*software_paths)
-
     for index, path in enumerate(software_paths):
         if "\\bin" in path:
             bin_index = path.index("\\bin")
@@ -21,9 +19,13 @@ def get_software_list():
             bin_index = path.index("\\Bin")
             path = path[:bin_index]
         software_paths[index] = path
-
+    
+    software_paths = set(software_paths)
     while True:
-        software_paths = set(software_paths)
+        software_paths = list(software_paths)
+        for index in range(len(software_paths)):
+            while not os.path.basename(software_paths[index])[0].isalpha():
+                software_paths[index] = os.path.dirname(software_paths[index])
         old_software_paths = software_paths
         common_paths = set(subpath for subpath in software_paths if any(subpath in path and subpath != path for path in software_paths))
         software_paths = [path for path in software_paths if all(subpath not in path for subpath in common_paths)]
@@ -31,6 +33,7 @@ def get_software_list():
         software_paths = set(software_paths)
         if old_software_paths == software_paths:
             break
+
 
     software_list = []
     for index, path in enumerate(set(software_paths)):
