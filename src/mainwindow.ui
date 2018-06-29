@@ -6,12 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>732</width>
-    <height>497</height>
+    <width>701</width>
+    <height>513</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>License Organizer</string>
+   <string>Pathfinder</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>PathfinderIcon.png</normaloff>PathfinderIcon.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
@@ -61,60 +65,81 @@
        <widget class="QWidget" name="verticalLayoutWidget">
         <layout class="QVBoxLayout" name="verticalLayout_3">
          <item>
-          <widget class="QLineEdit" name="softwareSearchLineEdit">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
+          <widget class="QGroupBox" name="groupBox">
+           <property name="title">
+            <string>Software List</string>
            </property>
-           <property name="placeholderText">
-            <string>Search for software</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QTreeWidget" name="softwareTreeWidget">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>222</width>
-             <height>100</height>
-            </size>
-           </property>
-           <property name="lineWidth">
-            <number>1</number>
-           </property>
-           <property name="midLineWidth">
-            <number>0</number>
-           </property>
-           <property name="selectionBehavior">
-            <enum>QAbstractItemView::SelectRows</enum>
-           </property>
-           <property name="columnCount">
-            <number>2</number>
-           </property>
-           <attribute name="headerVisible">
-            <bool>false</bool>
-           </attribute>
-           <attribute name="headerDefaultSectionSize">
-            <number>120</number>
-           </attribute>
-           <column>
-            <property name="text">
-             <string>Header</string>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <property name="leftMargin">
+             <number>3</number>
             </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>Item</string>
+            <property name="topMargin">
+             <number>3</number>
             </property>
-           </column>
+            <property name="rightMargin">
+             <number>3</number>
+            </property>
+            <property name="bottomMargin">
+             <number>3</number>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="softwareSearchLineEdit">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="placeholderText">
+               <string>Search for software</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTreeWidget" name="softwareTreeWidget">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>222</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="lineWidth">
+               <number>1</number>
+              </property>
+              <property name="midLineWidth">
+               <number>0</number>
+              </property>
+              <property name="selectionBehavior">
+               <enum>QAbstractItemView::SelectRows</enum>
+              </property>
+              <property name="columnCount">
+               <number>2</number>
+              </property>
+              <attribute name="headerVisible">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="headerDefaultSectionSize">
+               <number>120</number>
+              </attribute>
+              <column>
+               <property name="text">
+                <string>Header</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Item</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </item>
         </layout>
@@ -122,32 +147,53 @@
        <widget class="QWidget" name="verticalLayoutWidget_2">
         <layout class="QVBoxLayout" name="verticalLayout_4">
          <item>
-          <widget class="QLineEdit" name="licenseSearchLineEdit">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
+          <widget class="QGroupBox" name="groupBox_2">
+           <property name="title">
+            <string>License List</string>
            </property>
-           <property name="placeholderText">
-            <string>Search for license</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QListWidget" name="licenseListWidget">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>222</width>
-             <height>100</height>
-            </size>
-           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <property name="leftMargin">
+             <number>3</number>
+            </property>
+            <property name="topMargin">
+             <number>3</number>
+            </property>
+            <property name="rightMargin">
+             <number>3</number>
+            </property>
+            <property name="bottomMargin">
+             <number>3</number>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="licenseSearchLineEdit">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="placeholderText">
+               <string>Search for license</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="licenseListWidget">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>222</width>
+                <height>100</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </item>
          <item>
@@ -171,59 +217,64 @@
         </layout>
        </widget>
       </widget>
-      <widget class="QGroupBox" name="licenseGroupBox">
+      <widget class="QTabWidget" name="licenseTabWidget">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
          <horstretch>2</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
-       <property name="title">
-        <string>License</string>
+       <property name="currentIndex">
+        <number>0</number>
        </property>
-       <layout class="QVBoxLayout" name="verticalLayout">
-        <property name="spacing">
-         <number>6</number>
-        </property>
-        <property name="leftMargin">
-         <number>3</number>
-        </property>
-        <property name="topMargin">
-         <number>3</number>
-        </property>
-        <property name="rightMargin">
-         <number>3</number>
-        </property>
-        <property name="bottomMargin">
-         <number>3</number>
-        </property>
-        <item>
-         <widget class="QPlainTextEdit" name="licensePlainTextEdit">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>350</width>
-            <height>350</height>
-           </size>
-          </property>
-          <property name="readOnly">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="parseLicenseButton">
-          <property name="text">
-           <string>Analize License</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
+       <widget class="QWidget" name="licenseTabWidgetPage1">
+        <attribute name="title">
+         <string>License</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <property name="spacing">
+          <number>6</number>
+         </property>
+         <property name="leftMargin">
+          <number>3</number>
+         </property>
+         <property name="topMargin">
+          <number>3</number>
+         </property>
+         <property name="rightMargin">
+          <number>3</number>
+         </property>
+         <property name="bottomMargin">
+          <number>3</number>
+         </property>
+         <item>
+          <widget class="QPlainTextEdit" name="licensePlainTextEdit">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>350</width>
+             <height>350</height>
+            </size>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="parseLicenseButton">
+           <property name="text">
+            <string>Analyze License</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
      </widget>
     </item>
@@ -234,7 +285,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>732</width>
+     <width>701</width>
      <height>21</height>
     </rect>
    </property>
@@ -242,7 +293,13 @@
     <property name="title">
      <string>Scan</string>
     </property>
+    <widget class="QMenu" name="menuScan_in_drive">
+     <property name="title">
+      <string>Scan in drive</string>
+     </property>
+    </widget>
     <addaction name="actionScan_for_software"/>
+    <addaction name="menuScan_in_drive"/>
    </widget>
    <widget class="QMenu" name="menuView">
     <property name="title">
@@ -259,7 +316,7 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionScan_for_software">
    <property name="text">
-    <string>Scan for software</string>
+    <string>Scan all drives</string>
    </property>
   </action>
   <action name="actionShow_all_software">
@@ -281,6 +338,11 @@
    </property>
    <property name="text">
     <string>Hide software without license</string>
+   </property>
+  </action>
+  <action name="actiontest">
+   <property name="text">
+    <string>test</string>
    </property>
   </action>
  </widget>

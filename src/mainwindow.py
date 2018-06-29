@@ -1,11 +1,11 @@
-import sys
-
-import _thread
+import sys, _thread
+import win32api
 
 from PySide2.QtUiTools import QUiLoader
 from PySide2.QtWidgets import QMainWindow, QTreeWidgetItem, QMessageBox, QFileDialog
-from PySide2.QtCore import QObject, QFile, Signal, Slot
+from PySide2.QtCore import QObject, QUrl, QFile, Signal, Slot
 from PySide2.QtXml import QDomNode
+from PySide2.QtWebEngineWidgets import QWebEngineView
 
 from software_program import SoftwareProgram
 from software_license_organiser import SoftwareLicenseOrganiser
@@ -13,6 +13,7 @@ from license_web_analyzer import LicenseWebAnalyzer
 
 class MainWindow(QObject):
 	message_signal = Signal(str)
+
 	def __init__(self):
 		super().__init__()
 		self.ui = self.setup_ui("mainwindow.ui")
@@ -31,24 +32,6 @@ class MainWindow(QObject):
 		uiFile.close()
 		return ui
 
-	def setup_signals(self):
-		self.ui.actionScan_for_software.triggered.connect(self.on_actionScan_for_software_triggered)
-		self.ui.actionShow_all_software.triggered.connect(self.on_actionShow_all_software_triggered)
-		self.ui.actionHide_software_without_path.toggled.connect(self.on_actionHide_software_without_path_toggled)
-		self.ui.actionHide_software_without_license.toggled.connect(self.on_actionHide_software_without_license_toggled)
-		self.ui.softwareTreeWidget.itemSelectionChanged.connect(self.on_softwareTreeWidget_itemSelectionChanged)
-		self.ui.softwareTreeWidget.itemDoubleClicked.connect(self.on_softwareTreeWidget_itemDoubleClicked)
-		self.ui.licenseListWidget.itemSelectionChanged.connect(self.on_licenseListWidget_itemSelectionChanged)
-		self.ui.addSoftwareButton.clicked.connect(self.on_addSoftwareButton_clicked)
-		self.ui.removeSoftwareButton.clicked.connect(self.on_removeSoftwareButton_clicked)
-		self.ui.parseLicenseButton.clicked.connect(self.on_parseLicenseButton_clicked)
-		self.ui.softwareSearchLineEdit.textChanged.connect(self.on_softwareSearchLineEdit_textChanged)
-		self.ui.licenseSearchLineEdit.textChanged.connect(self.on_licenseSearchLineEdit_textChanged)
-		self.edit_window.programLocationButton.clicked.connect(self.on_edit_window_programLocationButton_clicked)
-		self.edit_window.licenseLocationButton.clicked.connect(self.on_edit_window_licenseLocationButton_clicked)
-		self.edit_window.submitButton.clicked.connect(self.on_edit_window_submitButton_clicked)
-		self.message_signal.connect(self.display_message)
-
 	def setup_class_variables(self):
 		self.CATALOG = SoftwareLicenseOrganiser("softwares.pi")
 		self.ANALIZER = LicenseWebAnalyzer()
@@ -59,6 +42,33 @@ class MainWindow(QObject):
 		self.license_search_text = ""
 		self.software_list = self.CATALOG.list_installed_software()
 		self.msg_box = QMessageBox(self.ui)
+
+		drives = win32api.GetLogicalDriveStrings()
+		drives = drives.split('\000')[:-1]
+		action_dictionary = {}
+		from functools import partial
+		for drive in drives:
+			action_dictionary[drive] = self.ui.menuScan_in_drive.addAction(drive)
+			action_dictionary[drive].triggered.connect(partial(self.on_actionScan_in_drive_triggered, drive))
+
+	def setup_signals(self):
+		self.ui.actionScan_for_software.triggered.connect(self.on_actionScan_for_software_triggered)
+		self.ui.actionShow_all_software.triggered.connect(self.on_actionShow_all_software_triggered)
+		self.ui.actionHide_software_without_path.toggled.connect(self.on_actionHide_software_without_path_toggled)
+		self.ui.actionHide_software_without_license.toggled.connect(self.on_actionHide_software_without_license_toggled)
+		self.ui.softwareTreeWidget.itemSelectionChanged.connect(self.on_softwareTreeWidget_itemSelectionChanged)
+		self.ui.softwareTreeWidget.itemDoubleClicked.connect(self.on_softwareTreeWidget_itemDoubleClicked)
+		self.ui.licenseListWidget.itemSelectionChanged.connect(self.on_licenseListWidget_itemSelectionChanged)
+		self.ui.addSoftwareButton.clicked.connect(self.on_addSoftwareButton_clicked)
+		self.ui.removeSoftwareButton.clicked.connect(self.on_removeSoftwareButton_clicked)
+		self.ui.licensePlainTextEdit.textChanged.connect(self.on_licensePlainTextEdit_textChanged)
+		self.ui.parseLicenseButton.clicked.connect(self.on_parseLicenseButton_clicked)
+		self.ui.softwareSearchLineEdit.textChanged.connect(self.on_softwareSearchLineEdit_textChanged)
+		self.ui.licenseSearchLineEdit.textChanged.connect(self.on_licenseSearchLineEdit_textChanged)
+		self.edit_window.programLocationButton.clicked.connect(self.on_edit_window_programLocationButton_clicked)
+		self.edit_window.licenseLocationButton.clicked.connect(self.on_edit_window_licenseLocationButton_clicked)
+		self.edit_window.submitButton.clicked.connect(self.on_edit_window_submitButton_clicked)
+		self.message_signal.connect(self.display_message)
 
 	def open_edit_window(self, item):
 		self.edited_item = item
@@ -121,13 +131,6 @@ class MainWindow(QObject):
 		subItem.setText(0, name)
 		subItem.setText(1, value)
 		return subItem
-
-
-	def add_software(self):
-		pass
-
-	def remove_software(self):
-		pass
 
 	def update_license_list(self):
 		item = self.ui.softwareTreeWidget.currentItem()
@@ -233,13 +236,31 @@ class MainWindow(QObject):
 		self.ui.softwareTreeWidget.setCurrentItem(None)
 		self.update_software_tree()
 
+	def on_licensePlainTextEdit_textChanged(self):
+		self.remove_analyzed_license_tabs()
+
 	def on_parseLicenseButton_clicked(self):
 		license_text = self.ui.licensePlainTextEdit.toPlainText()
 		self.ANALIZER.analyze_license_string(license_text)
-		self.ANALIZER.open_analysis_in_browser()
+		self.set_analyzed_license_tab()
+		
+	def set_analyzed_license_tab(self):
+		self.remove_analyzed_license_tabs()
+		parsedWebEngineView = QWebEngineView()
+		with open("response.html", "r") as response_file:
+			parsedWebEngineView.setHtml(response_file.read())
+		self.ui.licenseTabWidget.addTab(parsedWebEngineView, "Analyzed License")
+		self.ui.licenseTabWidget.setCurrentIndex(1)
+
+	def remove_analyzed_license_tabs(self):
+		while self.ui.licenseTabWidget.count() > 1:
+			self.ui.licenseTabWidget.removeTab(1)
 
 	def on_actionScan_for_software_triggered(self):
-		self.scan_in_spearate_thread()
+		self.scan_in_spearate_thread(self.scan_for_software)
+
+	def on_actionScan_in_drive_triggered(self, drive):
+		self.scan_in_spearate_thread(self.scan_in_drive, drive)
 
 	def on_edit_window_programLocationButton_clicked(self):
 		directory = self.edit_window.programLocationEdit.text()
@@ -285,18 +306,29 @@ class MainWindow(QObject):
 
 		self.edit_window.close()
 
-	def scan_in_spearate_thread(self):
+	def scan_in_spearate_thread(self, scan_function, drive = None):
 		if(self.scanning_in_progress):
 			self.display_warning_message("Scanning in progress...")
 		else:
 			self.scanning_in_progress = True
-			_thread.start_new_thread(self.scan_for_software, ())
+			_thread.start_new_thread(scan_function, (drive,))
 
 	def scan_for_software(self):
 		import time
 		self.display_warning_message("Scanning started. This might last several minutes")
 		execution_time = time.process_time()
 		self.CATALOG.update_software_catalog()
+		execution_time = time.process_time() - execution_time
+		self.software_list = self.CATALOG.list_installed_software()
+		self.update_software_tree()
+		self.scanning_in_progress = False
+		self.display_warning_message("".join(["Scanning Complete.\n\nExecution Time = ", str(execution_time), "s"]))
+
+	def scan_in_drive(self, drive):
+		import time
+		self.display_warning_message("Scanning started. This might last several minutes")
+		execution_time = time.process_time()
+		self.CATALOG.update_software_catalog(drive)
 		execution_time = time.process_time() - execution_time
 		self.software_list = self.CATALOG.list_installed_software()
 		self.update_software_tree()
@@ -319,11 +351,15 @@ class MainWindow(QObject):
 
 	def close(self):
 		self.ui.close()
+		self.close()
 		sys.exit(0)
 
 if __name__ == "__main__":
 	from PySide2.QtWidgets import QApplication
-	app = QApplication(sys.argv)
+	args = sys.argv
+	args.append("-style")
+	args.append("Fusion")
+	app = QApplication(args)
 
 	window = MainWindow()
 	window.show()

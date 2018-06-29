@@ -17,13 +17,18 @@ class SoftwareLicenseOrganiser:
         self.catalog = SoftwareCatalog(catalog_location)
         self.lister = None
 
-    def update_software_catalog(self):
+    def update_software_catalog(self, drive = None):
         """
         Using the software finder updates the repository that contains programs
         """
         import software_search
-        for software in software_search.get_software_list():
-            self.add_software(software)
+        if drive:
+            print(drive)
+            for software in software_search.get_software_list_from_file(drive):
+                self.add_software(software)
+        else:
+            for software in software_search.get_software_list():
+                self.add_software(software)
         # all_results_filename = "ScanResult.txt"
         # good_results_filename = "GoodScanResults.txt"
         # bruteSearch.scan_registry_and_save_results(
