@@ -7,7 +7,6 @@ and the software finder
 
 from software_program import SoftwareProgram
 from software_catalog import SoftwareCatalog
-import bruteSearch
 
 class SoftwareLicenseOrganiser:
     """
@@ -22,20 +21,24 @@ class SoftwareLicenseOrganiser:
         """
         Using the software finder updates the repository that contains programs
         """
-        all_results_filename = "ScanResult.txt"
-        good_results_filename = "GoodScanResults.txt"
-        bruteSearch.scan_registry_and_save_results(
-            all_results_filename,
-            good_results_filename)
+        import software_search
+        for software in software_search.get_software_list():
+            self.add_software(software)
+        # all_results_filename = "ScanResult.txt"
+        # good_results_filename = "GoodScanResults.txt"
+        # bruteSearch.scan_registry_and_save_results(
+        #     all_results_filename,
+        #     good_results_filename)
 
-        with open(all_results_filename, mode='r') as results:
-            import ast
-            for line in results:
-                try:
-                    evaluated_line = ast.literal_eval(line)
-                    self.add_software(SoftwareProgram(str(evaluated_line[0]), str(evaluated_line[1]), "", ""))
-                except Exception:
-                    self.add_software(SoftwareProgram(line, "", "", ""))
+
+        # with open(all_results_filename, mode='r') as results:
+        #     import ast
+        #     for line in results:
+        #         try:
+        #             evaluated_line = ast.literal_eval(line)
+        #             self.add_software(SoftwareProgram(str(evaluated_line[0]), str(evaluated_line[1]), "", ""))
+        #         except Exception:
+        #             self.add_software(SoftwareProgram(line, "", "", ""))
 
 
     def get_software(self, index: int) -> SoftwareProgram:

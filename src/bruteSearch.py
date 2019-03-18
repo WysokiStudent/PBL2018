@@ -167,9 +167,12 @@ def save_result(stack: list, filename: str):
 def scan_registry_and_save_results(
         all_results_filename: str,
         good_results_filename: str):
-    scan_registry()
+    # scan_registry()
+    import glob
+    stack.extend(glob.glob('C:/**/*.exe', recursive=True))
     save_scan_result(all_results_filename)
-    save_good_entries(good_results_filename)
+    # save_good_entries(good_results_filename)
+
 
 def main():
     start = time.time()
