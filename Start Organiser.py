@@ -1,7 +1,10 @@
-#!/usr/bin/env python
 
 import sys
-sys.path.insert(0, "src")
-import gui
+sys.path.append("src")
+import qt_gui as gui
 
-gui.main()
+args = sys.argv
+if len(args) == 1:
+    args.append('-style')
+    args.append('Fusion')
+gui.main(sys.argv)
