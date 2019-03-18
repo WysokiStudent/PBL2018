@@ -1,7 +1,11 @@
 For the analyzer you will need:
+'pypiwin32' for searching the reqistry (pip install pywin32)
 'requests' for using http methods and interacting with websites (pip install requests)
+using SSL verification requires correct certificates
+It seems that the website used for parsing licences changed their post response
 'webbrowser' for opening a html file in a new browser window or tab (might actually be default)
-'beautifulsoup4' for parsing html files (currently commented out) (pip install beautifulsoup4)
+'beautifulsoup4' for parsing html files (pip install beautifulsoup4)
 
 For the GUI:
-'appJar' a wrapper for tkinter that allows to create simple UIs (pip install appJar)
+pyside2
+pyqt5

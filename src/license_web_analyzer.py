@@ -13,7 +13,7 @@ class LicenseWebAnalyzer:
         self.analyzer_url = \
             'http://www.spywareguide.com/analyze/go.php'
         self.session = requests.Session()  # session object used for http methods
-        self.session.get(self.analyzer_url)
+        self.session.get(self.analyzer_url, verify=False)
 
 
     def analyze_license_file(self, license_path: str):
@@ -42,7 +42,11 @@ class LicenseWebAnalyzer:
         request_headers = {}
         request_data = dict(title='none', url='none', license=license_text, anmode=0, comment='none', submit='Start Analyzer')
         # calling the http 'post' method with the prepared headers & data and save the http response as a variable
-        post_response = self.session.post(self.analyzer_url, data=request_data, headers=request_headers)
+        post_response = self.session.post(
+            self.analyzer_url,
+            data=request_data,
+            headers=request_headers,
+            verify=False)
         return post_response
 
     def write_response(self, response_text: str):
